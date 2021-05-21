@@ -1,0 +1,8 @@
+version: "3.9"
+services:
+  rata:
+    image: weesing/rata:latest
+    container_name: rata
+    build: .
+    ports:
+      - "8080:8080"

@@ -1,0 +1,32 @@
+{
+  "snapshot": {
+    "protocol": "https",
+    "host": "weesing.tk",
+    "path": "/webcam/?action=snapshot",
+    "download_path": "./snapshots/"
+  },
+  "telegram": {
+    "constants": {
+      "broadcast_messages": [
+        "Testing telegram bot",
+        "I'm in a meeting, please keep your volume down",
+        "I'm in a meeting, please don't come into the room now",
+        "I'm busy at the moment, give me a minute",
+        "Wake up",
+        "It's bed time!",
+        "It's very late, please go and sleep now",
+        "Please go brush teeth and shower now",
+        "Please answer Mommy",
+        "Please answer Papa"
+      ],
+      "devices": [
+        "Living Room Aircon",
+        "Bedroom Aircon",
+        "Study Room Aircon",
+        "Living Room TV",
+        "Bedroom TV",
+        "3D Printer"
+      ]
+    }
+  }
+}

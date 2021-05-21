@@ -1,0 +1,26 @@
+{
+  "name": "playground",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./serveresm.js"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "ejs": "~2.6.1",
+    "esm": "^3.2.25",
+    "express": "~4.16.1",
+    "google-auth-library": "0.12.0",
+    "google-proto-files": "^0.15.0",
+    "google-protobuf": "^3.3.0",
+    "grpc": "^1.0.0",
+    "http-errors": "~1.6.3",
+    "lodash": "^4.17.15",
+    "morgan": "~1.9.1",
+    "superagent": "^5.3.1",
+    "telegraf": "^3.38.0",
+    "telegraf-inline-menu": "^4.0.1",
+    "uuid": "^8.3.0"
+  }
+}
