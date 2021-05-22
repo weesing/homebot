@@ -15,7 +15,7 @@ export class TelegramHandlers {
   welcome(ctx) {
     let welcomeString = `Welcome!\n\nThis is a private bot. This is not meant for public use, or I will have access to all your messages`;
     // ctx.reply(welcomeString);
-    this.util.reply(ctx, welcomString);
+    this.util.reply(ctx, welcomeString);
     let helpString = `1) Use the word 'broadcast' to broadcast stuff onto our Home Google Minis (e.g. broadcast wake up everyone)\n`;
     helpString += `2) Use the command '/status' to check the status of the bot.\n`;
     helpString += `3) Use the commands '/enable' or '/disable' to set the reactions of the bot.\n`;
