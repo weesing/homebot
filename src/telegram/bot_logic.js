@@ -53,7 +53,6 @@ export class BotLogic {
 
   initializeEvents() {
     logger.info('   events registration in progress...');
-    // this.bot.on('message', this.handlers.handleGeneralMessage);
     const commands = [
       { clazzPath: `./handlers/handler_help`, cmdMatch: /\/help/ },
       { clazzPath: `./handlers/handler_status`, cmdMatch: /\/status/ },
@@ -83,7 +82,6 @@ export class BotLogic {
     //   "snapshot",
     //   async (ctx, next) => await this.handlers.handleCamSnapshot(ctx)
     // );
-    // this.bot.on("text", (ctx, next) => this.handlers.handleText(ctx));
     this.bot.on('polling_error', (err) => logger.error(err));
     logger.info('   done');
   }
