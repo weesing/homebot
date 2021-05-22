@@ -29,8 +29,8 @@ app.use(function (req, res, next) {
   next(createError(404));
 });
 
-import { TelegramBot } from "./src/telegram/TelegramBot";
-let telegramBot = new TelegramBot();
+import { BotLogic } from "./src/telegram/BotLogic";
+let telegramBot = BotLogic.getInstance();
 
 // error handler
 app.use(function (err, req, res, next) {

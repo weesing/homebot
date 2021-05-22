@@ -1,5 +1,3 @@
-let telegramBotInstance = undefined;
-
 import _ from "lodash";
 import { Telegraf } from "telegraf";
 import TelegrafInlineMenu from "telegraf-inline-menu";
@@ -7,41 +5,54 @@ import { TelegramValidator } from "./TelegramValidator";
 import { TelegramHandlers } from "./TelegramHandlers";
 import { TelegramUtil } from "./TelegramUtil";
 import { cfg } from "../configLoader";
+import TelegramBot from 'node-telegram-bot-api';
+import logger from '../logger';
 
-export class TelegramBot {
-  constructor() {
-    if (telegramBotInstance) {
-      console.log("Found existing instance, returning that...");
-      return telegramBotInstance;
+export class BotLogic {
+  static _instance;
+
+  static getInstance() {
+    if (_.isNil(BotLogic._instance)) {
+      logger.log(`Creating new BotLogic instance...`);
+      BotLogic._instance = new BotLogic();
     }
+    return BotLogic._instance;
+  }
+
+  constructor() {    
     this.initialize();
     this.util = new TelegramUtil();
-
-    telegramBotInstance = this;
-    return telegramBotInstance;
   }
 
   initialize() {
-    console.log("++++++++ Initializing Telegram Bot");
+    logger.log("++++++++ Initializing BotLogic");
     if (this.isInitalized) {
-      console.log("Has been initialized before! Skipping");
+      logger.log("Has been initialized before! Skipping");
       return;
     }
 
     this.initializeTelegraf();
+    // this.initializeTelegramBot();
     this.initializeHandlers();
     this.initializeEvents();
     this.initializeMenu();
 
     this.isInitalized = true;
-    console.log("++++++++ Initialization completed");
+    logger.log("++++++++ Initialization completed");
   }
 
+  // initializeTelegramBot() {
+  //   logger.log(`  creating new Telegram Bot`);
+  //   this.secret = _.get(cfg, `telegram.token`);
+  //   this.bot = new TelegramBot(this.secret, { polling: true });
+  //   logger.log(`  done`);
+  // }
+
   initializeTelegraf() {
-    console.log("   creating new Telegraf...");
+    logger.log("   creating new Telegraf...");
     this.secret = _.get(cfg, `telegram.token`);
     this.bot = new Telegraf(this.secret);
-    console.log("   done");
+    logger.log("   done");
   }
 
   initializeHandlers() {
@@ -49,7 +60,7 @@ export class TelegramBot {
   }
 
   initializeEvents() {
-    console.log("   events registration in progress...");
+    logger.log("   events registration in progress...");
     this.bot.command("help", (ctx) => this.handlers.welcome(ctx));
     this.bot.on("text", (ctx, next) => {
       let validator = new TelegramValidator();
@@ -78,7 +89,7 @@ export class TelegramBot {
     );
     // this.bot.on("text", (ctx, next) => this.handlers.handleText(ctx));
     this.bot.launch();
-    console.log("   done");
+    logger.log("   done");
   }
 
   extractDeviceName(ctx) {
