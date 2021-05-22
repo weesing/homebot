@@ -1,12 +1,11 @@
 import _ from 'lodash';
-import { Telegraf } from 'telegraf';
+import path from 'path';
 import TelegrafInlineMenu from 'telegraf-inline-menu';
-import { TelegramValidator } from './TelegramValidator';
-import { TelegramHandlers } from './TelegramHandlers';
-import { TelegramUtil } from './TelegramUtil';
+import { TelegramHandlers } from './telegram_handlers';
+import { TelegramUtil } from './telegram_util';
 import { cfg } from '../configLoader';
 import TelegramBot from 'node-telegram-bot-api';
-import logger from '../logger';
+import logger from '../common/logger';
 import util from 'util';
 
 export class BotLogic {
@@ -54,33 +53,32 @@ export class BotLogic {
 
   initializeEvents() {
     logger.info('   events registration in progress...');
-    this.bot.on('message', (context) => {
-      logger.info(`on text ${util.inspect(context, { depth: 10 })}`);
-      logger.info(arguments);
-      let validator = new TelegramValidator();
-      if (!validator.validateSource(context)) {
-        return;
-      }
-    });
-    this.bot.onText(/\/help/, (context) => this.handlers.welcome(context));
-    this.bot.onText(/\/enable/, (context) =>
-      this.handlers.handleEnable(context)
-    );
-    this.bot.onText(/\/disable/, (context) =>
-      this.handlers.handleDisable(context)
-    );
-    this.bot.onText(/\/status/, (context) =>
-      this.handlers.handleStatus(context)
-    );
-    this.bot.onText(/\/broadcast/, (context) =>
-      this.handlers.handleBroadcast(context)
-    );
-    this.bot.onText(/\/deviceon/, (context) =>
-      this.handlers.handleDeviceOn(context)
-    );
-    this.bot.onText(/\/deviceoff/, (context) =>
-      this.handlers.handleDeviceOff(context)
-    );
+    // this.bot.on('message', this.handlers.handleGeneralMessage);
+    const commands = [
+      { clazzPath: `./handlers/handler_help`, cmdMatch: /\/help/ },
+      { clazzPath: `./handlers/handler_status`, cmdMatch: /\/status/ },
+      { clazzPath: `./handlers/handler_deviceon`, cmdMatch: /\/deviceon/ },
+      { clazzPath: `./handlers/handler_deviceoff`, cmdMatch: /\/deviceoff/ },
+      { clazzPath: `./handlers/handler_enable`, cmdMatch: /\/enable/ },
+      { clazzPath: `./handlers/handler_disable`, cmdMatch: /\/disable/ },
+      { clazzPath: `./handlers/handler_broadcast`, cmdMatch: /\/broadcast/ }
+    ];
+    for (const command of commands) {
+      let matchCommandRegex = command.cmdMatch;
+      const handlerClazzPath = path.resolve(
+        path.join(__dirname, command.clazzPath)
+      );
+      logger.info(`Instantiating handler class in file - ${handlerClazzPath}`);
+      const handlerClazz = require(handlerClazzPath);
+      const handlerInstance = new handlerClazz({ botInstance: this.bot });
+      const handlerFn = handlerInstance.handle.bind(handlerInstance);
+      logger.info(
+        `Binding command '${matchCommandRegex}' to ${util.inspect(handlerClazz)}`
+      );
+      this.bot.onText(matchCommandRegex, handlerFn);
+    }
+    this.bot.onText(/\/m/, (context) => logger.info(`Displaying menu...`));
+    this.bot.onText(/\/menu/, (context) => logger.info(`Displaying menu...`));
     // this.bot.onText(
     //   "snapshot",
     //   async (ctx, next) => await this.handlers.handleCamSnapshot(ctx)

@@ -1,5 +1,5 @@
 import _ from 'lodash';
-import logger from '../logger';
+import logger from '../common/logger';
 
 export class TelegramUtil {
   reply(ctx, msg) {

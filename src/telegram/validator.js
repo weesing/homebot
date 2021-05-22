@@ -5,7 +5,7 @@ import cfg from "../configLoader";
 const allowedUserIds = _.get(cfg, `telegram.allowedUserIds`);
 const allowedGroupIds = _.get(cfg, `telegram.allowedGroupIds`);
 
-import logger from "../logger";
+import logger from "../common/logger";
 
 export class TelegramValidator {
   constructor() {}

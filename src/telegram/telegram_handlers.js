@@ -5,13 +5,14 @@ import util from 'util';
 import superagent from 'superagent';
 import { v4 as uuidv4 } from 'uuid';
 import { cfg } from '../configLoader';
-import { TelegramUtil } from './TelegramUtil';
-import logger from '../logger';
+import { TelegramUtil } from './telegram_util';
+import logger from '../common/logger';
 import TelegramBot from 'node-telegram-bot-api';
+import { TelegramValidator } from './validator';
+import { BotState } from './bot_state';
 
 export class TelegramHandlers {
   constructor({ botInstance = null }) {
-    this.enabled = true;
     this.util = new TelegramUtil();
     if (_.isNil(botInstance) || !(botInstance instanceof TelegramBot)) {
       throw new Error('A bot instance is required');
@@ -27,15 +28,24 @@ export class TelegramHandlers {
     });
   }
 
+  handleGeneralMessage(context) {
+    logger.info(`on text ${util.inspect(context, { depth: 10 })}`);
+    let validator = new TelegramValidator();
+    if (!validator.validateSource(context)) {
+      return;
+    }
+  }
+
   welcome(context) {
     logger.info(`Handling welcome command`);
     let welcomeString = `Welcome!\n\nThis is a private bot. This is not meant for public use, or I will have access to all your messages`;
     // ctx.reply(welcomeString);
     this.sendMessage({ context, msg: welcomeString });
-    let helpString = `1) Use the word 'broadcast' to broadcast stuff onto our Home Google Minis (e.g. broadcast wake up everyone)\n`;
-    helpString += `2) Use the command '/status' to check the status of the bot.\n`;
-    helpString += `3) Use the commands '/enable' or '/disable' to set the reactions of the bot.\n`;
-    helpString += `4) Use the commands '/deviceon' or /deviceoff' to turn devices on/off through Google Assistant.`;
+    let helpString = `Available commands:\n`;
+    helpString += `/broadcast - Broadcast leading message onto our Home Google Minis (e.g. broadcast wake up everyone)\n`;
+    helpString += `/status - Check the status of the bot.\n`;
+    helpString += `/enable or /disable - Set the reactions of the bot.\n`;
+    helpString += `/deviceon or /deviceoff - Turn devices on/off through Google Assistant.`;
     // ctx.reply(helpString);
     this.sendMessage({ context, msg: helpString });
   }
@@ -43,31 +53,30 @@ export class TelegramHandlers {
   handleStatus(context) {
     logger.info(`Handling status command`);
     let reply = `Status - Home Bot is alive\nEnabled - ${
-      this.enabled ? 'Yes' : 'No'
+      BotState.getInstance().enabled ? 'Yes' : 'No'
     }`;
-    // ctx.reply(reply);
     this.sendMessage({ context, msg: reply });
   }
 
   handleEnable(context) {
     logger.info(`Handling bot enable command`);
     this.sendMessage({ context, msg: `Bot is now enabled` });
-    this.enabled = true;
+    BotState.getInstance().enabled = true;
   }
 
   handleDisable(context) {
     logger.info(`Handling bot disable command`);
     this.sendMessage({ context, msg: `Bot is now disabled` });
-    this.enabled = false;
+    BotState.getInstance().enabled = false;
   }
 
-  validateEnable(ctx) {
-    if (!this.enabled) {
+  validateEnable(context) {
+    if (!BotState.getInstance().enabled) {
       // ctx.reply('Bot is disabled');
-      this.util.reply(ctx, `Bot is disabled`);
+      this.sendMessage({ context, msg: `Bot is disabled` });
       return;
     }
-    return this.enabled;
+    return BotState.getInstance().enabled;
   }
 
   extractCommandArguments(context, command) {

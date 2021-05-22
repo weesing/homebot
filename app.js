@@ -29,7 +29,7 @@ app.use(function (req, res, next) {
   next(createError(404));
 });
 
-import { BotLogic } from "./src/telegram/BotLogic";
+import { BotLogic } from "./src/telegram/bot_logic";
 let telegramBot = BotLogic.getInstance();
 
 // error handler
