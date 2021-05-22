@@ -1,9 +1,11 @@
-const Logger = {
-  log: console.log,
-  debug: console.debug,
-  trace: console.trace,
-  info: console.info,
-  error: console.error
-}
+import pino from "pino";
 
-export default Logger;
+const defaultLogger = pino({
+  prettyPrint: {
+    levelFirst: true,
+    translateTime: true
+  }
+});
+defaultLogger.info(`Initialized logger`);
+
+export default defaultLogger;

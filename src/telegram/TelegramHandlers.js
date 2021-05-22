@@ -1,48 +1,63 @@
-import { GoogleAssistantHelper } from "../googleassistant/assistantHelper";
-import fs from "fs";
-import _ from "lodash";
-import superagent from "superagent";
-import { v4 as uuidv4 } from "uuid";
-import { cfg } from "../configLoader";
-import { TelegramUtil } from "./TelegramUtil";
+import { GoogleAssistantHelper } from '../googleassistant/assistantHelper';
+import fs from 'fs';
+import _ from 'lodash';
+import util from 'util';
+import superagent from 'superagent';
+import { v4 as uuidv4 } from 'uuid';
+import { cfg } from '../configLoader';
+import { TelegramUtil } from './TelegramUtil';
+import logger from '../logger';
+import TelegramBot from 'node-telegram-bot-api';
 
 export class TelegramHandlers {
-  constructor() {
+  constructor({ botInstance = null }) {
     this.enabled = true;
     this.util = new TelegramUtil();
+    if (_.isNil(botInstance) || !(botInstance instanceof TelegramBot)) {
+      throw new Error('A bot instance is required');
+    }
+    this.botInstance = botInstance;
   }
 
-  welcome(ctx) {
+  sendMessage({ context, msg }) {
+    this.util.sendMessage({
+      bot: this.botInstance,
+      context,
+      msg
+    });
+  }
+
+  welcome(context) {
+    logger.info(`Handling welcome command`);
     let welcomeString = `Welcome!\n\nThis is a private bot. This is not meant for public use, or I will have access to all your messages`;
     // ctx.reply(welcomeString);
-    this.util.reply(ctx, welcomString);
+    this.sendMessage({ context, msg: welcomeString });
     let helpString = `1) Use the word 'broadcast' to broadcast stuff onto our Home Google Minis (e.g. broadcast wake up everyone)\n`;
     helpString += `2) Use the command '/status' to check the status of the bot.\n`;
     helpString += `3) Use the commands '/enable' or '/disable' to set the reactions of the bot.\n`;
     helpString += `4) Use the commands '/deviceon' or /deviceoff' to turn devices on/off through Google Assistant.`;
     // ctx.reply(helpString);
-    this.util.reply(ctx, helpString);
+    this.sendMessage({ context, msg: helpString });
   }
 
-  handleStatus(ctx) {
+  handleStatus(context) {
+    logger.info(`Handling status command`);
     let reply = `Status - Home Bot is alive\nEnabled - ${
-      this.enabled ? "Yes" : "No"
+      this.enabled ? 'Yes' : 'No'
     }`;
     // ctx.reply(reply);
-    this.util.reply(ctx, reply);
+    this.sendMessage({ context, msg: reply });
   }
 
-  handleEnable(ctx) {
-    console.log(`Bot is now enabled`);
-    // ctx.reply(`Bot is now enabled`);
-    this.util.reply(ctx, `Bot is now enabled`);
+  handleEnable(context) {
+    logger.info(`Handling bot enable command`);
+    this.sendMessage({ context, msg: `Bot is now enabled` });
     this.enabled = true;
   }
 
-  handleDisable(ctx) {
-    console.log(`Bot is now disabled`);
-    // ctx.reply(`Bot is now disabled`);
-    this.util.reply(ctx, `Bot is now disabled`);
+  handleDisable(context) {
+    logger.info(`Handling bot disable command`);
+    this.sendMessage({ context, msg: `Bot is now disabled` });
     this.enabled = false;
   }
 
@@ -55,8 +70,8 @@ export class TelegramHandlers {
     return this.enabled;
   }
 
-  extractCommandArguments(ctx, command) {
-    let fullText = _.get(ctx, "update.message.text");
+  extractCommandArguments(context, command) {
+    let fullText = _.get(context, `text`);
     let commandIndex = fullText.toLowerCase().indexOf(command);
     if (commandIndex === 0) {
       let message = fullText.slice(command.length).trim();
@@ -64,7 +79,7 @@ export class TelegramHandlers {
         return message;
       }
     }
-    return "";
+    return '';
   }
 
   assistantBroadcast(msg) {
@@ -72,37 +87,40 @@ export class TelegramHandlers {
     assistantHelper.broadcast(msg);
   }
 
-  handleBroadcast(ctx) {
-    let cmdArgs = this.extractCommandArguments(ctx, "/broadcast");
+  handleBroadcast(context) {
+    let cmdArgs = this.extractCommandArguments(context, '/broadcast');
     if (cmdArgs.length > 0) {
-      if (!this.validateEnable(ctx)) {
+      if (!this.validateEnable(context)) {
         return;
       }
-      this.util.reply(ctx, `Broadcasting ${cmdArgs} on Google Home Minis`);
+      this.sendMessage({
+        context,
+        msg: `Broadcasting ${cmdArgs} on Google Home Minis`
+      });
       // ctx.reply(`Broadcasting ${cmdArgs} on Google Home Minis`);
       this.assistantBroadcast(cmdArgs);
     }
   }
 
-  handleDeviceOn(ctx) {
-    let cmdArgs = this.extractCommandArguments(ctx, "/deviceon");
-    this.handleDeviceSwitch(ctx, "Activate", cmdArgs);
+  handleDeviceOn(context) {
+    let cmdArgs = this.extractCommandArguments(context, '/deviceon');
+    this.handleDeviceSwitch(context, 'Activate', cmdArgs);
   }
 
-  handleDeviceOff(ctx) {
-    let cmdArgs = this.extractCommandArguments(ctx, "/deviceoff");
-    this.handleDeviceSwitch(ctx, "Deactivate", cmdArgs);
+  handleDeviceOff(context) {
+    let cmdArgs = this.extractCommandArguments(context, '/deviceoff');
+    this.handleDeviceSwitch(context, 'Deactivate', cmdArgs);
   }
 
-  handleDeviceSwitch(ctx, command, cmdArgs) {
+  handleDeviceSwitch(context, command, cmdArgs) {
     if (cmdArgs.length > 0) {
-      if (!this.validateEnable(ctx)) {
+      if (!this.validateEnable(context)) {
         return;
       }
       let reply = `${command} device ${cmdArgs}`;
       // ctx.reply(reply);
-      this.util.reply(ctx, reply);
-      console.log(reply);
+      this.sendMessage({ context, msg: reply });
+      logger.info(reply);
       let assistantHelper = new GoogleAssistantHelper();
       assistantHelper.device(command, cmdArgs);
     }
@@ -113,7 +131,7 @@ export class TelegramHandlers {
   async handleCamSnapshot(ctx) {
     let { protocol, host, path, download_path, username, password } = _.get(
       cfg,
-      "snapshot"
+      'snapshot'
     );
     let fileName = `${download_path}${uuidv4()}.jpg`;
     console.log(`Start writing to file ${fileName}`);
@@ -122,25 +140,25 @@ export class TelegramHandlers {
     console.log(`Stream opened...`);
 
     let creds =
-      _.isNil(username) || username === "" ? "" : `${username}:${password}@`;
+      _.isNil(username) || username === '' ? '' : `${username}:${password}@`;
     let url = `${protocol}://${creds}${host}${path}`;
 
     console.log(`Downloading from ${protocol}://${host}${path}`);
 
     superagent.get(url).pipe(stream);
 
-    stream.on("finish", () => {
+    stream.on('finish', () => {
       console.log(`Stream finished on ${fileName}`);
     });
-    stream.on("close", () => {
+    stream.on('close', () => {
       console.log(`Stream closed on ${fileName}, sending snapshot`);
       ctx
         .replyWithPhoto(
           {
-            source: fileName,
+            source: fileName
           },
           {
-            caption: `Here's your snapshot!`,
+            caption: `Here's your snapshot!`
           }
         )
         .then((res) => {

@@ -1,51 +1,60 @@
+import { setLogger } from "grpc";
 import _ from "lodash";
 
 import cfg from "../configLoader";
 const allowedUserIds = _.get(cfg, `telegram.allowedUserIds`);
 const allowedGroupIds = _.get(cfg, `telegram.allowedGroupIds`);
 
+import logger from "../logger";
+
 export class TelegramValidator {
-    constructor() {
+  constructor() {}
 
+  validateUserId(msg, userId) {
+    if (!_.isNil(userId) && allowedUserIds.indexOf(userId) >= 0) {
+      logger.info(
+        `Authorized user: ${userId} - ${_.get(msg, "from.username")}`
+      );
+      return true;
+    } else {
+      logger.info(
+        `Unauthorized user: ${userId} - ${_.get(msg, "from.username")}!!!`
+      );
+      return false;
     }
+  }
 
-    validateUserId(ctx, userId) {
-        if (!_.isNil(userId) && allowedUserIds.indexOf(userId) >= 0) {
-            console.log(`Authorized user: ${userId} - ${_.get(ctx, "update.message.from.username")}`);
-            return true;
-        } else {
-            console.log(`Unauthorized user: ${userId} - ${_.get(ctx, "update.message.from.username")}!!!`);
-            return false;
-        }
+  validateGroupId(msg, groupId) {
+    if (!_.isNil(groupId)) {
+      if (allowedGroupIds.indexOf(groupId) >= 0) {
+        logger.info(
+          `Authorized group: ${groupId} - ${_.get(msg, "chat.title")}`
+        );
+        return true;
+      } else {
+        logger.info(
+          `Unauthorized group: ${groupId} - ${_.get(msg, "chat.title")}`
+        );
+        return false;
+      }
     }
+  }
 
-    validateGroupId(ctx, groupId) {
-        if (!_.isNil(groupId)) {
-            if (allowedGroupIds.indexOf(groupId) >= 0) {
-                console.log(`Authorized group: ${groupId} - ${_.get(ctx, "update.message.chat.title")}`);
-                return true;
-            }
-            else {
-                console.log(`Unauthorized group: ${groupId} - ${_.get(ctx, "update.message.chat.title")}`);
-                return false;
-            }
-        }
+  validateSource(msg) {
+    let type = _.get(msg, "chat.type");
+    logger.info(`Detected chat type ${type}`);
+    switch (type) {
+      case "private": {
+        let userId = _.get(msg, "from.id");
+        return this.validateUserId(msg, userId);
+      }
+      case "group": {
+        let groupId = _.get(msg, "chat.id");
+        return this.validateGroupId(msg, groupId);
+      }
+      default: {
+        return false;
+      }
     }
-
-    validateSource(ctx) {
-        let type = _.get(ctx, "update.message.chat.type");
-        switch (type) {
-            case "private": {
-                let userId = _.get(ctx, "update.message.from.id");
-                return this.validateUserId(ctx, userId);
-            }
-            case "group": {
-                let groupId = _.get(ctx, "update.message.chat.id");
-                return this.validateGroupId(ctx, groupId);
-            }
-            default: {
-                return false;
-            }
-        }
-    }
+  }
 }
