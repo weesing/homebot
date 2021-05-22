@@ -60,10 +60,9 @@ export class BotLogic {
       { clazzPath: `./handlers/handler_deviceoff`, cmdMatch: /\/deviceoff/ },
       { clazzPath: `./handlers/handler_enable`, cmdMatch: /\/enable/ },
       { clazzPath: `./handlers/handler_disable`, cmdMatch: /\/disable/ },
-      { clazzPath: `./handlers/handler_broadcast`, cmdMatch: /\/broadcast/ }
+      { clazzPath: `./handlers/handler_broadcast`, cmdMatch: /\/broadcast/ },
     ];
     for (const command of commands) {
-      let matchCommandRegex = command.cmdMatch;
       const handlerClazzPath = path.resolve(
         path.join(__dirname, command.clazzPath)
       );
@@ -71,10 +70,15 @@ export class BotLogic {
       const handlerClazz = require(handlerClazzPath);
       const handlerInstance = new handlerClazz({ botInstance: this.bot });
       const handlerFn = handlerInstance.handle.bind(handlerInstance);
-      logger.info(
-        `Binding command '${matchCommandRegex}' to ${util.inspect(handlerClazz)}`
-      );
-      this.bot.onText(matchCommandRegex, handlerFn);
+      let matchCommandRegex = command.cmdMatch;
+      if (matchCommandRegex) {
+        logger.info(
+          `Binding command '${matchCommandRegex}' to ${util.inspect(
+            handlerClazz
+          )}`
+        );
+        this.bot.onText(matchCommandRegex, handlerFn);
+      }
     }
     this.bot.onText(/\/m/, (context) => logger.info(`Displaying menu...`));
     this.bot.onText(/\/menu/, (context) => logger.info(`Displaying menu...`));
@@ -117,7 +121,7 @@ export class BotLogic {
           // ctx.reply(`Broadcasting '${message}'`);
           this.util.reply(ctx, `Broadcasting '${message}'`);
           this.handlers.assistantBroadcast(message);
-        }
+        },
       });
     }
 
@@ -132,7 +136,7 @@ export class BotLogic {
         if (!_.isNil(deviceName)) {
           this.handlers.handleDeviceSwitch(ctx, 'Activate', deviceName);
         }
-      }
+      },
     });
     onOffMenu.simpleButton('Off', 'off', {
       doFunc: (ctx) => {
@@ -141,20 +145,20 @@ export class BotLogic {
           this.handlers.handleDeviceSwitch(ctx, 'Deactivate', deviceName);
         }
         return true;
-      }
+      },
     });
 
     menu.simpleButton(`Camera Snapshot`, `cam_snapshot`, {
       doFunc: (ctx) => {
         this.handlers.handleCamSnapshot(ctx);
         return true;
-      }
+      },
     });
 
     this.bot.use(
       menu.init({
         backButtonText: `< Back`,
-        mainMenuButtonText: `<< Back to Main Menu <<`
+        mainMenuButtonText: `<< Back to Main Menu <<`,
       })
     );
   }
