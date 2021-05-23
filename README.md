@@ -17,4 +17,5 @@ Last tested on NodeJS version 14
 - *Please remember not to commit your secrets in your code repository, add the `secrets.json` file into your .gitignore*
 
 # Improvements
-- Migrate to different Telegram Bot framework from Telegraf. Not very ideal internal error handling and often crashes the bot.
+- *(DONE)* Migrate to different Telegram Bot framework from Telegraf. Not very ideal internal error handling and often crashes the bot.
+- Refactoring of menu handling to it's own generic library.
