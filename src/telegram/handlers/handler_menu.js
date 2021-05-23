@@ -3,8 +3,8 @@ import { HandlerBase } from './handler_base';
 import logger from '../../common/logger';
 import { cfg } from '../../configLoader';
 import { GoogleAssistantHelper } from '../../googleassistant/assistantHelper';
-import { CoinDeskLib } from '../../lib/coin_desk';
 import { BTCLib } from '../../lib/btc';
+import { AssetDefines } from '../../lib/asset_defines';
 
 module.exports = class HandlerBroadcast extends HandlerBase {
   constructor(args) {
@@ -97,7 +97,7 @@ module.exports = class HandlerBroadcast extends HandlerBase {
     }
     buttonList.push([
       {
-        text: `${this.backIcon} Back`,
+        text: `${AssetDefines.backIcon} Back`,
         callback_data: JSON.stringify({
           command: `back_main`
         })
@@ -127,7 +127,7 @@ module.exports = class HandlerBroadcast extends HandlerBase {
     }
     buttonList.push([
       {
-        text: `${this.backIcon} Back`,
+        text: `${AssetDefines.backIcon} Back`,
         callback_data: JSON.stringify({
           command: `back_main`
         })
@@ -158,7 +158,7 @@ module.exports = class HandlerBroadcast extends HandlerBase {
       ],
       [
         {
-          text: '\u{1F7E2} On',
+          text: `${AssetDefines.deviceOnIcon} On`,
           callback_data: JSON.stringify({
             command: `device_on`,
             device: deviceIndex
@@ -167,7 +167,7 @@ module.exports = class HandlerBroadcast extends HandlerBase {
       ],
       [
         {
-          text: '\u{1F534} Off',
+          text: `${AssetDefines.deviceOffIcon} Off`,
           callback_data: JSON.stringify({
             command: `device_off`,
             device: deviceIndex
@@ -176,13 +176,13 @@ module.exports = class HandlerBroadcast extends HandlerBase {
       ],
       [
         {
-          text: `${this.backIcon} Back`,
+          text: `${AssetDefines.backIcon} Back`,
           callback_data: JSON.stringify({
             command: `devices`
           })
         },
         {
-          text: `${this.upIcon} Back to main`,
+          text: `${AssetDefines.upIcon} Back to main`,
           callback_data: JSON.stringify({
             command: `back_main`
           })
@@ -202,7 +202,9 @@ module.exports = class HandlerBroadcast extends HandlerBase {
     if (!this.validateEnable(context)) {
       return;
     }
-    let reply = `${state.toUpperCase()} device ${device}`;
+    let reply = `${
+      AssetDefines.okHandIcon
+    } ${state.toUpperCase()} device ${device}`;
     this.sendMessage({ context, msg: reply });
     logger.info(reply);
     let assistantHelper = new GoogleAssistantHelper();
@@ -214,25 +216,17 @@ module.exports = class HandlerBroadcast extends HandlerBase {
     btcLib.getPrices(context, this.sendMessage.bind(this));
   }
 
-  get backIcon() {
-    return '\u{1F448}';
-  }
-
-  get upIcon() {
-    return `\u{261D}`;
-  }
-
   get mainMenuInlineKeyboard() {
     return [
       [
         {
-          text: '\u{1F399} Broadcast message',
+          text: `${AssetDefines.broadcastIcon} Broadcast message`,
           callback_data: JSON.stringify({
             command: `broadcast`
           })
         },
         {
-          text: '\u{1F39B} Control Devices',
+          text: `${AssetDefines.controlDevicesIcon} Control Devices`,
           callback_data: JSON.stringify({
             command: `devices`
           })
@@ -240,13 +234,13 @@ module.exports = class HandlerBroadcast extends HandlerBase {
       ],
       [
         {
-          text: '\u{1F4F7} Camera Snapshot [ WIP ]',
+          text: `${AssetDefines.cameraSnapshotIcon} Camera Snapshot [ WIP ]`,
           callback_data: JSON.stringify({
             command: `camera_snapshot`
           })
         },
         {
-          text: `\u{20BF} Bitcoin Prices`,
+          text: `${AssetDefines.bitcoinIcon} Bitcoin Prices`,
           callback_data: JSON.stringify({
             command: `btc`
           })

@@ -12,7 +12,7 @@ export class HandlerDeviceSwitchBase extends HandlerBase {
       if (!this.validateEnable(context)) {
         return;
       }
-      let reply = `${command.toUpperCase()} device ${cmdArgs}`;
+      let reply = `${AssetDefines.okHandIcon} ${command.toUpperCase()} device ${cmdArgs}`;
       this.sendMessage({ context, msg: reply });
       logger.info(reply);
       let assistantHelper = new GoogleAssistantHelper();
