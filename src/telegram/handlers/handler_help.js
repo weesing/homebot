@@ -16,7 +16,7 @@ module.exports = class HandlerHelp extends HandlerBase {
     helpString += `/enable or /disable - Set the reactions of the bot.\n`;
     helpString += `/deviceon or /deviceoff - Turn devices on/off through Google Assistant.\n`;
     helpString += `/btcprice - Grabs the latest BTC price in USD and SGD\n`;
-    helpString += `/m - Display a menu for ease of executing the above actions\n.`;
+    helpString += `/m - Display a menu for ease of executing the above actionas.\n`;
     this.sendMessage({ context, msg: helpString });
   }
 };

@@ -1,19 +1,28 @@
-import { CoinDeskLib } from "./coin_desk";
+import { CoinDeskLib } from './coin_desk';
 
 export class BTCLib {
   async getPrices(context, sendMessage = null) {
     const coinDeskLib = new CoinDeskLib();
     const currencies = ['USD', 'SGD'];
     const rates = await coinDeskLib.getPrices(currencies);
-    let msg = '';
+    let msg = `*BTC Current Price:*
+`;
     for (const currency of currencies) {
       const rateInfo = rates[currency];
+      let rate = rateInfo.rate.toString();
+      rate = rate.replace(`.`, `\\.`);
+      console.log(rate);
       if (rateInfo) {
-        msg += `\nBTC Current price ${currency} ${rateInfo.rate} - ${rateInfo.updatedTime}`;
+        const emoji = '\u{20BF}';
+        msg += `${emoji} _${currency}_ $*${rate}*
+`;
       }
     }
     if (sendMessage) {
-      sendMessage({ context, msg });
+      const opts = {
+        parse_mode: 'MarkdownV2'
+      }
+      sendMessage({ context, msg, opts });
     }
     return rates;
   }

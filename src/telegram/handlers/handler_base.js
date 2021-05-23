@@ -16,20 +16,12 @@ export class HandlerBase {
     this.util = new TelegramUtil();
   }
 
-  sendMessage({ context, msg }) {
-    this.util.sendMessage({
-      bot: this.botInstance,
-      context,
-      msg
-    });
-  }
-
-  sendMarkupMessage({ context, msg, markupOpts }) {
+  sendMessage({ context, msg, opts }) {
     this.util.sendMessage({
       bot: this.botInstance,
       context,
       msg,
-      markupOpts
+      opts
     });
   }
 

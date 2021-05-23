@@ -37,12 +37,12 @@ export class TelegramUtil {
     return messageId;
   }
 
-  async sendMessage({ bot, context, msg, markupOpts = null }) {
+  async sendMessage({ bot, context, msg, opts = null }) {
     const chatId = this.getReplyId(context);
-    if (_.isNil(markupOpts)) {
+    if (_.isNil(opts)) {
       return await bot.sendMessage(chatId, msg);
     }
-    return await bot.sendMessage(chatId, msg, markupOpts);
+    return await bot.sendMessage(chatId, msg, opts);
   }
 
   async editMarkupMessage({ bot, context, replyMarkup }) {

@@ -97,7 +97,7 @@ module.exports = class HandlerBroadcast extends HandlerBase {
     }
     buttonList.push([
       {
-        text: `<< Back`,
+        text: `\u{1F814} Back`,
         callback_data: JSON.stringify({
           command: `back_main`
         })
@@ -127,7 +127,7 @@ module.exports = class HandlerBroadcast extends HandlerBase {
     }
     buttonList.push([
       {
-        text: `<< Back`,
+        text: `\u{1F814} Back`,
         callback_data: JSON.stringify({
           command: `back_main`
         })
@@ -150,14 +150,24 @@ module.exports = class HandlerBroadcast extends HandlerBase {
     var buttonList = [
       [
         {
-          text: 'On',
+          text: device,
+          callback_data: JSON.stringify({
+            command: 'fake'
+          })
+        }
+      ],
+      [
+        {
+          text: '\u{1F7E2} On',
           callback_data: JSON.stringify({
             command: `device_on`,
             device: deviceIndex
           })
-        },
+        }
+      ],
+      [
         {
-          text: 'Off',
+          text: '\u{1F534} Off',
           callback_data: JSON.stringify({
             command: `device_off`,
             device: deviceIndex
@@ -166,13 +176,13 @@ module.exports = class HandlerBroadcast extends HandlerBase {
       ],
       [
         {
-          text: '<< Back',
+          text: '\u{1F814} Back',
           callback_data: JSON.stringify({
             command: `devices`
           })
         },
         {
-          text: '<< Back to main',
+          text: '\u{1F815} Back to main',
           callback_data: JSON.stringify({
             command: `back_main`
           })
@@ -192,7 +202,7 @@ module.exports = class HandlerBroadcast extends HandlerBase {
     if (!this.validateEnable(context)) {
       return;
     }
-    let reply = `${state} device ${device}`;
+    let reply = `${state.toUpperCase()} device ${device}`;
     this.sendMessage({ context, msg: reply });
     logger.info(reply);
     let assistantHelper = new GoogleAssistantHelper();
@@ -208,13 +218,13 @@ module.exports = class HandlerBroadcast extends HandlerBase {
     return [
       [
         {
-          text: 'Broadcast message',
+          text: '\u{1F399} Broadcast message',
           callback_data: JSON.stringify({
             command: `broadcast`
           })
         },
         {
-          text: 'Control Devices',
+          text: '\u{1F398} Control Devices',
           callback_data: JSON.stringify({
             command: `devices`
           })
@@ -222,13 +232,13 @@ module.exports = class HandlerBroadcast extends HandlerBase {
       ],
       [
         {
-          text: 'Camera Snapshot',
+          text: '\u{1F4F7} Camera Snapshot [ WIP ]',
           callback_data: JSON.stringify({
             command: `camera_snapshot`
           })
         },
         {
-          text: `BTC`,
+          text: `\u{20BF} Bitcoin Prices`,
           callback_data: JSON.stringify({
             command: `btc`
           })
@@ -246,12 +256,12 @@ module.exports = class HandlerBroadcast extends HandlerBase {
   }
 
   async handleMessage(context) {
-    var markupOpts = {
+    var opts = {
       reply_markup: JSON.stringify({
         inline_keyboard: this.mainMenuInlineKeyboard,
         resize_keyboard: true
       })
     };
-    this.sendMarkupMessage({ context, msg: `Choose your action:`, markupOpts });
+    this.sendMessage({ context, msg: `Choose your action:`, opts });
   }
 };
