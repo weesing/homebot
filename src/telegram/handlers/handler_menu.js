@@ -97,7 +97,7 @@ module.exports = class HandlerBroadcast extends HandlerBase {
     }
     buttonList.push([
       {
-        text: `\u{1F814} Back`,
+        text: `${this.backIcon} Back`,
         callback_data: JSON.stringify({
           command: `back_main`
         })
@@ -127,7 +127,7 @@ module.exports = class HandlerBroadcast extends HandlerBase {
     }
     buttonList.push([
       {
-        text: `\u{1F814} Back`,
+        text: `${this.backIcon} Back`,
         callback_data: JSON.stringify({
           command: `back_main`
         })
@@ -176,13 +176,13 @@ module.exports = class HandlerBroadcast extends HandlerBase {
       ],
       [
         {
-          text: '\u{1F814} Back',
+          text: `${this.backIcon} Back`,
           callback_data: JSON.stringify({
             command: `devices`
           })
         },
         {
-          text: '\u{1F815} Back to main',
+          text: `${this.upIcon} Back to main`,
           callback_data: JSON.stringify({
             command: `back_main`
           })
@@ -214,6 +214,14 @@ module.exports = class HandlerBroadcast extends HandlerBase {
     btcLib.getPrices(context, this.sendMessage.bind(this));
   }
 
+  get backIcon() {
+    return '\u{1F448}';
+  }
+
+  get upIcon() {
+    return `\u{261D}`;
+  }
+
   get mainMenuInlineKeyboard() {
     return [
       [
@@ -224,7 +232,7 @@ module.exports = class HandlerBroadcast extends HandlerBase {
           })
         },
         {
-          text: '\u{1F398} Control Devices',
+          text: '\u{1F39B} Control Devices',
           callback_data: JSON.stringify({
             command: `devices`
           })
