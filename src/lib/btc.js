@@ -1,4 +1,5 @@
 import { CoinDeskLib } from './coin_desk';
+import { AssetDefines } from './asset_defines';
 
 export class BTCLib {
   async getPrices(context, sendMessage = null) {
@@ -11,17 +12,15 @@ export class BTCLib {
       const rateInfo = rates[currency];
       let rate = rateInfo.rate.toString();
       rate = rate.replace(`.`, `\\.`);
-      console.log(rate);
       if (rateInfo) {
-        const emoji = '\u{20BF}';
-        msg += `${emoji} _${currency}_ $*${rate}*
+        msg += `${AssetDefines.bitcoinIcon} _${currency}_ $*${rate}*
 `;
       }
     }
     if (sendMessage) {
       const opts = {
         parse_mode: 'MarkdownV2'
-      }
+      };
       sendMessage({ context, msg, opts });
     }
     return rates;
