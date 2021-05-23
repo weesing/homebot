@@ -3,7 +3,7 @@ import logger from '../../common/logger';
 import { BotState } from '../bot_state';
 
 module.exports = class HandlerDisable extends HandlerBase {
-  handleMessage(context) {
+  async handleMessage(context) {
     logger.info(`Handling bot disable command`);
     this.sendMessage({ context, msg: `Bot is now disabled` });
     BotState.getInstance().enabled = false;

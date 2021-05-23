@@ -2,7 +2,7 @@ import { HandlerBase } from './handler_base';
 import logger from '../../common/logger';
 
 module.exports = class HandlerBroadcast extends HandlerBase {
-  handleMessage(context) {
+  async handleMessage(context) {
     let cmdArgs = this.extractCommandArguments(context, '/broadcast');
     if (cmdArgs.length > 0) {
       if (!this.validateEnable(context)) {

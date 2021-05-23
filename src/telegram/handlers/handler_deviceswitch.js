@@ -6,8 +6,8 @@ export class HandlerDeviceSwitchBase extends HandlerBase {
   constructor(args) {
     super(args);
   }
-  
-  handleMessage(context, command, cmdArgs) {
+
+  async handleMessage(context, command, cmdArgs) {
     if (cmdArgs.length > 0) {
       if (!this.validateEnable(context)) {
         return;

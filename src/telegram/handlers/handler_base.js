@@ -20,15 +20,15 @@ export class HandlerBase {
     this.util.sendMessage({
       bot: this.botInstance,
       context,
-      msg
+      msg,
     });
   }
 
-  handleMessage(context) {
+  async handleMessage(context) {
     // to be implemented by children
   }
 
-  handle(context) {
+  async handle(context) {
     logger.info(`received message: ${util.inspect(context, { depth: 10 })}`);
     let validator = new TelegramValidator();
     const isValid = validator.validateSource(context);
@@ -37,7 +37,7 @@ export class HandlerBase {
       return;
     }
     logger.info(`Validated source, handling message...`);
-    return this.handleMessage(context);
+    return await this.handleMessage(context);
   }
 
   validateEnable(context) {

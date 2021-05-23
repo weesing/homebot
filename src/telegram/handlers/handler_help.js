@@ -6,7 +6,7 @@ module.exports = class HandlerHelp extends HandlerBase {
     super(args);
   }
 
-  handleMessage(context) {
+  async handleMessage(context) {
     logger.info(`Handling welcome command`);
     let welcomeString = `Welcome!\n\nThis is a private bot. This is not meant for public use, or I will have access to all your messages`;
     this.sendMessage({ context, msg: welcomeString });

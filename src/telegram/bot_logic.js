@@ -61,6 +61,7 @@ export class BotLogic {
       { clazzPath: `./handlers/handler_enable`, cmdMatch: /\/enable/ },
       { clazzPath: `./handlers/handler_disable`, cmdMatch: /\/disable/ },
       { clazzPath: `./handlers/handler_broadcast`, cmdMatch: /\/broadcast/ },
+      { clazzPath: `./handlers/handler_btcprice`, cmdMatch: /\/btcprice/ }
     ];
     for (const command of commands) {
       const handlerClazzPath = path.resolve(
