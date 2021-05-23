@@ -20,7 +20,24 @@ export class HandlerBase {
     this.util.sendMessage({
       bot: this.botInstance,
       context,
+      msg
+    });
+  }
+
+  sendMarkupMessage({ context, msg, markupOpts }) {
+    this.util.sendMessage({
+      bot: this.botInstance,
+      context,
       msg,
+      markupOpts
+    });
+  }
+
+  editMarkupMessage({ context, replyMarkup }) {
+    this.util.editMarkupMessage({
+      bot: this.botInstance,
+      context,
+      replyMarkup
     });
   }
 

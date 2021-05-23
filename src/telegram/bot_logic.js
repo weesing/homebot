@@ -61,7 +61,8 @@ export class BotLogic {
       { clazzPath: `./handlers/handler_enable`, cmdMatch: /\/enable/ },
       { clazzPath: `./handlers/handler_disable`, cmdMatch: /\/disable/ },
       { clazzPath: `./handlers/handler_broadcast`, cmdMatch: /\/broadcast/ },
-      { clazzPath: `./handlers/handler_btcprice`, cmdMatch: /\/btcprice/ }
+      { clazzPath: `./handlers/handler_btcprice`, cmdMatch: /\/btcprice/ },
+      { clazzPath: `./handlers/handler_menu`, cmdMatch: /\/m/ }
     ];
     for (const command of commands) {
       const handlerClazzPath = path.resolve(
@@ -81,86 +82,7 @@ export class BotLogic {
         this.bot.onText(matchCommandRegex, handlerFn);
       }
     }
-    this.bot.onText(/\/m/, (context) => logger.info(`Displaying menu...`));
-    this.bot.onText(/\/menu/, (context) => logger.info(`Displaying menu...`));
-    // this.bot.onText(
-    //   "snapshot",
-    //   async (ctx, next) => await this.handlers.handleCamSnapshot(ctx)
-    // );
     this.bot.on('polling_error', (err) => logger.error(err));
     logger.info('   done');
-  }
-
-  extractDeviceName(ctx) {
-    let deviceName = _.split(ctx.match, ':');
-    deviceName = deviceName[deviceName.length - 2];
-    if (_.isNil(deviceName)) {
-      this.util.reply(
-        ctx,
-        `ERROR: Unknown device name, this is ctx.match - ${ctx.match}`
-      );
-      // ctx.reply(`ERROR: Unknown device name, this is ctx.match - ${ctx.match}`);
-      return undefined;
-    }
-    return deviceName;
-  }
-
-  initializeMenu(ctx) {
-    const menu = new TelegrafInlineMenu((ctx) => `Hey ${ctx.from.first_name}!`);
-    const onOffMenu = new TelegrafInlineMenu((ctx) => `On / Off:`);
-    const broadcastMenu = new TelegrafInlineMenu((ctx) => `Choose message:`);
-    const devicesMenu = new TelegrafInlineMenu((ctx) => `Choose device:`);
-
-    menu.setCommand('m');
-    menu.setCommand('menu');
-
-    menu.submenu(`Broadcast message`, `Broadcast message`, broadcastMenu);
-    let broadcastMessages = _.get(cfg, 'telegram.constants.broadcast_messages');
-    for (const [i, message] of broadcastMessages.entries()) {
-      broadcastMenu.simpleButton(message, i.toString(), {
-        doFunc: (ctx) => {
-          // ctx.reply(`Broadcasting '${message}'`);
-          this.util.reply(ctx, `Broadcasting '${message}'`);
-          this.handlers.assistantBroadcast(message);
-        },
-      });
-    }
-
-    menu.submenu(`Control Devices`, `ctrldev`, devicesMenu);
-    let devices = _.get(cfg, 'telegram.constants.devices');
-    for (const [i, device] of devices.entries()) {
-      devicesMenu.submenu(device, device, onOffMenu);
-    }
-    onOffMenu.simpleButton('On', 'on', {
-      doFunc: (ctx) => {
-        let deviceName = this.extractDeviceName(ctx);
-        if (!_.isNil(deviceName)) {
-          this.handlers.handleDeviceSwitch(ctx, 'Activate', deviceName);
-        }
-      },
-    });
-    onOffMenu.simpleButton('Off', 'off', {
-      doFunc: (ctx) => {
-        let deviceName = this.extractDeviceName(ctx);
-        if (!_.isNil(deviceName)) {
-          this.handlers.handleDeviceSwitch(ctx, 'Deactivate', deviceName);
-        }
-        return true;
-      },
-    });
-
-    menu.simpleButton(`Camera Snapshot`, `cam_snapshot`, {
-      doFunc: (ctx) => {
-        this.handlers.handleCamSnapshot(ctx);
-        return true;
-      },
-    });
-
-    this.bot.use(
-      menu.init({
-        backButtonText: `< Back`,
-        mainMenuButtonText: `<< Back to Main Menu <<`,
-      })
-    );
   }
 }

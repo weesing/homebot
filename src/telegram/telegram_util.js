@@ -22,12 +22,35 @@ export class TelegramUtil {
         break;
       }
     }
+    if (_.isNil(chatId)) {
+      chatId = _.get(context, `message.chat.id`);
+    }
     logger.info(`Retrieved ID ${chatId}`);
     return chatId;
   }
 
-  sendMessage({ bot, context, msg }) {
+  getMessageId(context) {
+    let messageId = context.messageId;
+    if (!messageId && context.message) {
+      messageId = context.message.message_id;
+    }
+    return messageId;
+  }
+
+  async sendMessage({ bot, context, msg, markupOpts = null }) {
     const chatId = this.getReplyId(context);
-    bot.sendMessage(chatId, msg);
+    if (_.isNil(markupOpts)) {
+      return await bot.sendMessage(chatId, msg);
+    }
+    return await bot.sendMessage(chatId, msg, markupOpts);
+  }
+
+  async editMarkupMessage({ bot, context, replyMarkup }) {
+    const chatId = this.getReplyId(context);
+    const messageId = this.getMessageId(context);
+    return await bot.editMessageReplyMarkup(replyMarkup, {
+      chat_id: chatId,
+      message_id: messageId
+    });
   }
 }
