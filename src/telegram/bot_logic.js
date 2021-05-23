@@ -1,6 +1,5 @@
 import _ from 'lodash';
 import path from 'path';
-import TelegrafInlineMenu from 'telegraf-inline-menu';
 import { TelegramHandlers } from './telegram_handlers';
 import { TelegramUtil } from './telegram_util';
 import { cfg } from '../configLoader';
