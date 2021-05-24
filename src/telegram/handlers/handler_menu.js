@@ -19,6 +19,7 @@ import {
 import { HandlerDeviceSwitchBase } from './handler_deviceswitch';
 import { HandlerBroadcast } from './handler_broadcast';
 import { HandlerBTCPrice } from './handler_btcprice';
+import { HandlerUUID } from './handler_uuid';
 
 export class HandlerMenu extends HandlerBase {
   constructor(args) {
@@ -240,17 +241,8 @@ export class HandlerMenu extends HandlerBase {
   }
 
   async handleGenerateUUID(context) {
-    let uuid = uuidV4();
-    uuid = uuid.replace(/-/g, '\\-');
-    logger.info(`Generated UUID ${uuid}`);
-    const msg = `\`\`\`${uuid}\`\`\``;
-    logger.info(msg);
-    const opts = {
-      parse_mode: 'MarkdownV2'
-    };
-    this.sendMessage({ context, msg, opts });
-    const link = `[uuidgenerator\\.net](https://www.uuidgenerator.net/)`;
-    this.sendMessage({ context, msg: link, opts });
+    const handlerUUID = new HandlerUUID({ botInstance: this.botInstance });
+    await handlerUUID.handleMessage(context);
   }
 
   get mainMenuInlineKeyboard() {
