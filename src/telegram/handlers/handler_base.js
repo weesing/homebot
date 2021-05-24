@@ -15,8 +15,8 @@ export class HandlerBase {
     this.botInstance = botInstance;
   }
 
-  sendMessage({ context, msg, opts }) {
-    TelegramUtil.instance.sendMessage({
+  async sendMessage({ context, msg, opts }) {
+    await TelegramUtil.instance.sendMessage({
       bot: this.botInstance,
       context,
       msg,

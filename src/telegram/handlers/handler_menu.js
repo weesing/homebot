@@ -2,8 +2,6 @@ import _ from 'lodash';
 import { HandlerBase } from './handler_base';
 import logger from '../../common/logger';
 import { cfg } from '../../configLoader';
-import { GoogleAssistantHelper } from '../../googleassistant/assistantHelper';
-import { BTCLib } from '../../lib/btc';
 import { AssetDefines } from '../../lib/asset_defines';
 import { v4 as uuidV4 } from 'uuid';
 import {
@@ -18,8 +16,12 @@ import {
   CMD_GENERATE_UUID,
   CMD_CAMERA_SNAPSHOT
 } from '../../lib/command_defines';
+import { HandlerDeviceSwitchBase } from './handler_deviceswitch';
+import { HandlerBroadcast } from './handler_broadcast';
+import { HandlerBTCPrice } from './handler_btcprice';
+import { HandlerUUID } from './handler_uuid';
 
-module.exports = class HandlerBroadcast extends HandlerBase {
+export class HandlerMenu extends HandlerBase {
   constructor(args) {
     super(args);
     const { botInstance } = args;
@@ -47,9 +49,7 @@ module.exports = class HandlerBroadcast extends HandlerBase {
         break;
       }
       case CMD_BROADCAST_MESSAGE: {
-        const messageIndex = parseInt(data.message);
-        const message = this.broadcastMessages[messageIndex];
-        this.assistantBroadcast(message);
+        this.handleBroadcastMessage(context);
         break;
       }
       case CMD_DEVICES: {
@@ -125,6 +125,16 @@ module.exports = class HandlerBroadcast extends HandlerBase {
       inline_keyboard: buttonList
     };
     this.editMarkupMessage({ context, replyMarkup });
+  }
+
+  async handleBroadcastMessage(context) {
+    const data = JSON.parse(context.data);
+    const messageIndex = parseInt(data.message);
+    const message = this.broadcastMessages[messageIndex];
+    const broadcastHandler = new HandlerBroadcast({
+      botInstance: this.botInstance
+    });
+    await broadcastHandler.broadcastMessage(context, message);
   }
 
   async handleDeviceList(context) {
@@ -216,35 +226,25 @@ module.exports = class HandlerBroadcast extends HandlerBase {
     const data = JSON.parse(context.data);
     const deviceIndex = parseInt(data.device);
     const device = this.devices[deviceIndex];
-    if (!this.validateEnable(context)) {
-      return;
-    }
-    let reply = `${
-      AssetDefines.okHandIcon
-    } ${state.toUpperCase()} device ${device}`;
-    this.sendMessage({ context, msg: reply });
-    logger.info(reply);
-    let assistantHelper = new GoogleAssistantHelper();
-    assistantHelper.device(state, device);
+
+    const deviceSwitchHandler = new HandlerDeviceSwitchBase({
+      botInstance: this.botInstance
+    });
+    await deviceSwitchHandler.switchDevice(context, state, device);
   }
 
   async handleBTC(context) {
-    const btcLib = new BTCLib();
-    btcLib.getPrices(context, this.sendMessage.bind(this));
+    const btcPriceHandler = new HandlerBTCPrice({
+      botInstance: this.botInstance
+    });
+    await btcPriceHandler.handleMessage(context);
   }
 
   async handleGenerateUUID(context) {
-    let uuid = uuidV4();
-    uuid = uuid.replace(/-/g, '\\-');
-    logger.info(`Generated UUID ${uuid}`);
-    const msg = `\`\`\`${uuid}\`\`\``;
-    logger.info(msg);
-    const opts = {
-      parse_mode: 'MarkdownV2'
-    };
-    this.sendMessage({ context, msg, opts });
-    const link = `[uuidgenerator\\.net](https://www.uuidgenerator.net/)`;
-    this.sendMessage({ context, msg: link, opts });
+    const generateUUIDHandler = new HandlerUUID({
+      botInstance: this.botInstance
+    });
+    await generateUUIDHandler.handleMessage(context);
   }
 
   get mainMenuInlineKeyboard() {
@@ -303,4 +303,6 @@ module.exports = class HandlerBroadcast extends HandlerBase {
     };
     this.sendMessage({ context, msg: `Choose your action:`, opts });
   }
-};
+}
+
+module.exports = HandlerMenu;

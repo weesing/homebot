@@ -1,7 +1,7 @@
 import { HandlerBase } from './handler_base';
 import logger from '../../common/logger';
 
-module.exports = class HandlerHelp extends HandlerBase {
+export class HandlerHelp extends HandlerBase {
   constructor(args) {
     super(args);
   }
@@ -20,3 +20,5 @@ module.exports = class HandlerHelp extends HandlerBase {
     this.sendMessage({ context, msg: helpString });
   }
 };
+
+module.exports = HandlerHelp;
