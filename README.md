@@ -25,6 +25,7 @@ HomeBot is a NodeJS based Telegram Bot that allows broadcasting of messages thro
 ### Before you begin
 - Ensure you have Docker installed.
   - Please refer to https://docker.io for instructions on installing Docker.
+  - If you are running this application in Raspberry Pi, you can utilize the `get-docker.sh` shell script to install Docker on your Pi.
 
 ### Using Dockerfile
 - Execute the following command to build the image:
