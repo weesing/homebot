@@ -7,8 +7,8 @@ export class HandlerDeviceOn extends HandlerDeviceSwitchBase {
 
   async handleMessage(context) {
     let device = this.extractCommandArguments(context, '/deviceon');
-    return await super.handleMessage(context, 'Activate', device);
+    return await this.switchDevice(context, 'Activate', device);
   }
-};
+}
 
 module.exports = HandlerDeviceOn;

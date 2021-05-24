@@ -230,7 +230,7 @@ export class HandlerMenu extends HandlerBase {
     const deviceSwitchHandler = new HandlerDeviceSwitchBase({
       botInstance: this.botInstance
     });
-    await deviceSwitchHandler.handleMessage(context, state, device);
+    await deviceSwitchHandler.switchDevice(context, state, device);
   }
 
   async handleBTC(context) {
@@ -241,8 +241,10 @@ export class HandlerMenu extends HandlerBase {
   }
 
   async handleGenerateUUID(context) {
-    const handlerUUID = new HandlerUUID({ botInstance: this.botInstance });
-    await handlerUUID.handleMessage(context);
+    const generateUUIDHandler = new HandlerUUID({
+      botInstance: this.botInstance
+    });
+    await generateUUIDHandler.handleMessage(context);
   }
 
   get mainMenuInlineKeyboard() {
