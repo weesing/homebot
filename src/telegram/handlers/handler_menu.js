@@ -5,6 +5,7 @@ import { cfg } from '../../configLoader';
 import { GoogleAssistantHelper } from '../../googleassistant/assistantHelper';
 import { BTCLib } from '../../lib/btc';
 import { AssetDefines } from '../../lib/asset_defines';
+import { v4 as uuidV4 } from 'uuid';
 
 module.exports = class HandlerBroadcast extends HandlerBase {
   constructor(args) {
@@ -57,6 +58,10 @@ module.exports = class HandlerBroadcast extends HandlerBase {
       }
       case `btc`: {
         this.handleBTC(context);
+        break;
+      }
+      case 'generate_uuid': {
+        this.handleGenerateUUID(context);
         break;
       }
       case `back_main`: {
@@ -216,53 +221,73 @@ module.exports = class HandlerBroadcast extends HandlerBase {
     btcLib.getPrices(context, this.sendMessage.bind(this));
   }
 
+  async handleGenerateUUID(context) {
+    let uuid = uuidV4();
+    uuid = uuid.replace(/-/g, '\\-');
+    logger.info(`Generated UUID ${uuid}`);
+    const msg = `\`\`\`${uuid}\`\`\``;
+    logger.info(msg);
+    const opts = {
+      parse_mode: 'MarkdownV2'
+    };
+    this.sendMessage({ context, msg, opts });
+    const link = `[uuidgenerator\\.net](https://www.uuidgenerator.net/)`;
+    this.sendMessage({ context, msg: link, opts });
+  }
+
   get mainMenuInlineKeyboard() {
-    return [
-      [
-        {
-          text: `${AssetDefines.broadcastIcon} Broadcast message`,
-          callback_data: JSON.stringify({
-            command: `broadcast`
-          })
-        },
-        {
-          text: `${AssetDefines.controlDevicesIcon} Control Devices`,
-          callback_data: JSON.stringify({
-            command: `devices`
-          })
-        }
-      ],
-      [
-        {
-          text: `${AssetDefines.cameraSnapshotIcon} Camera Snapshot [ WIP ]`,
-          callback_data: JSON.stringify({
-            command: `camera_snapshot`
-          })
-        },
-        {
-          text: `${AssetDefines.bitcoinIcon} Bitcoin Prices`,
-          callback_data: JSON.stringify({
-            command: `btc`
-          })
-        }
+    return JSON.stringify({
+      inline_keyboard: [
+        [
+          {
+            text: `${AssetDefines.broadcastIcon} Broadcast message`,
+            callback_data: JSON.stringify({
+              command: `broadcast`
+            })
+          }
+        ],
+        [
+          {
+            text: `${AssetDefines.controlDevicesIcon} Control Devices`,
+            callback_data: JSON.stringify({
+              command: `devices`
+            })
+          }
+        ],
+        [
+          {
+            text: `${AssetDefines.cameraSnapshotIcon} Camera Snapshot [ WIP ]`,
+            callback_data: JSON.stringify({
+              command: `camera_snapshot`
+            })
+          }
+        ],
+        [
+          {
+            text: `${AssetDefines.bitcoinIcon} Bitcoin Prices`,
+            callback_data: JSON.stringify({
+              command: `btc`
+            })
+          },
+          {
+            text: `${AssetDefines.uuidIcon} Generate UUID`,
+            callback_data: JSON.stringify({
+              command: 'generate_uuid'
+            })
+          }
+        ]
       ]
-    ];
+    });
   }
 
   async backToMainMenu(context) {
-    var replyMarkup = JSON.stringify({
-      inline_keyboard: this.mainMenuInlineKeyboard,
-      resize_keyboard: true
-    });
+    var replyMarkup = this.mainMenuInlineKeyboard;
     this.editMarkupMessage({ context, replyMarkup });
   }
 
   async handleMessage(context) {
     var opts = {
-      reply_markup: JSON.stringify({
-        inline_keyboard: this.mainMenuInlineKeyboard,
-        resize_keyboard: true
-      })
+      reply_markup: this.mainMenuInlineKeyboard
     };
     this.sendMessage({ context, msg: `Choose your action:`, opts });
   }
