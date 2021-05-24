@@ -2,7 +2,6 @@ import _ from 'lodash';
 import { HandlerBase } from './handler_base';
 import logger from '../../common/logger';
 import { cfg } from '../../configLoader';
-import { GoogleAssistantHelper } from '../../googleassistant/assistantHelper';
 import { BTCLib } from '../../lib/btc';
 import { AssetDefines } from '../../lib/asset_defines';
 import { v4 as uuidV4 } from 'uuid';
@@ -19,8 +18,9 @@ import {
   CMD_CAMERA_SNAPSHOT
 } from '../../lib/command_defines';
 import { HandlerDeviceSwitchBase } from './handler_deviceswitch';
+import { HandlerBroadcast } from './handler_broadcast';
 
-module.exports = class HandlerBroadcast extends HandlerBase {
+export class HandlerMenu extends HandlerBase {
   constructor(args) {
     super(args);
     const { botInstance } = args;
@@ -48,9 +48,7 @@ module.exports = class HandlerBroadcast extends HandlerBase {
         break;
       }
       case CMD_BROADCAST_MESSAGE: {
-        const messageIndex = parseInt(data.message);
-        const message = this.broadcastMessages[messageIndex];
-        this.assistantBroadcast(message);
+        this.handleBroadcastMessage(context);
         break;
       }
       case CMD_DEVICES: {
@@ -126,6 +124,16 @@ module.exports = class HandlerBroadcast extends HandlerBase {
       inline_keyboard: buttonList
     };
     this.editMarkupMessage({ context, replyMarkup });
+  }
+
+  async handleBroadcastMessage(context) {
+    const data = JSON.parse(context.data);
+    const messageIndex = parseInt(data.message);
+    const message = this.broadcastMessages[messageIndex];
+    const broadcastHandler = new HandlerBroadcast({
+      botInstance: this.botInstance
+    });
+    await broadcastHandler.broadcastMessage(context, message);
   }
 
   async handleDeviceList(context) {
@@ -300,3 +308,5 @@ module.exports = class HandlerBroadcast extends HandlerBase {
     this.sendMessage({ context, msg: `Choose your action:`, opts });
   }
 };
+
+module.exports = HandlerMenu;

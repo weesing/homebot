@@ -1,19 +1,25 @@
 import { HandlerBase } from './handler_base';
 import logger from '../../common/logger';
 
-module.exports = class HandlerBroadcast extends HandlerBase {
+export class HandlerBroadcast extends HandlerBase {
+  async broadcastMessage(context, broadcastMessage) {
+    if (!this.validateEnable(context)) {
+      return;
+    }
+    this.sendMessage({
+      context,
+      msg: `Broadcasting ${broadcastMessage} on Google Home Minis`
+    });
+    logger.info(`Handling broadcasting message '${broadcastMessage}'`);
+    this.assistantBroadcast(broadcastMessage);
+  }
+
   async handleMessage(context) {
-    let cmdArgs = this.extractCommandArguments(context, '/broadcast');
-    if (cmdArgs.length > 0) {
-      if (!this.validateEnable(context)) {
-        return;
-      }
-      this.sendMessage({
-        context,
-        msg: `Broadcasting ${cmdArgs} on Google Home Minis`
-      });
-      logger.info(`Handling broadcasting message '${cmdArgs}'`);
-      this.assistantBroadcast(cmdArgs);
+    let broadcastMessage = this.extractCommandArguments(context, '/broadcast');
+    if (broadcastMessage.length > 0) {
+      await this.broadcastMessage(context, broadcastMessage);
     }
   }
 };
+
+module.exports = HandlerBroadcast;

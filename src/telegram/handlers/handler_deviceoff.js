@@ -1,6 +1,6 @@
 import { HandlerDeviceSwitchBase } from './handler_deviceswitch';
 
-module.exports = class HandlerDeviceOff extends HandlerDeviceSwitchBase {
+export class HandlerDeviceOff extends HandlerDeviceSwitchBase {
   constructor(args) {
     super(args);
   }
@@ -10,3 +10,5 @@ module.exports = class HandlerDeviceOff extends HandlerDeviceSwitchBase {
     return await super.handleMessage(context, 'Deactivate', cmdArgs);
   }
 };
+
+module.exports = HandlerDeviceOff;
