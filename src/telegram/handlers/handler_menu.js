@@ -6,6 +6,18 @@ import { GoogleAssistantHelper } from '../../googleassistant/assistantHelper';
 import { BTCLib } from '../../lib/btc';
 import { AssetDefines } from '../../lib/asset_defines';
 import { v4 as uuidV4 } from 'uuid';
+import {
+  CMD_BACK_TO_MAIN,
+  CMD_BROADCAST,
+  CMD_BROADCAST_MESSAGE,
+  CMD_BTC,
+  CMD_DEVICES,
+  CMD_DEVICE_CONTROL,
+  CMD_DEVICE_OFF,
+  CMD_DEVICE_ON,
+  CMD_GENERATE_UUID,
+  CMD_CAMERA_SNAPSHOT
+} from '../../lib/command_defines';
 
 module.exports = class HandlerBroadcast extends HandlerBase {
   constructor(args) {
@@ -30,41 +42,41 @@ module.exports = class HandlerBroadcast extends HandlerBase {
     const command = data.command;
     logger.info(`Processing command ${command}`);
     switch (command) {
-      case `broadcast`: {
+      case CMD_BROADCAST: {
         this.handleBroadcast(context);
         break;
       }
-      case `broadcast_message`: {
+      case CMD_BROADCAST_MESSAGE: {
         const messageIndex = parseInt(data.message);
         const message = this.broadcastMessages[messageIndex];
         this.assistantBroadcast(message);
         break;
       }
-      case `devices`: {
+      case CMD_DEVICES: {
         this.handleDeviceList(context);
         break;
       }
-      case `device_control`: {
+      case CMD_DEVICE_CONTROL: {
         this.handleDeviceControl(context);
         break;
       }
-      case `device_on`: {
+      case CMD_DEVICE_ON: {
         this.handleDeviceSwitch(context, 'activate');
         break;
       }
-      case `device_off`: {
+      case CMD_DEVICE_OFF: {
         this.handleDeviceSwitch(context, 'deactivate');
         break;
       }
-      case `btc`: {
+      case CMD_BTC: {
         this.handleBTC(context);
         break;
       }
-      case 'generate_uuid': {
+      case CMD_GENERATE_UUID: {
         this.handleGenerateUUID(context);
         break;
       }
-      case `back_main`: {
+      case CMD_BACK_TO_MAIN: {
         this.handleBackToMain(context);
         break;
       }
@@ -90,7 +102,7 @@ module.exports = class HandlerBroadcast extends HandlerBase {
     var buttonList = [];
     for (const [i, message] of this.broadcastMessages.entries()) {
       const buttonCallbackData = {
-        command: `broadcast_message`,
+        command: CMD_BROADCAST_MESSAGE,
         message: i
       };
       buttonList.push([
@@ -104,7 +116,7 @@ module.exports = class HandlerBroadcast extends HandlerBase {
       {
         text: `${AssetDefines.backIcon} Back`,
         callback_data: JSON.stringify({
-          command: `back_main`
+          command: CMD_BACK_TO_MAIN
         })
       }
     ]);
@@ -120,7 +132,7 @@ module.exports = class HandlerBroadcast extends HandlerBase {
     var buttonList = [];
     for (const [i, message] of this.devices.entries()) {
       const buttonCallbackData = {
-        command: `device_control`,
+        command: CMD_DEVICE_CONTROL,
         device: i
       };
       buttonList.push([
@@ -134,7 +146,7 @@ module.exports = class HandlerBroadcast extends HandlerBase {
       {
         text: `${AssetDefines.backIcon} Back`,
         callback_data: JSON.stringify({
-          command: `back_main`
+          command: CMD_BACK_TO_MAIN
         })
       }
     ]);
@@ -165,7 +177,7 @@ module.exports = class HandlerBroadcast extends HandlerBase {
         {
           text: `${AssetDefines.deviceOnIcon} On`,
           callback_data: JSON.stringify({
-            command: `device_on`,
+            command: CMD_DEVICE_ON,
             device: deviceIndex
           })
         }
@@ -174,7 +186,7 @@ module.exports = class HandlerBroadcast extends HandlerBase {
         {
           text: `${AssetDefines.deviceOffIcon} Off`,
           callback_data: JSON.stringify({
-            command: `device_off`,
+            command: CMD_DEVICE_OFF,
             device: deviceIndex
           })
         }
@@ -183,13 +195,13 @@ module.exports = class HandlerBroadcast extends HandlerBase {
         {
           text: `${AssetDefines.backIcon} Back`,
           callback_data: JSON.stringify({
-            command: `devices`
+            command: CMD_DEVICES
           })
         },
         {
           text: `${AssetDefines.upIcon} Back to main`,
           callback_data: JSON.stringify({
-            command: `back_main`
+            command: CMD_BACK_TO_MAIN
           })
         }
       ]
@@ -242,7 +254,7 @@ module.exports = class HandlerBroadcast extends HandlerBase {
           {
             text: `${AssetDefines.broadcastIcon} Broadcast message`,
             callback_data: JSON.stringify({
-              command: `broadcast`
+              command: CMD_BROADCAST
             })
           }
         ],
@@ -250,7 +262,7 @@ module.exports = class HandlerBroadcast extends HandlerBase {
           {
             text: `${AssetDefines.controlDevicesIcon} Control Devices`,
             callback_data: JSON.stringify({
-              command: `devices`
+              command: CMD_DEVICES
             })
           }
         ],
@@ -258,7 +270,7 @@ module.exports = class HandlerBroadcast extends HandlerBase {
           {
             text: `${AssetDefines.cameraSnapshotIcon} Camera Snapshot [ WIP ]`,
             callback_data: JSON.stringify({
-              command: `camera_snapshot`
+              command: CMD_CAMERA_SNAPSHOT
             })
           }
         ],
@@ -266,13 +278,13 @@ module.exports = class HandlerBroadcast extends HandlerBase {
           {
             text: `${AssetDefines.bitcoinIcon} Bitcoin Prices`,
             callback_data: JSON.stringify({
-              command: `btc`
+              command: CMD_BTC
             })
           },
           {
             text: `${AssetDefines.uuidIcon} Generate UUID`,
             callback_data: JSON.stringify({
-              command: 'generate_uuid'
+              command: CMD_GENERATE_UUID
             })
           }
         ]
