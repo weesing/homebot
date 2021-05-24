@@ -1,5 +1,6 @@
 import { GoogleAssistantHelper } from "../../googleassistant/assistantHelper";
 import { HandlerBase } from "./handler_base";
+import { AssetDefines } from '../../lib/asset_defines';
 import logger from '../../common/logger';
 
 export class HandlerDeviceSwitchBase extends HandlerBase {
@@ -7,16 +8,16 @@ export class HandlerDeviceSwitchBase extends HandlerBase {
     super(args);
   }
 
-  async handleMessage(context, command, cmdArgs) {
-    if (cmdArgs.length > 0) {
+  async handleMessage(context, command, device) {
+    if (device.length > 0) {
       if (!this.validateEnable(context)) {
         return;
       }
-      let reply = `${AssetDefines.okHandIcon} ${command.toUpperCase()} device ${cmdArgs}`;
+      let reply = `${AssetDefines.okHandIcon} ${command.toUpperCase()} device ${device}`;
       this.sendMessage({ context, msg: reply });
       logger.info(reply);
       let assistantHelper = new GoogleAssistantHelper();
-      assistantHelper.device(command, cmdArgs);
+      assistantHelper.device(command, device);
     }
   }
 }

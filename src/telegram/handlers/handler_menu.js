@@ -18,6 +18,7 @@ import {
   CMD_GENERATE_UUID,
   CMD_CAMERA_SNAPSHOT
 } from '../../lib/command_defines';
+import { HandlerDeviceSwitchBase } from './handler_deviceswitch';
 
 module.exports = class HandlerBroadcast extends HandlerBase {
   constructor(args) {
@@ -216,16 +217,11 @@ module.exports = class HandlerBroadcast extends HandlerBase {
     const data = JSON.parse(context.data);
     const deviceIndex = parseInt(data.device);
     const device = this.devices[deviceIndex];
-    if (!this.validateEnable(context)) {
-      return;
-    }
-    let reply = `${
-      AssetDefines.okHandIcon
-    } ${state.toUpperCase()} device ${device}`;
-    this.sendMessage({ context, msg: reply });
-    logger.info(reply);
-    let assistantHelper = new GoogleAssistantHelper();
-    assistantHelper.device(state, device);
+
+    const deviceSwitchHandler = new HandlerDeviceSwitchBase({
+      botInstance: this.botInstance
+    });
+    await deviceSwitchHandler.handleMessage(context, state, device);
   }
 
   async handleBTC(context) {
