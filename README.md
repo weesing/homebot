@@ -1,7 +1,9 @@
 # What is HomeBot?
 HomeBot is a NodeJS based Telegram Bot that allows broadcasting of messages through Google Home Minis, Control Devices (On/Off), and Camera Snapshot retrieval (WIP).
 
-Last tested on NodeJS version 14
+- This application uses https://github.com/yagop/node-telegram-bot-api library. 
+
+- Last tested on NodeJS version 14
 
 # How to run
 - There are 2 methods to run the application.
