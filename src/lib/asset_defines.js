@@ -34,4 +34,8 @@ export class AssetDefines {
   static get deviceOffIcon() {
     return `\u{1F534}`;
   }
+
+  static get uuidIcon() {
+    return `\u{1F194}`;
+  }
 }
