@@ -56,13 +56,3 @@ router.get('/device', (req, res, next) => {
         message: `${device} ${action.toUpperCase()}`
     });
 });
-
-
-router.get('/off', (req, res, next) => {
-    let device = req.query.device;
-    assistantHelper.off(device);
-    httpHelper.httpResponse({
-        res, 
-        message: `Switching on ${device}`
-    });
-});
