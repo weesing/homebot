@@ -9,6 +9,7 @@
     "constants": {
       "broadcast_messages": [
         "Testing telegram bot",
+        "Please keep your volume down",
         "I'm in a meeting, please keep your volume down",
         "I'm in a meeting, please don't come into the room now",
         "I'm busy at the moment, give me a minute",
