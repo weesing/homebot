@@ -2,7 +2,7 @@ import { CoinDeskLib } from './coin_desk';
 import { AssetDefines } from './asset_defines';
 
 export class BTCLib {
-  async getPrices(context, sendMessage = null) {
+  async getPrices() {
     const coinDeskLib = new CoinDeskLib();
     const currencies = ['USD', 'SGD'];
     const rates = await coinDeskLib.getPrices(currencies);
@@ -17,12 +17,6 @@ export class BTCLib {
 `;
       }
     }
-    if (sendMessage) {
-      const opts = {
-        parse_mode: 'MarkdownV2'
-      };
-      sendMessage({ context, msg, opts });
-    }
-    return rates;
+    return msg;
   }
 }

@@ -2,7 +2,6 @@ import _ from 'lodash';
 import { HandlerBase } from './handler_base';
 import logger from '../../common/logger';
 import { cfg } from '../../configLoader';
-import { BTCLib } from '../../lib/btc';
 import { AssetDefines } from '../../lib/asset_defines';
 import { v4 as uuidV4 } from 'uuid';
 import {
@@ -19,6 +18,7 @@ import {
 } from '../../lib/command_defines';
 import { HandlerDeviceSwitchBase } from './handler_deviceswitch';
 import { HandlerBroadcast } from './handler_broadcast';
+import { HandlerBTCPrice } from './handler_btcprice';
 
 export class HandlerMenu extends HandlerBase {
   constructor(args) {
@@ -233,8 +233,10 @@ export class HandlerMenu extends HandlerBase {
   }
 
   async handleBTC(context) {
-    const btcLib = new BTCLib();
-    btcLib.getPrices(context, this.sendMessage.bind(this));
+    const btcPriceHandler = new HandlerBTCPrice({
+      botInstance: this.botInstance
+    });
+    await btcPriceHandler.handleMessage(context);
   }
 
   async handleGenerateUUID(context) {
@@ -307,6 +309,6 @@ export class HandlerMenu extends HandlerBase {
     };
     this.sendMessage({ context, msg: `Choose your action:`, opts });
   }
-};
+}
 
 module.exports = HandlerMenu;
