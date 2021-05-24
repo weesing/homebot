@@ -1,6 +1,5 @@
 import _ from 'lodash';
 import path from 'path';
-import { TelegramHandlers } from './telegram_handlers';
 import { cfg } from '../configLoader';
 import TelegramBot from 'node-telegram-bot-api';
 import logger from '../common/logger';
@@ -29,9 +28,7 @@ export class BotLogic {
     }
 
     this.initializeTelegramBot();
-    this.initializeHandlers();
     this.initializeEvents();
-    // this.initializeMenu();
 
     this.isInitalized = true;
     logger.info('++++++++ Initialization completed');
@@ -42,10 +39,6 @@ export class BotLogic {
     this.secret = _.get(cfg, `telegram.token`);
     this.bot = new TelegramBot(this.secret, { polling: true });
     logger.info(`  done`);
-  }
-
-  initializeHandlers() {
-    this.handlers = new TelegramHandlers({ botInstance: this.bot });
   }
 
   initializeEvents() {
