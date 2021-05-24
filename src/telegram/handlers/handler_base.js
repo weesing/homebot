@@ -13,11 +13,10 @@ export class HandlerBase {
       throw new Error(`botInstance is required and must be 'TelegramBot' type`);
     }
     this.botInstance = botInstance;
-    this.util = new TelegramUtil();
   }
 
   sendMessage({ context, msg, opts }) {
-    this.util.sendMessage({
+    TelegramUtil.instance.sendMessage({
       bot: this.botInstance,
       context,
       msg,
@@ -26,7 +25,7 @@ export class HandlerBase {
   }
 
   editMarkupMessage({ context, replyMarkup }) {
-    this.util.editMarkupMessage({
+    TelegramUtil.instance.editMarkupMessage({
       bot: this.botInstance,
       context,
       replyMarkup

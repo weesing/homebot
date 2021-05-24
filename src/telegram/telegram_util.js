@@ -2,11 +2,12 @@ import _ from 'lodash';
 import logger from '../common/logger';
 
 export class TelegramUtil {
-  reply(ctx, msg) {
-    ctx.reply(msg).catch((e) => {
-      console.error(util.inspect(e), `Error caught!`);
-    });
-    return;
+  static get instance() {
+    if (_.isNil(TelegramUtil._instance)) {
+      TelegramUtil._instance = new TelegramUtil();
+    }
+
+    return TelegramUtil._instance;
   }
 
   getReplyId(context) {

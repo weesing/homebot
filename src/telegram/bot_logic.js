@@ -1,7 +1,6 @@
 import _ from 'lodash';
 import path from 'path';
 import { TelegramHandlers } from './telegram_handlers';
-import { TelegramUtil } from './telegram_util';
 import { cfg } from '../configLoader';
 import TelegramBot from 'node-telegram-bot-api';
 import logger from '../common/logger';
@@ -20,7 +19,6 @@ export class BotLogic {
 
   constructor() {
     this.initialize();
-    this.util = new TelegramUtil();
   }
 
   initialize() {

@@ -13,7 +13,6 @@ import { BotState } from './bot_state';
 
 export class TelegramHandlers {
   constructor({ botInstance = null }) {
-    this.util = new TelegramUtil();
     if (_.isNil(botInstance) || !(botInstance instanceof TelegramBot)) {
       throw new Error('A bot instance is required');
     }
@@ -21,7 +20,7 @@ export class TelegramHandlers {
   }
 
   sendMessage({ context, msg }) {
-    this.util.sendMessage({
+    TelegramUtil.instance.sendMessage({
       bot: this.botInstance,
       context,
       msg
@@ -39,14 +38,12 @@ export class TelegramHandlers {
   welcome(context) {
     logger.info(`Handling welcome command`);
     let welcomeString = `Welcome!\n\nThis is a private bot. This is not meant for public use, or I will have access to all your messages`;
-    // ctx.reply(welcomeString);
     this.sendMessage({ context, msg: welcomeString });
     let helpString = `Available commands:\n`;
     helpString += `/broadcast - Broadcast leading message onto our Home Google Minis (e.g. broadcast wake up everyone)\n`;
     helpString += `/status - Check the status of the bot.\n`;
     helpString += `/enable or /disable - Set the reactions of the bot.\n`;
     helpString += `/deviceon or /deviceoff - Turn devices on/off through Google Assistant.`;
-    // ctx.reply(helpString);
     this.sendMessage({ context, msg: helpString });
   }
 
@@ -72,7 +69,6 @@ export class TelegramHandlers {
 
   validateEnable(context) {
     if (!BotState.getInstance().enabled) {
-      // ctx.reply('Bot is disabled');
       this.sendMessage({ context, msg: `Bot is disabled` });
       return;
     }
@@ -106,7 +102,6 @@ export class TelegramHandlers {
         context,
         msg: `Broadcasting ${cmdArgs} on Google Home Minis`
       });
-      // ctx.reply(`Broadcasting ${cmdArgs} on Google Home Minis`);
       this.assistantBroadcast(cmdArgs);
     }
   }
@@ -127,7 +122,6 @@ export class TelegramHandlers {
         return;
       }
       let reply = `${command} device ${cmdArgs}`;
-      // ctx.reply(reply);
       this.sendMessage({ context, msg: reply });
       logger.info(reply);
       let assistantHelper = new GoogleAssistantHelper();
