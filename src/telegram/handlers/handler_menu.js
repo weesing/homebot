@@ -3,7 +3,6 @@ import { HandlerBase } from './handler_base';
 import logger from '../../common/logger';
 import { cfg } from '../../configLoader';
 import { AssetDefines } from '../../lib/asset_defines';
-import { v4 as uuidV4 } from 'uuid';
 import {
   CMD_BACK_TO_MAIN,
   CMD_BROADCAST,
