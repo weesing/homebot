@@ -54,4 +54,9 @@ export class TelegramUtil {
       message_id: messageId
     });
   }
+
+  async sendPhoto({ bot, context, caption, imagePath }) {
+    const chatId = this.getReplyId(context);
+    return await bot.sendPhoto(chatId, imagePath);
+  }
 }

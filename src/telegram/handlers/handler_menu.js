@@ -3,7 +3,6 @@ import { HandlerBase } from './handler_base';
 import logger from '../../common/logger';
 import { cfg } from '../../configLoader';
 import { AssetDefines } from '../../lib/asset_defines';
-import { v4 as uuidV4 } from 'uuid';
 import {
   CMD_BACK_TO_MAIN,
   CMD_BROADCAST,
@@ -20,6 +19,7 @@ import { HandlerDeviceSwitchBase } from './handler_deviceswitch';
 import { HandlerBroadcast } from './handler_broadcast';
 import { HandlerBTCPrice } from './handler_btcprice';
 import { HandlerUUID } from './handler_uuid';
+import { HandlerCameraSnapshot } from './handler_camerasnapshot';
 
 export class HandlerMenu extends HandlerBase {
   constructor(args) {
@@ -74,6 +74,10 @@ export class HandlerMenu extends HandlerBase {
       }
       case CMD_GENERATE_UUID: {
         this.handleGenerateUUID(context);
+        break;
+      }
+      case CMD_CAMERA_SNAPSHOT: {
+        this.handleCameraSnapshot(context);
         break;
       }
       case CMD_BACK_TO_MAIN: {
@@ -233,6 +237,13 @@ export class HandlerMenu extends HandlerBase {
     await deviceSwitchHandler.switchDevice(context, state, device);
   }
 
+  async handleCameraSnapshot(context) {
+    const handlerCameraSnapshot = new HandlerCameraSnapshot({
+      botInstance: this.botInstance
+    });
+    await handlerCameraSnapshot.handleMessage(context);
+  }
+
   async handleBTC(context) {
     const btcPriceHandler = new HandlerBTCPrice({
       botInstance: this.botInstance
@@ -268,7 +279,7 @@ export class HandlerMenu extends HandlerBase {
         ],
         [
           {
-            text: `${AssetDefines.cameraSnapshotIcon} Camera Snapshot [ WIP ]`,
+            text: `${AssetDefines.cameraSnapshotIcon} Camera Snapshot`,
             callback_data: JSON.stringify({
               command: CMD_CAMERA_SNAPSHOT
             })
