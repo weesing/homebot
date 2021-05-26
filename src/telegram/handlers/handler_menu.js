@@ -19,6 +19,7 @@ import { HandlerDeviceSwitchBase } from './handler_deviceswitch';
 import { HandlerBroadcast } from './handler_broadcast';
 import { HandlerBTCPrice } from './handler_btcprice';
 import { HandlerUUID } from './handler_uuid';
+import { HandlerCameraSnapshot } from './handler_camerasnapshot';
 
 export class HandlerMenu extends HandlerBase {
   constructor(args) {
@@ -73,6 +74,10 @@ export class HandlerMenu extends HandlerBase {
       }
       case CMD_GENERATE_UUID: {
         this.handleGenerateUUID(context);
+        break;
+      }
+      case CMD_CAMERA_SNAPSHOT: {
+        this.handleCameraSnapshot(context);
         break;
       }
       case CMD_BACK_TO_MAIN: {
@@ -230,6 +235,13 @@ export class HandlerMenu extends HandlerBase {
       botInstance: this.botInstance
     });
     await deviceSwitchHandler.switchDevice(context, state, device);
+  }
+
+  async handleCameraSnapshot(context) {
+    const handlerCameraSnapshot = new HandlerCameraSnapshot({
+      botInstance: this.botInstance
+    });
+    await handlerCameraSnapshot.handleMessage(context);
   }
 
   async handleBTC(context) {
