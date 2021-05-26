@@ -279,7 +279,7 @@ export class HandlerMenu extends HandlerBase {
         ],
         [
           {
-            text: `${AssetDefines.cameraSnapshotIcon} Camera Snapshot [ WIP ]`,
+            text: `${AssetDefines.cameraSnapshotIcon} Camera Snapshot`,
             callback_data: JSON.stringify({
               command: CMD_CAMERA_SNAPSHOT
             })
