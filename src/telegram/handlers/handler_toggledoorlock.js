@@ -17,7 +17,9 @@ export class HandlerToggleDoorlock extends HandlerBase {
       null,
       { headers: { api_key: apiKey } }
     );
-    return;
+    const status = _.get(response, `data.status`);
+    await this.sendMessage({ context, msg: `Door is now ${status}` });
+    return status;
   }
 
   async handleMessage(context) {
