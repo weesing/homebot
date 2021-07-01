@@ -243,7 +243,10 @@ export class HandlerMenu extends HandlerBase {
   }
 
   async handleToggleDoorlock(context) {
-
+    const handlerToggleDoorlock = new handlerToggleDoorlock({
+      botInstance: this.botInstance
+    });
+    await handlerToggleDoorlock.handleMessage(context);
   }
 
   async handleCameraSnapshot(context) {
@@ -301,7 +304,8 @@ export class HandlerMenu extends HandlerBase {
               command: CMD_TOGGLE_DOORLOCK
             })
           }
-        ][
+        ],
+        [
           ({
             text: `${AssetDefines.bitcoinIcon} Bitcoin Prices`,
             callback_data: JSON.stringify({
