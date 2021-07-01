@@ -5,6 +5,11 @@
     "path": "/webcam/?action=snapshot",
     "download_path": "./snapshots/"
   },
+  "doorlock": {
+    "protocol": "http",
+    "url": "192.168.1.252",
+    "api_path": "/lock/"
+  },
   "telegram": {
     "constants": {
       "broadcast_messages": [

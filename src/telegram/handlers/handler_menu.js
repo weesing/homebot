@@ -13,7 +13,8 @@ import {
   CMD_DEVICE_OFF,
   CMD_DEVICE_ON,
   CMD_GENERATE_UUID,
-  CMD_CAMERA_SNAPSHOT
+  CMD_CAMERA_SNAPSHOT,
+  CMD_TOGGLE_DOORLOCK
 } from '../../lib/command_defines';
 import { HandlerDeviceSwitchBase } from './handler_deviceswitch';
 import { HandlerBroadcast } from './handler_broadcast';
@@ -78,6 +79,10 @@ export class HandlerMenu extends HandlerBase {
       }
       case CMD_CAMERA_SNAPSHOT: {
         this.handleCameraSnapshot(context);
+        break;
+      }
+      case CMD_TOGGLE_DOORLOCK: {
+        this.handleToggleDoorlock(context);
         break;
       }
       case CMD_BACK_TO_MAIN: {
@@ -237,6 +242,10 @@ export class HandlerMenu extends HandlerBase {
     await deviceSwitchHandler.switchDevice(context, state, device);
   }
 
+  async handleToggleDoorlock(context) {
+
+  }
+
   async handleCameraSnapshot(context) {
     const handlerCameraSnapshot = new HandlerCameraSnapshot({
       botInstance: this.botInstance
@@ -287,6 +296,13 @@ export class HandlerMenu extends HandlerBase {
         ],
         [
           {
+            text: `Toggle Doorlock`,
+            callback_data: JSON.stringify({
+              command: CMD_TOGGLE_DOORLOCK
+            })
+          }
+        ][
+          ({
             text: `${AssetDefines.bitcoinIcon} Bitcoin Prices`,
             callback_data: JSON.stringify({
               command: CMD_BTC
@@ -297,7 +313,7 @@ export class HandlerMenu extends HandlerBase {
             callback_data: JSON.stringify({
               command: CMD_GENERATE_UUID
             })
-          }
+          })
         ]
       ]
     });
