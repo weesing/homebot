@@ -17,7 +17,6 @@ export class HandlerDoorlockReboot extends HandlerBase {
       { headers: { api_key: apiKey } }
     );
     await this.sendMessage({ context, msg: `Door Lock rebooted` });
-    return status;
   }
 
   async handleMessage(context) {
