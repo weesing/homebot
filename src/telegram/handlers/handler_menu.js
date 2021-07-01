@@ -21,6 +21,7 @@ import { HandlerBroadcast } from './handler_broadcast';
 import { HandlerBTCPrice } from './handler_btcprice';
 import { HandlerUUID } from './handler_uuid';
 import { HandlerCameraSnapshot } from './handler_camerasnapshot';
+import { HandlerToggleDoorlock } from './handler_toggledoorlock';
 
 export class HandlerMenu extends HandlerBase {
   constructor(args) {
@@ -243,7 +244,7 @@ export class HandlerMenu extends HandlerBase {
   }
 
   async handleToggleDoorlock(context) {
-    const handlerToggleDoorlock = new handlerToggleDoorlock({
+    const handlerToggleDoorlock = new HandlerToggleDoorlock({
       botInstance: this.botInstance
     });
     await handlerToggleDoorlock.handleMessage(context);
