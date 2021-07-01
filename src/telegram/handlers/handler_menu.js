@@ -307,7 +307,7 @@ export class HandlerMenu extends HandlerBase {
           }
         ],
         [
-          ({
+          {
             text: `${AssetDefines.bitcoinIcon} Bitcoin Prices`,
             callback_data: JSON.stringify({
               command: CMD_BTC
@@ -318,7 +318,7 @@ export class HandlerMenu extends HandlerBase {
             callback_data: JSON.stringify({
               command: CMD_GENERATE_UUID
             })
-          })
+          }
         ]
       ]
     });
