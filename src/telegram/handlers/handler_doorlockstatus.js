@@ -13,7 +13,6 @@ export class HandlerDoorlockStatus extends HandlerBase {
     const apiKey = _.get(cfg, `doorlock.api_key`);
     const response = await axios.get(
       `${doorlockProtocol}://${doorlockURL}:${doorlockPort}${doorlockAPIPath}`,
-      null,
       { headers: { api_key: apiKey } }
     );
     const status = _.get(response, `data.status`);
