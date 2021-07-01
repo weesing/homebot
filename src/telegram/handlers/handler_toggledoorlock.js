@@ -5,7 +5,7 @@ import axios from 'axios';
 import logger from '../../common/logger';
 
 export class HandlerToggleDoorlock extends HandlerBase {
-  async sendCameraSnapshot(context) {
+  async toggleDoorlock(context) {
     await this.sendMessage({ context, msg: `Toggling Door Lock...` });
     const doorlockProtocol = _.get(cfg, `doorlock.protocol`);
     const doorlockURL = _.get(cfg, `doorlock.url`);
@@ -20,8 +20,8 @@ export class HandlerToggleDoorlock extends HandlerBase {
   }
 
   async handleMessage(context) {
-    return await this.sendCameraSnapshot(context);
+    return await this.toggleDoorlock(context);
   }
 }
 
-module.exports = HandlerCameraSnapshot;
+module.exports = HandlerToggleDoorlock;
