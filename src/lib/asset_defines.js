@@ -38,4 +38,8 @@ export class AssetDefines {
   static get uuidIcon() {
     return `\u{1F194}`;
   }
+
+  static get lockIcon() {
+    return `\u{1F512}`;
+  }
 }

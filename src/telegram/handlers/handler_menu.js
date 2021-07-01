@@ -300,7 +300,7 @@ export class HandlerMenu extends HandlerBase {
         ],
         [
           {
-            text: `Toggle Doorlock`,
+            text: `${AssetDefines.lockIcon} Toggle Doorlock`,
             callback_data: JSON.stringify({
               command: CMD_TOGGLE_DOORLOCK
             })
