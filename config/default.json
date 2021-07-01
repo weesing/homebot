@@ -12,7 +12,8 @@
     "api_path": {
       "lock": "/lock/",
       "status": "/lock/status/",
-      "reboot": "/lock/reboot/"
+      "lock_reboot": "/lock/reboot/",
+      "rfid_reboot": "/rfid/reboot/"
     }
   },
   "telegram": {
