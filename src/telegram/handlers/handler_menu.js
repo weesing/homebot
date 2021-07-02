@@ -14,7 +14,10 @@ import {
   CMD_DEVICE_ON,
   CMD_GENERATE_UUID,
   CMD_CAMERA_SNAPSHOT,
-  CMD_TOGGLE_DOORLOCK
+  CMD_TOGGLE_DOORLOCK,
+  CMD_DOORLOCK_STATUS,
+  CMD_DOORLOCK_REBOOT,
+  CMD_RFID_REBOOT
 } from '../../lib/command_defines';
 import { HandlerDeviceSwitchBase } from './handler_deviceswitch';
 import { HandlerBroadcast } from './handler_broadcast';
@@ -22,6 +25,9 @@ import { HandlerBTCPrice } from './handler_btcprice';
 import { HandlerUUID } from './handler_uuid';
 import { HandlerCameraSnapshot } from './handler_camerasnapshot';
 import { HandlerToggleDoorlock } from './handler_toggledoorlock';
+import { HandlerDoorlockStatus } from './handler_doorlockstatus';
+import { HandlerDoorlockReboot } from './handler_doorlockreboot';
+import { HandlerRFIDReboot } from './handler_rfidreboot';
 
 export class HandlerMenu extends HandlerBase {
   constructor(args) {
@@ -86,6 +92,18 @@ export class HandlerMenu extends HandlerBase {
         this.handleToggleDoorlock(context);
         break;
       }
+      case CMD_DOORLOCK_STATUS: {
+        this.handleDoorlockStatus(context);
+        break;
+      }
+      case CMD_DOORLOCK_REBOOT: {
+        this.handleDoorlockReboot(context);
+        break;
+      }
+      case CMD_RFID_REBOOT: {
+        this.handleRFIDReboot(context);
+        break;
+      }
       case CMD_BACK_TO_MAIN: {
         this.handleBackToMain(context);
         break;
@@ -98,6 +116,7 @@ export class HandlerMenu extends HandlerBase {
       logger.info(`Received callback from menu`);
       logger.info(context);
       this.handleMenuCallback(context);
+      botInstance.answerCallbackQuery(context.id);
     });
   }
 
@@ -250,6 +269,27 @@ export class HandlerMenu extends HandlerBase {
     await handlerToggleDoorlock.handleMessage(context);
   }
 
+  async handleDoorlockStatus(context) {
+    const handlerDoorlockStatus = new HandlerDoorlockStatus({
+      botInstance: this.botInstance
+    });
+    await handlerDoorlockStatus.handleMessage(context);
+  }
+
+  async handleDoorlockReboot(context) {
+    const handlerDoorlockReboot = new HandlerDoorlockReboot({
+      botInstance: this.botInstance
+    });
+    await handlerDoorlockReboot.handleMessage(context);
+  }
+
+  async handleRFIDReboot(context) {
+    const handlerRFIDReboot = new HandlerRFIDReboot({
+      botInstance: this.botInstance
+    });
+    await handlerRFIDReboot.handleMessage(context);
+  }
+
   async handleCameraSnapshot(context) {
     const handlerCameraSnapshot = new HandlerCameraSnapshot({
       botInstance: this.botInstance
@@ -304,10 +344,30 @@ export class HandlerMenu extends HandlerBase {
             callback_data: JSON.stringify({
               command: CMD_TOGGLE_DOORLOCK
             })
+          },
+          {
+            text: `Doorlock Status`,
+            callback_data: JSON.stringify({
+              command: CMD_DOORLOCK_STATUS
+            })
           }
         ],
         [
-          ({
+          {
+            text: `Reboot Doorlock`,
+            callback_data: JSON.stringify({
+              command: CMD_DOORLOCK_REBOOT
+            })
+          },
+          {
+            text: `Reboot RFID`,
+            callback_data: JSON.stringify({
+              command: CMD_RFID_REBOOT
+            })
+          }
+        ],
+        [
+          {
             text: `${AssetDefines.bitcoinIcon} Bitcoin Prices`,
             callback_data: JSON.stringify({
               command: CMD_BTC
@@ -318,7 +378,7 @@ export class HandlerMenu extends HandlerBase {
             callback_data: JSON.stringify({
               command: CMD_GENERATE_UUID
             })
-          })
+          }
         ]
       ]
     });

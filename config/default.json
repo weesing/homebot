@@ -9,7 +9,12 @@
     "protocol": "http",
     "url": "192.168.1.252",
     "port": "8080",
-    "api_path": "/lock/"
+    "api_path": {
+      "lock": "/lock/",
+      "status": "/lock/status/",
+      "lock_reboot": "/lock/reboot/",
+      "rfid_reboot": "/rfid/reboot/"
+    }
   },
   "telegram": {
     "constants": {
