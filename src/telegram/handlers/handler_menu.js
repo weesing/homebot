@@ -116,6 +116,7 @@ export class HandlerMenu extends HandlerBase {
       logger.info(`Received callback from menu`);
       logger.info(context);
       this.handleMenuCallback(context);
+      botInstance.answerCallbackQuery(context.id);
     });
   }
 
