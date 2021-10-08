@@ -17,9 +17,9 @@ export class HandlerSpaceout extends HandlerBase {
     const opts = {
       parse_mode: 'MarkdownV2'
     };
-    msg = msg.replace('-', '\\-');
-    msg = msg.replace('(', '\\(');
-    msg = msg.replace(')', '\\)');
+    msg.replace('-', '\\-');
+    msg.replace('(', '\\(');
+    msg.replace(')', '\\)');
     defaultLogger.info(msg);
     this.sendMessage({ context, msg, opts });
   }
