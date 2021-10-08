@@ -17,19 +17,20 @@ export class HandlerCrowd extends HandlerBase {
     );
     let crowdedStr = ``;
     if (_.isEmpty(crowded)) {
-        crowdedStr = `\u{1F535}  _Everywhere is empty / not opened_`;
+        crowdedStr = `\u{1F7E6}  _Everywhere is empty / not opened_`;
     } else {
         crowdedStr = crowded
           .map(
         (facility) =>
-          `${facility.band > 2 ? '\u{1F534}' : '\u{1F7E0}'}  ${
+          `${facility.band > 2 ? '\u{1F7E5}' : '\u{1F7E7}'}  ${
             facility.band > 2 ? '*' + facility.name + '*' : facility.name
           } (${moment(facility.createdAt).format('hh:mm A')})`
       )
       .toString();
     }
     const opts = {
-      parse_mode: 'MarkdownV2'
+      parse_mode: 'MarkdownV2',
+      disable_web_page_preview: true
     };
     crowdedStr = crowdedStr
       .replace(/\-/g, `\\-`)
@@ -37,7 +38,7 @@ export class HandlerCrowd extends HandlerBase {
       .replace(/\)/g, `\\)`)
       .replace(/\,/g, `\n`);
     defaultLogger.info(crowdedStr);
-    let msg = `${crowdedStr}\n\n[SpaceOut](https://www.spaceout.gov.sg)`;
+    let msg = `${crowdedStr}\n\nData retrieved from \\- [SpaceOut](https://www.spaceout.gov.sg)`;
     this.sendMessage({ context, msg, opts });
   }
 }
