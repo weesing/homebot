@@ -42,4 +42,8 @@ export class AssetDefines {
   static get lockIcon() {
     return `\u{1F512}`;
   }
+
+  static get crowdIcon() {
+    return `\u{1F46B}`;
+  }
 }

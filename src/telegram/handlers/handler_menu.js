@@ -395,7 +395,7 @@ export class HandlerMenu extends HandlerBase {
         ],
         [
           {
-            text: `Crowd Info`,
+            text: `${AssetDefines.crowdIcon} Crowd Info`,
             callback_data: JSON.stringify({
               command: CMD_CROWD
             })
