@@ -13,7 +13,7 @@ export class HandlerCrowd extends HandlerBase {
     let crowdedStr = crowded
       .map(
         (facility) =>
-          `${facility.band > 2 ? '\u{1F7E4}' : '\u{1F7E2}'} ${facility.name} ${facility.band} (${moment(facility.createdAt).format('DD MMM YYYY hh:mm A')})`
+          `${facility.band > 2 ? '\u{1F7E4}' : '\u{1F7E2}'} ${facility.name} (${moment(facility.createdAt).format('DD MMM YYYY hh:mm A')})`
       )
       .toString();
     const opts = {
