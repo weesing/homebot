@@ -3,7 +3,7 @@ import { SpaceoutLib } from '../../lib/spaceout';
 import defaultLogger from '../../common/logger';
 import _ from 'lodash';
 
-export class HandlerSpaceout extends HandlerBase {
+export class HandlerCrowd extends HandlerBase {
   async handleMessage(context) {
     const spaceoutLib = new SpaceoutLib();
     const data = await spaceoutLib.getData();
@@ -29,4 +29,4 @@ export class HandlerSpaceout extends HandlerBase {
   }
 }
 
-module.exports = HandlerSpaceout;
+module.exports = HandlerCrowd;
