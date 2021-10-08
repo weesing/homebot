@@ -1,3 +1,4 @@
+
 import { HandlerBase } from './handler_base';
 import { SpaceoutLib } from '../../lib/spaceout';
 import defaultLogger from '../../common/logger';
@@ -14,19 +15,22 @@ export class HandlerCrowd extends HandlerBase {
       ['band', 'name'],
       ['desc', 'asc']
     );
-    let crowdedStr = crowded
-      .map(
+    let crowdedStr = ``;
+    if (_.isEmpty(crowded)) {
+        crowdedStr = `\u{1F535}  _Everywhere is empty / not opened_`;
+    } else {
+        crowdedStr = crowded
+          .map(
         (facility) =>
-          `${facility.band > 2 ? '\u{1F7E4}' : '\u{1F7E2}'} ${
-            facility.band > 2 ? '**' + facility.name + '**' : facility.name
+          `${facility.band > 2 ? '\u{1F534}' : '\u{1F7E0}'}  ${
+            facility.band > 2 ? '*' + facility.name + '*' : facility.name
           } (${moment(facility.createdAt).format('hh:mm A')})`
       )
       .toString();
+    }
     const opts = {
       parse_mode: 'MarkdownV2'
     };
-    defaultLogger.info(crowdedStr);
-    defaultLogger.info(typeof crowdedStr);
     crowdedStr = crowdedStr
       .replace(/\-/g, `\\-`)
       .replace(/\(/g, `\\(`)
