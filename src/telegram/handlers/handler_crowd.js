@@ -9,7 +9,7 @@ export class HandlerCrowd extends HandlerBase {
     const spaceoutLib = new SpaceoutLib();
     const data = await spaceoutLib.getData();
 
-    const crowded = data.filter((facility) => facility.band > 1);
+    var crowded = _.orderBy(data.filter((facility) => facility.band > 1), ['band', 'name'], ['desc', 'asc']);
     let crowdedStr = crowded
       .map(
         (facility) =>
