@@ -3,3669 +3,3669 @@
     "facilities": [
       {
         "id": "475",
+        "name": "FairPrice - Potong Pasir CC",
         "band": 0,
-        "createdAt": "30 June 2021, 06:36 PM",
-        "trend": false
+        "createdAt": "30 June 2021, 06:36 PM"
       },
       {
         "id": null,
+        "name": "FairPrice - RedHill",
         "band": -2,
-        "createdAt": "01 October 2021, 03:01 AM",
-        "trend": false
+        "createdAt": "01 October 2021, 03:01 AM"
       },
       {
         "id": "5306bba5054dfe883018941f",
-        "band": -2,
-        "createdAt": "08 October 2021, 08:00 AM",
-        "trend": false
+        "name": "Sentosa Cablecar Station",
+        "band": 0,
+        "createdAt": "08 October 2021, 10:00 AM"
       },
       {
         "id": "15A20099-D9E0-48F1-BE36-47A07E84A0AD",
+        "name": "Coastal PlayGrove",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "A2D4C2C3-326E-44D4-AC43-A2F3F2C2B9FC",
+        "name": "Imbiah Trail",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "81062a08-ed64-4f74-bfd1-d2097013562b",
-        "band": 0,
-        "createdAt": "08 October 2021, 10:19 AM",
-        "trend": false
+        "name": "PRIME Choa Chu Kang 253",
+        "band": 2,
+        "createdAt": "08 October 2021, 11:10 AM"
       },
       {
         "id": "488",
+        "name": "FairPrice - Jalan Bukit Merah",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "fb5c763aee74b727b445f9a9628551f6",
+        "name": "Century Square",
         "band": 0,
-        "createdAt": "08 October 2021, 10:20 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:11 AM"
       },
       {
         "id": "423",
+        "name": "FairPrice - Cambridge",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "00d244f74f19d217b82a11944891cd53",
+        "name": "Shenton Way Post Office",
         "band": 0,
-        "createdAt": "08 October 2021, 08:30 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 08:30 AM"
       },
       {
         "id": "362",
+        "name": "FairPrice Finest - Thomson Plaza",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "@Microsoft.KeyVault(SecretUri=https://uraspaceoutvault.vault.azure.net/secrets/marsiling/)",
+        "name": "21 MARSILING LANE MARSILING WET MARKET",
         "band": -2,
-        "createdAt": "12 August 2021, 04:57 AM",
-        "trend": false
+        "createdAt": "12 August 2021, 04:57 AM"
       },
       {
         "id": "368",
+        "name": "FairPrice - Yung Kuang",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "499",
+        "name": "FairPrice Finest - Yew Tee MRT",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "439",
+        "name": "FairPrice - City Square",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "324",
+        "name": "FairPrice - East Point",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "E5D49D2E-C506-4CD2-B153-D7A03D088065",
+        "name": "Bay East",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "304",
+        "name": "FairPrice - Bukit Batok MRT",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "82246e9b",
+        "name": "Prime Hougang 159A",
         "band": 0,
-        "createdAt": "16 March 2021, 06:30 AM",
-        "trend": false
+        "createdAt": "16 March 2021, 06:30 AM"
       },
       {
         "id": "163d86dc-8793-4c39-93b8-6ef4ab7e00c5",
+        "name": "Dawson Place",
         "band": 2,
-        "createdAt": "01 January 2021, 10:54 AM",
-        "trend": true
+        "createdAt": "01 January 2021, 11:55 AM"
       },
       {
         "id": "8d5e83eb09b9e220febbb3c5b307bb25",
+        "name": "Killiney Road Post Office",
         "band": 0,
-        "createdAt": "08 October 2021, 09:00 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 09:00 AM"
       },
       {
         "id": "C421A36A-9990-4CEB-8F61-222DB4D6B49D",
+        "name": "Car Park A",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "3DBB64CC-B790-4C57-BAB5-E01D3A536AA1",
+        "name": "Water Playground",
         "band": -2,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "B36B3D33-4894-451B-9F99-0E2583FD10ED",
+        "name": "Jurong Lake Gardens - Dog Run",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "MN",
+        "name": null,
         "band": 0,
-        "createdAt": "08 October 2021, 09:59 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 10:59 AM"
       },
       {
         "id": "ff51a8dfa86f98f33014abe6281c96c4",
+        "name": "Woodlands Central Post Office",
         "band": 0,
-        "createdAt": "08 October 2021, 08:30 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 08:30 AM"
       },
       {
         "id": "317",
+        "name": "FairPrice Shop - Toa Payoh 95",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "5a7edeff1e4e8aa9e76f8584b38a590b",
+        "name": "Hougang Mall",
         "band": 0,
-        "createdAt": "08 October 2021, 10:20 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:11 AM"
       },
       {
         "id": "07d2342e-a183-4799-888c-233a12cc4345",
+        "name": "LUCKY PLAZA",
         "band": 0,
-        "createdAt": "08 October 2021, 10:20 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:11 AM"
       },
       {
         "id": "AE100E90-E7E7-4532-B3FE-1E645A805CE6",
+        "name": "Yishun Park",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "LP",
+        "name": null,
         "band": 0,
-        "createdAt": "08 October 2021, 09:59 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 10:59 AM"
       },
       {
         "id": "411A2511-EF0F-4103-8FD8-0EB52194D433",
+        "name": "Punggol Waterway Park (near Carpark B)",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "409",
+        "name": "FairPrice - Depot",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "D4F9F2C1-35F8-4540-A67D-B0835F0DD31B",
+        "name": "MacRitchie Car Park",
         "band": 1,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "3942bf7630701cec024c2a2114fc95ab",
+        "name": "Katong Post Office",
         "band": 0,
-        "createdAt": "08 October 2021, 08:30 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 08:30 AM"
       },
       {
         "id": "3A",
+        "name": null,
         "band": 0,
-        "createdAt": "08 October 2021, 09:59 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 10:59 AM"
       },
       {
         "id": "00784C0D-1B99-49A6-BEF1-E9CA0F8D042B",
+        "name": "Upper Bukit Timah Truss Bridge",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "ca59fc6520002e9dd1a7f8b8d1521587",
-        "band": -2,
-        "createdAt": "07 October 2021, 08:00 PM",
-        "trend": false
+        "name": "Orchard Post Office",
+        "band": 0,
+        "createdAt": "08 October 2021, 10:30 AM"
       },
       {
         "id": "999A3D0C-068E-4582-8F1A-019C2E9D1CC4",
+        "name": "Youth Olympic Park",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "1A",
+        "name": null,
         "band": 0,
-        "createdAt": "08 October 2021, 09:59 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 10:59 AM"
       },
       {
         "id": "288916CD-756B-4402-80BD-DC1FC2E6C5DB",
+        "name": "Punggol Park (Long Shelters)",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "CC",
+        "name": null,
         "band": 0,
-        "createdAt": "08 October 2021, 09:59 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 10:59 AM"
       },
       {
         "id": "6F548293-4A90-460C-8513-698E76154814",
+        "name": "Thomson Nature Park",
         "band": -2,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "f70155483ce246b922a32e9f4a09fd58",
+        "name": "Bukit Panjang Plaza",
         "band": 0,
-        "createdAt": "01 October 2021, 10:00 AM",
-        "trend": true
+        "createdAt": "01 October 2021, 11:00 AM"
       },
       {
         "id": "426",
+        "name": "FairPrice - Jalan Tiga",
         "band": 1,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "ec797b4b0ba33bc75255aa40",
+        "name": "Beach Interchange",
         "band": 0,
-        "createdAt": "08 October 2021, 10:15 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 10:15 AM"
       },
       {
         "id": "235ed05d-ec49-47fc-b7e7-2e34ff07b57d",
+        "name": "WOODLANDS STADIUM",
         "band": 3,
-        "createdAt": "08 October 2021, 10:16 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:03 AM"
       },
       {
         "id": "062868bf-b30b-424f-aa21-8588c302009e",
-        "band": 0,
-        "createdAt": "08 October 2021, 10:15 AM",
-        "trend": false
+        "name": "PRIME Bukit Batok 159",
+        "band": 3,
+        "createdAt": "08 October 2021, 11:09 AM"
       },
       {
         "id": "715b51ddf630f137ac4df35c98fd1a63",
+        "name": "Harbourfront Centre Post Office",
         "band": 0,
-        "createdAt": "08 October 2021, 09:00 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 09:00 AM"
       },
       {
         "id": "B2",
+        "name": null,
         "band": 0,
-        "createdAt": "08 October 2021, 09:59 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 10:59 AM"
       },
       {
         "id": "594",
+        "name": "Tanjong1 Carpark",
         "band": 1,
-        "createdAt": "08 October 2021, 10:20 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:11 AM"
       },
       {
         "id": "5D2FF248-E6FE-4768-A203-407893B184DA",
+        "name": "Kent Ridge Park",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "F6CECC6A-C18F-4F07-94B2-2DF4B97905FA",
+        "name": "Ang Mo Kio Town Garden East",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "a4b4e43593cd6d79a600e857e1ecd024",
+        "name": "Bukit Merah Central Post Office",
         "band": 0,
-        "createdAt": "08 October 2021, 08:30 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 08:30 AM"
       },
       {
         "id": "0FD3BF54-7A28-49FB-A3FD-34BED9FF9C15",
+        "name": "West Coast Park Area 3",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "6B1BE9FF-B825-40B0-BEF5-A6626DF4D6A7",
+        "name": "Yishun Park (Plaza 2)",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "0ab0b9d3339d3cc30a9f5728a94b5c75",
+        "name": "Westgate",
         "band": 0,
-        "createdAt": "01 October 2021, 10:00 AM",
-        "trend": true
+        "createdAt": "01 October 2021, 11:00 AM"
       },
       {
         "id": "313",
+        "name": "FairPrice Finest - Bukit Timah Plaza",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "330",
+        "name": "FairPrice Xtra - VivoCity",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "CF730371-C76C-42C2-B751-46580FC6D231",
+        "name": "Sungei Buloh Wetland Reserve - Wetland Centre",
         "band": -2,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "978bf27460ce10edbb39f2a5a30f82a5",
+        "name": "Bugis +",
         "band": 0,
-        "createdAt": "01 October 2021, 10:00 AM",
-        "trend": true
+        "createdAt": "01 October 2021, 11:00 AM"
       },
       {
         "id": "482",
+        "name": "FairPrice - Seng Kang East",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "DBFB1FE7-425E-4FF2-8C10-1A3E2461F9A7",
+        "name": "Small Dog Run",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "a9c935da55e5c5405717ef6e4e38c023",
+        "name": "White Sands",
         "band": 0,
-        "createdAt": "08 October 2021, 10:20 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:11 AM"
       },
       {
         "id": "69AE0BF5-BA9D-46A3-AFF0-0F73A56DB0B9",
+        "name": "Jurong Lake Gardens - Central Zone",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "5d3db11a-7b84-494a-b7c8-e6405dddf313",
-        "band": 2,
-        "createdAt": "08 October 2021, 10:16 AM",
-        "trend": false
+        "name": "SERANGOON STADIUM",
+        "band": 1,
+        "createdAt": "08 October 2021, 11:09 AM"
       },
       {
         "id": "305",
-        "band": 1,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "name": "FairPrice - Bukit Ho Swee",
+        "band": 0,
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "1A2C3029-4380-4DA7-920E-0CA09364D756",
+        "name": "Car Park B",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "ACF75AE7-FC09-43C6-A3B0-4C86EE81D4E6",
+        "name": "Gardens By The Bay",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "350",
+        "name": "FairPrice Finest - Paya Lebar Quarter",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "93b6b2ea43e71e678811aa48",
+        "name": "Imbiah Station",
         "band": 0,
-        "createdAt": "08 October 2021, 10:15 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 10:15 AM"
       },
       {
         "id": "5F13F0DF-0076-4FB7-94D6-A210FB2DE79B",
+        "name": "Lower Seletar Reservoir Park",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "fbd76accbfda28d3782d962b",
+        "name": "Sentosa Nature Discovery",
         "band": 0,
-        "createdAt": "08 October 2021, 10:15 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 10:15 AM"
       },
       {
         "id": "01efdf08-a7e7-4719-9270-5cfb9ba88901",
+        "name": "TOA PAYOH STADIUM",
         "band": 0,
-        "createdAt": "08 October 2021, 10:07 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 10:59 AM"
       },
       {
         "id": "6ADEB9A9-2D50-4ED1-A3C3-E3B6A3F6DD75",
+        "name": "Woodlands Waterfront Park ",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "@Microsoft.KeyVault(SecretUri=https://uraspaceoutvault.vault.azure.net/secrets/jurong/)",
+        "name": "BLK 505 JURONG WEST ST 52",
         "band": 0,
-        "createdAt": "12 August 2021, 04:54 AM",
-        "trend": false
+        "createdAt": "12 August 2021, 04:54 AM"
       },
       {
         "id": "982A4A0D-36D6-4379-A806-4CAE4B643E40",
+        "name": "Singapore Botanic Gardens - Bukit Timah Eco Lake",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "2640A789-2EAD-4067-AB33-5F322EDBDFA7",
+        "name": "Jurong Lake Gardens - South Zone",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "f67057b29cd0e1b233bd673f",
+        "name": "Merlion Cable Car Station",
         "band": 1,
-        "createdAt": "08 October 2021, 10:15 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 10:15 AM"
       },
       {
         "id": "334",
+        "name": "FairPrice - Jalan Teck Whye A",
         "band": 1,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "9d6eb8b486f50d5144c0f907",
+        "name": "Boardwalk",
         "band": 0,
-        "createdAt": "08 October 2021, 08:00 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 10:00 AM"
       },
       {
         "id": "2a668ef9791ffb744d6a2f51",
+        "name": "Imbiah Lookout Recreation Node",
         "band": 0,
-        "createdAt": "08 October 2021, 08:00 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 10:00 AM"
       },
       {
         "id": "bf40aed317835880f050a6de0eb64c93",
+        "name": "Raffles City",
         "band": 0,
-        "createdAt": "01 October 2021, 10:00 AM",
-        "trend": true
+        "createdAt": "01 October 2021, 11:00 AM"
       },
       {
         "id": "75212e2cf3d6ed220227310f76371122",
+        "name": "The Clementi Mall",
         "band": 0,
-        "createdAt": "08 October 2021, 10:20 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "1882",
+        "name": "Cove Carpark",
         "band": 0,
-        "createdAt": "08 October 2021, 10:20 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:11 AM"
       },
       {
         "id": "476",
+        "name": "FairPrice Xtra - Sports Hub",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "AV",
+        "name": null,
         "band": 0,
-        "createdAt": "08 October 2021, 09:59 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 10:59 AM"
       },
       {
         "id": "419",
+        "name": "FairPrice - Pasir Ris West Plaza",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "81ec53ba-719a-43e3-96f5-2c57319c0894",
+        "name": "YISHUN STADIUM",
         "band": 2,
-        "createdAt": "08 October 2021, 10:17 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:09 AM"
       },
       {
         "id": "c72d97f9",
+        "name": "Prime Woodlands 768",
         "band": 0,
-        "createdAt": "16 March 2021, 07:30 AM",
-        "trend": false
+        "createdAt": "16 March 2021, 07:30 AM"
       },
       {
         "id": "414",
-        "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "name": "FairPrice - Chai Chee",
+        "band": 1,
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "369305ba-5a95-4786-a325-2d92309e85f8",
+        "name": "PLQ MALL (ENTRANCE / EXIT)",
         "band": 0,
-        "createdAt": "08 October 2021, 10:20 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:11 AM"
       },
       {
         "id": "4b58d716da8d05482f179f2cd5e9dd2a",
+        "name": "KINEX",
         "band": 0,
-        "createdAt": "08 October 2021, 10:00 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:00 AM"
       },
       {
         "id": "7E135F02-368D-49F1-A266-43752F59CB68",
+        "name": "Sentosa Boardwalk",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "JT",
+        "name": null,
         "band": 0,
-        "createdAt": "08 October 2021, 09:59 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 10:59 AM"
       },
       {
         "id": "YS",
+        "name": null,
         "band": 0,
-        "createdAt": "08 October 2021, 09:59 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 10:59 AM"
       },
       {
         "id": "354",
+        "name": "FairPrice Finest - Jewel Changi Airport",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "60992CDD-F93E-454E-8CB4-DE8987CDAC12",
+        "name": "Ulu Pandan PC (Clementi Rd to AYE)",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "828B0177-8B62-4A67-BE5D-E286A55F5E77",
+        "name": "Kallang Riverside Park - Kampong Bugis",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "F2B00413-BF21-4505-B355-4EE852308027",
+        "name": "Singapore Botanic Gardens - National Orchid Garden",
         "band": -2,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "005d254d",
+        "name": "Prime Bedok South 18",
         "band": 0,
-        "createdAt": "03 November 2020, 06:59 PM",
-        "trend": false
+        "createdAt": "03 November 2020, 06:59 PM"
       },
       {
         "id": "453",
+        "name": "FairPrice - Punggol Drive",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "JG",
+        "name": null,
         "band": 0,
-        "createdAt": "08 October 2021, 09:59 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 10:59 AM"
       },
       {
         "id": "335",
+        "name": "FairPrice - Jurong West",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "417",
-        "band": 1,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "name": "FairPrice - Siglap New Market",
+        "band": 0,
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "7bdea858-fac1-4433-901b-3f2c9cec77f5",
+        "name": "BISHAN STADIUM",
         "band": 0,
-        "createdAt": "08 October 2021, 10:20 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:05 AM"
       },
       {
         "id": "BK",
+        "name": null,
         "band": 0,
-        "createdAt": "08 October 2021, 09:59 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 10:59 AM"
       },
       {
         "id": "e306c279-51a3-4aae-b993-e56394378b92",
+        "name": "PRIME Buangkok 991",
         "band": 0,
-        "createdAt": "08 October 2021, 10:19 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:07 AM"
       },
       {
         "id": "be97b20e",
+        "name": "Prime Sumang 322",
         "band": 0,
-        "createdAt": "16 March 2021, 07:30 AM",
-        "trend": false
+        "createdAt": "16 March 2021, 07:30 AM"
       },
       {
         "id": "1CA17963-B8CA-4E76-ADD4-9348D7073A00",
+        "name": "Telok Kurau Park",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "feaabfb3-6350-458c-ab2b-25947f94986f",
+        "name": "YIO CHU KANG STADIUM",
         "band": 0,
-        "createdAt": "08 October 2021, 10:11 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 10:58 AM"
       },
       {
         "id": "2247c599f18cb1b45bd2ba7c641eb406",
+        "name": "Toa Payoh Central Post Office",
         "band": 0,
-        "createdAt": "08 October 2021, 08:30 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 08:30 AM"
       },
       {
         "id": "92cb76db-f1f9-4083-ab32-8f6647ba0c16",
+        "name": "Gek Poh Shopping Centre",
         "band": 0,
-        "createdAt": "08 October 2021, 10:19 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:11 AM"
       },
       {
         "id": "da659bee88a136badcd1f4e9",
-        "band": 0,
-        "createdAt": "08 October 2021, 08:00 AM",
-        "trend": false
+        "name": "Siloso Beach",
+        "band": 1,
+        "createdAt": "08 October 2021, 10:00 AM"
       },
       {
         "id": "4B",
+        "name": null,
         "band": 0,
-        "createdAt": "08 October 2021, 09:59 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 10:59 AM"
       },
       {
         "id": "364",
+        "name": "FairPrice - Toa Payoh A",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "bfa6ef6a",
+        "name": "Prime NTU",
         "band": 0,
-        "createdAt": "16 March 2021, 08:00 AM",
-        "trend": false
+        "createdAt": "16 March 2021, 08:00 AM"
       },
       {
         "id": "f3f42e3ef4c1f67b1a06444a04b6d102",
+        "name": "Chinatown Post Office",
         "band": 0,
-        "createdAt": "08 October 2021, 10:01 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 10:01 AM"
       },
       {
         "id": "E787FE80-0073-44E2-A0BF-6A11A5B13D0F",
+        "name": "Fort Siloso",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "adafdc9ac0e5536aa1f55b9026630a4b",
+        "name": "Bedok Point",
         "band": 0,
-        "createdAt": "08 October 2021, 10:20 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:11 AM"
       },
       {
         "id": "471",
+        "name": "FairPrice Finest - Katong Village",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "FF4F2F0F-9CCF-4DA4-B95E-F0956DB46AC8",
+        "name": "Ubin Living Lab",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "bf46bc1919846a9b16177fae93cb7b7e",
+        "name": "IMM",
         "band": 0,
-        "createdAt": "01 October 2021, 10:00 AM",
-        "trend": true
+        "createdAt": "01 October 2021, 11:00 AM"
       },
       {
         "id": "eb61e036-943d-4308-b1ce-822adfb691ee",
+        "name": "OASIS TERRACES",
         "band": 0,
-        "createdAt": "08 October 2021, 10:19 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:11 AM"
       },
       {
         "id": "F4BC18AA-A1DF-4111-AE40-E95D45C79937",
+        "name": "EAST COAST PARK CARPARK B1",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "ce1639b2f17f0a3abebea9e49603fd74",
+        "name": "Guoco Tower",
         "band": 0,
-        "createdAt": "08 October 2021, 09:50 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 09:50 AM"
       },
       {
         "id": "S2",
+        "name": null,
         "band": 0,
-        "createdAt": "08 October 2021, 09:59 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 10:59 AM"
       },
       {
         "id": "FFA71E7C-FC0F-4EE6-8509-9000299949B8",
+        "name": "Bedok Reservoir Park (Hilltop)",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "8A3F0071-BE6F-4BFB-BA9E-3CD18F362E56",
+        "name": "Empress Place - Raffles Landing",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "483",
-        "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "name": "FairPrice - Bukit batok West",
+        "band": 1,
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "401",
-        "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "name": "FairPrice - Ang Mo Kio Ave 10 Blk 453",
+        "band": 1,
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "743c060d-2ad1-4b91-bcad-690814f3b3db",
+        "name": "21 MARSILING LANE MARSILING WET MARKET",
         "band": -2,
-        "createdAt": "26 July 2021, 01:53 PM",
-        "trend": false
+        "createdAt": "26 July 2021, 01:53 PM"
       },
       {
         "id": "YC",
+        "name": null,
         "band": 0,
-        "createdAt": "08 October 2021, 09:59 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 10:59 AM"
       },
       {
         "id": "460",
+        "name": "FairPrice - PSA",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "df20151a6a251811400ca80af7b4e6d0",
+        "name": "Jurong East Post Office",
         "band": 0,
-        "createdAt": "08 October 2021, 10:00 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 10:00 AM"
       },
       {
         "id": "ba282570588c64a2021deb9aa9fbdedb",
+        "name": "Eastpoint Mall",
         "band": 0,
-        "createdAt": "08 October 2021, 10:20 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:11 AM"
       },
       {
         "id": "F6D9BEF8-F5E0-4BA6-AD82-5213959E5D1D",
+        "name": "Floral Walk",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "6227EB49-0253-441A-84C7-FC3B3F089D84",
+        "name": "Clementi Woods Park",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "FAC3D255-D423-4AFF-AFA9-134295C6CD3F",
+        "name": "Jurong Lake Garden - Event Area",
         "band": 2,
-        "createdAt": "01 January 2021, 07:30 PM",
-        "trend": false
+        "createdAt": "01 January 2021, 07:30 PM"
       },
       {
         "id": "90E95A5C-7A03-4FFC-83B8-44B4D654A4E3",
+        "name": "Windsor Nature Park",
         "band": -2,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "64BB860E-9A93-4C76-91C8-F3DEEC2CB5A1",
+        "name": "Chek Jawa Wetlands",
         "band": -2,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "71E07A59-0AD8-4BD3-94A7-2AEA440BA6F1",
+        "name": "West Coast Park Area 1",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "D2C321DC-3726-4655-85FD-2A19C72DC896",
+        "name": "TreeTop Walk",
         "band": -2,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "B35D55E0-D3C0-4D4C-8AC3-4DEF63BFE4D1",
+        "name": "EAST COAST PARK CARPARK D1",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "4S",
+        "name": null,
         "band": 0,
-        "createdAt": "08 October 2021, 09:59 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 10:59 AM"
       },
       {
         "id": "344",
+        "name": "FairPrice - Singpost",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "3049f48eb4c412cf160eafe1442e78fb",
+        "name": "Siglap Post Office",
         "band": 0,
-        "createdAt": "08 October 2021, 08:30 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 08:30 AM"
       },
       {
         "id": "39011655-5917-4EC4-98B3-687ECA908058",
+        "name": "Sembawang Park",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "23j2ku3n490012",
+        "name": "AMK Hub",
         "band": 0,
-        "createdAt": "08 October 2021, 10:20 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "defc3b96e43b4714924b81117d7337f2",
+        "name": "Jurong West Post Office",
         "band": 0,
-        "createdAt": "08 October 2021, 08:30 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 08:30 AM"
       },
       {
         "id": "05451532-A08B-4021-84E5-DD6D1E3400F5",
+        "name": "Rower's Bay",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "f2a2956a-944c-4490-a1e0-b4352b5d16b9",
+        "name": "PRIME Yishun 761",
         "band": 3,
-        "createdAt": "08 October 2021, 10:19 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:11 AM"
       },
       {
         "id": "42C0B74B-1BB7-4540-84AB-79C253C8663E",
+        "name": "Pasir Ris Park Area 3",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "838B4D9F-2A4A-4A18-9597-CF8E4A4552FC",
+        "name": "Pang Sua Park Connector (Choa Chu Kang Way to Choa Chu Kang Link)",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "5fcaa90e22b3d38072537c89df09d9e0",
+        "name": "Changi Airport Terminal 2 Post Office",
         "band": 0,
-        "createdAt": "08 October 2021, 09:00 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 09:00 AM"
       },
       {
         "id": "GL",
+        "name": null,
         "band": 0,
-        "createdAt": "08 October 2021, 09:59 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 10:59 AM"
       },
       {
         "id": "736344a03cc22c02a6037d83",
-        "band": -2,
-        "createdAt": "08 October 2021, 08:00 AM",
-        "trend": false
+        "name": "Mount Faber Cablecar Station",
+        "band": 0,
+        "createdAt": "08 October 2021, 10:00 AM"
       },
       {
         "id": "DB2C43F4-5666-4B34-A35F-4495FDD03EE9",
+        "name": "Fitness Station",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "310",
+        "name": "FairPrice Finest - Bukit Panjang Plaza",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "312",
+        "name": "FairPrice - Bishan A",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "dc77ffba-1f81-4cb8-b7b6-1e80cfae4a28",
-        "band": 0,
-        "createdAt": "08 October 2021, 10:20 AM",
-        "trend": false
+        "name": "PRIME Joo Seng 01",
+        "band": 1,
+        "createdAt": "08 October 2021, 11:11 AM"
       },
       {
         "id": "C1",
+        "name": null,
         "band": 0,
-        "createdAt": "08 October 2021, 09:59 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 10:59 AM"
       },
       {
         "id": "345CB276-7466-403A-888B-BA212815FEB2",
+        "name": "Sembawang Hot Spring Park (Cafe Area)",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "489450F4-56B1-4277-A2DB-749E4966C09B",
+        "name": "MacRitchie Reservoir Park",
         "band": 1,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "E5A50B95-E016-4225-9683-F8EDA1832AF6",
+        "name": "Marine Cove ",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "65BAA551-9B33-4E3A-8784-4F0581F39D21",
+        "name": "Carpark 1",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "427",
+        "name": "FairPrice - Sembawang 355",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "c1980810-36d3-402b-8f09-7287256b8bcd",
+        "name": "PRIME Jurong West 962",
         "band": 3,
-        "createdAt": "08 October 2021, 10:19 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:11 AM"
       },
       {
         "id": "1318384c-2220-4e42-bcbd-7b42f4818e2b",
+        "name": "Parkway Parade",
         "band": 0,
-        "createdAt": "08 October 2021, 10:16 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:09 AM"
       },
       {
         "id": "3dce4a13",
+        "name": "Prime Choa Chu Kang 253",
         "band": 0,
-        "createdAt": "16 March 2021, 06:30 AM",
-        "trend": false
+        "createdAt": "16 March 2021, 06:30 AM"
       },
       {
         "id": "C60A32D8-C422-4B1A-B77F-49980AE76D2A",
+        "name": "Bukit Timah Nature Reserve",
         "band": -2,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "FF9E930C-BB58-40FB-ABF4-E07B4A5C8EA9",
+        "name": "Punggol Waterway Park (near Carpark A)",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "d58b234b3ec217b80616162e",
+        "name": "Beach Interchange",
         "band": 0,
-        "createdAt": "08 October 2021, 10:15 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 10:15 AM"
       },
       {
         "id": "C4",
+        "name": null,
         "band": 0,
-        "createdAt": "08 October 2021, 09:59 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 10:59 AM"
       },
       {
         "id": "4FDE1AD4-1D58-4C36-A66B-6D837DDBE62D",
+        "name": "Yishun Neighbourhood Park",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "450",
+        "name": "FairPrice Finest - Clementi Mall",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "359",
+        "name": "FairPrice - Telok Blangah",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "fbcd4d56-11d2-465c-ba78-6d70f9a4c0d2",
+        "name": "BLK 505 JURONG WEST ST 52",
         "band": 0,
-        "createdAt": "08 October 2021, 10:21 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:11 AM"
       },
       {
         "id": "27131f5d-6178-4e71-bb73-5563cb0b6151",
+        "name": "PRIME Compassvale 263",
         "band": 2,
-        "createdAt": "08 October 2021, 10:18 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:11 AM"
       },
       {
         "id": "7280F004-6BA4-4A2F-92C8-A3EC9BCE3DDE",
+        "name": "Area outside Toilet Block",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "96ab4c4a802bc03328f05bda00ad8a4f",
-        "band": -2,
-        "createdAt": "07 October 2021, 07:00 PM",
-        "trend": false
+        "name": "Punggol Post Office",
+        "band": 0,
+        "createdAt": "08 October 2021, 10:30 AM"
       },
       {
         "id": "828E07FC-31C8-44B8-8E20-6EFEAFBB59DB",
+        "name": "Pavilion",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "D06200BA-E986-4836-8649-B5C89D286D31",
+        "name": "Admiralty Park ",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "fff3c463e57bb368d98fda667193cce6",
-        "band": 0,
-        "createdAt": "01 October 2021, 10:00 AM",
-        "trend": true
+        "name": "Tampines Mall",
+        "band": 1,
+        "createdAt": "01 October 2021, 11:00 AM"
       },
       {
         "id": "d1b42497-8c18-4809-a919-887fa987554d",
+        "name": "PRIME Serangoon 542B",
         "band": 0,
-        "createdAt": "08 October 2021, 10:15 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:11 AM"
       },
       {
         "id": "4506B15F-FCBE-4560-854A-34410D09DFE6",
+        "name": "Bedok Reservoir Park (Carpark B area)",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "07fe4367-196b-4e0e-9f3d-a7ef696eacc1",
+        "name": "CHONG PANG MARKET & FOOD CENTRE",
         "band": 0,
-        "createdAt": "26 July 2021, 01:41 PM",
-        "trend": false
+        "createdAt": "26 July 2021, 01:41 PM"
       },
       {
         "id": "f31273a17ff8b505266c943e8ef29b7d",
+        "name": "SingPost Centre",
         "band": 0,
-        "createdAt": "01 October 2021, 10:00 AM",
-        "trend": true
+        "createdAt": "01 October 2021, 11:00 AM"
       },
       {
         "id": "397",
+        "name": "FairPrice - Toa Payoh HDB Hub",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "54D9895B-4059-47DE-881A-0B02F1BDED79",
+        "name": "Seafood Centre ",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "JS",
+        "name": null,
         "band": 0,
-        "createdAt": "08 October 2021, 09:59 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 10:59 AM"
       },
       {
         "id": "4B1839CE-4A53-4312-A614-94D8DB30F785",
+        "name": "Jurong Lake Gardens - North Zone",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "A1F7E5AF-5A86-4A37-9A06-7DBC2BF3D655",
+        "name": "Tiong Bahru Park - Fitness Corner (Near Henderson)",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "89c5ed1c",
+        "name": "Prime Compassvale 263",
         "band": 0,
-        "createdAt": "16 March 2021, 02:06 PM",
-        "trend": false
+        "createdAt": "16 March 2021, 02:06 PM"
       },
       {
         "id": "33CC7892-AA76-4310-8D66-3067217541D6",
+        "name": "Labrador Park Carpark C",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "78eecdd83d555e06a4b9e2aba6839252",
+        "name": "United Square",
         "band": 0,
-        "createdAt": "08 October 2021, 10:00 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:00 AM"
       },
       {
         "id": "31e6f577",
+        "name": "Prime Jurong West 763",
         "band": 0,
-        "createdAt": "16 March 2021, 02:29 PM",
-        "trend": false
+        "createdAt": "16 March 2021, 02:29 PM"
       },
       {
         "id": "F4D0A170-1F0E-4A16-AA75-4DA4455B87FE",
+        "name": "Punggol Park (Shelter 6)",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "7DCFC741-5521-4B20-8045-333214D7A911",
+        "name": "West Coast Park Area 2",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "96E935A3-074C-47D7-B82B-A9DF29E09485",
+        "name": "Promenade",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "64e2d9264fd44f64d68be322",
+        "name": "Siloso Cove Village",
         "band": 0,
-        "createdAt": "08 October 2021, 10:15 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 10:15 AM"
       },
       {
         "id": "PJ",
+        "name": "Sheng Siong - Penjuru Walk 27",
         "band": 0,
-        "createdAt": "14 May 2021, 05:48 PM",
-        "trend": false
+        "createdAt": "14 May 2021, 05:48 PM"
       },
       {
         "id": "314",
+        "name": "FairPrice Finest - Changi City Point",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "358",
+        "name": "FairPrice - Tampines Mall",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "@Microsoft.KeyVault(SecretUri=https://uraspaceoutvault.vault.azure.net/secrets/geylang/)",
+        "name": "GEYLANG SERAI MARKET",
         "band": 0,
-        "createdAt": "12 August 2021, 04:54 AM",
-        "trend": false
+        "createdAt": "12 August 2021, 04:54 AM"
       },
       {
         "id": "449",
+        "name": "FairPrice Xtra - Nex Mall",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "365",
+        "name": "FairPrice - Woodlands 888",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "ACF22A71-E428-4C83-A1E0-607379926543",
+        "name": "Fort Canning Park - Armenian Street",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "93A5C7E4-3BA3-4D1D-817E-2F68818490EB",
+        "name": "Ulu Pandan (North Bank) PC (Commonwealth Ave West - Clementi Rd)",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "444",
+        "name": "FairPrice - Canberra 511",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "328",
+        "name": "FairPrice - Tekka",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "0f9345da888cd0876db80032f35f2049",
+        "name": "Raffles Place Post Office",
         "band": 0,
-        "createdAt": "08 October 2021, 08:30 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 08:30 AM"
       },
       {
         "id": "4ee0e77baba2877271776e94687a91ba",
+        "name": "Pasir Panjang Post Office",
         "band": 0,
-        "createdAt": "08 October 2021, 10:02 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 10:02 AM"
       },
       {
         "id": "465",
+        "name": "FairPrice - Woodlands Ave 1",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "431",
+        "name": "FairPrice - Compassvale Link",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "BBC7FBCA-634F-4E7A-9FB2-9190F0160EA8",
+        "name": "Shelter & Hilltop",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "93kagdoiek49zk",
+        "name": "Jurong Point",
         "band": 0,
-        "createdAt": "08 October 2021, 10:20 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "422f9da73c3ff0ba6fee986b5b9f4ed4",
-        "band": -2,
-        "createdAt": "07 October 2021, 07:00 PM",
-        "trend": false
+        "name": "Suntec City Post Office",
+        "band": 0,
+        "createdAt": "08 October 2021, 11:00 AM"
       },
       {
         "id": "6a08fcff-a8c2-4fa1-8870-7dbf97a9b834",
+        "name": "GEYLANG SERAI MARKET",
         "band": 0,
-        "createdAt": "08 October 2021, 10:22 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:11 AM"
       },
       {
         "id": "3fe17b24-fbcf-483f-9d5f-778a0e37641b",
+        "name": "PRIME Sembawang 365",
         "band": 0,
-        "createdAt": "08 October 2021, 10:19 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:11 AM"
       },
       {
         "id": "05fd94638514f491cebcc9c99a8b2a3b",
+        "name": "Tampines Central Post Office",
         "band": 0,
-        "createdAt": "08 October 2021, 10:10 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 10:10 AM"
       },
       {
         "id": "BAC7E4FB-09CD-4031-9324-353B896CCA77",
+        "name": "Bukit Batok Nature Park",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "B1",
+        "name": null,
         "band": 0,
-        "createdAt": "08 October 2021, 09:59 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 10:59 AM"
       },
       {
         "id": "348",
-        "band": 1,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "name": "FairPrice - Ghim Moh",
+        "band": 0,
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "35bf93c03c2cd67db1a2f9ee",
+        "name": "Vivocity Station",
         "band": 0,
-        "createdAt": "08 October 2021, 10:15 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 10:15 AM"
       },
       {
         "id": "75b0f6d3-3517-4a66-b516-96bf46142972",
+        "name": "Jurong Point",
         "band": 0,
-        "createdAt": "01 January 2021, 10:55 AM",
-        "trend": true
+        "createdAt": "01 January 2021, 11:55 AM"
       },
       {
         "id": "44b127af",
+        "name": "Prime Hougang 106",
         "band": 1,
-        "createdAt": "13 October 2020, 11:11 AM",
-        "trend": false
+        "createdAt": "13 October 2020, 11:11 AM"
       },
       {
         "id": "4848b403-24c4-43c2-9ffb-08cc0dde4844",
-        "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "name": "PRIME Sumang 322",
+        "band": 3,
+        "createdAt": "08 October 2021, 11:11 AM"
       },
       {
         "id": "461",
+        "name": "FairPrice Xtra - Changi Business Park",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "085D7A8C-42D1-4892-8604-1AE637FADA93",
+        "name": "Kranji Marshes",
         "band": -2,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "dfb2f47354081f443d59e0c898c8a52c",
+        "name": "Bedok Central Post Office",
         "band": 0,
-        "createdAt": "08 October 2021, 10:03 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 10:03 AM"
       },
       {
         "id": "cb8e267ca76d908dd794619762a02a56",
+        "name": "Hougang Central Post Office",
         "band": 0,
-        "createdAt": "08 October 2021, 09:30 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 09:30 AM"
       },
       {
         "id": "3C96D4B2-2E7A-4E17-81B1-4845A12551C3",
+        "name": "Punggol Waterway Park (near Nibong LRT)",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "339",
+        "name": "FairPrice - Marsiling MRT",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "306",
+        "name": "FairPrice - Boon Lay",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "1744EDA6-FA43-440C-ADDD-010BE899BBFC",
+        "name": "HortCentre",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "W7",
+        "name": null,
         "band": 0,
-        "createdAt": "08 October 2021, 09:59 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 10:59 AM"
       },
       {
         "id": "369",
+        "name": "FairPrice - Yishun MRT",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "7152C5B0-4FA9-4366-9627-384669073906",
+        "name": "Tiong Bahru Park - Playground",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "7bd155ae-0bc3-410e-9368-6ed5ffa0d573",
+        "name": "313 Somerset",
         "band": 0,
-        "createdAt": "08 October 2021, 10:20 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:11 AM"
       },
       {
         "id": "412",
+        "name": "FairPrice - Woodland Civic Center",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "b13b4136d1bffee27f402d2a068343ac",
+        "name": "Serangoon Central Post Office",
         "band": 0,
-        "createdAt": "08 October 2021, 08:30 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 08:30 AM"
       },
       {
         "id": "147ee65c-70bc-4596-93ca-263991208d27",
+        "name": "PRIME Bedok South 18",
         "band": 3,
-        "createdAt": "08 October 2021, 10:20 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:09 AM"
       },
       {
         "id": "323",
+        "name": "FairPrice Finest - LeQuest",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "b5f3bb7b",
+        "name": "Prime Bukit Batok 373",
         "band": 0,
-        "createdAt": "06 March 2021, 02:35 PM",
-        "trend": false
+        "createdAt": "06 March 2021, 02:35 PM"
       },
       {
         "id": "403",
+        "name": "FairPrice Finest - Woodgrove",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "16FD9698-8B70-40F1-850D-06D2004E510B",
+        "name": "Siglap PCN",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "393",
+        "name": "FairPrice Xtra - Parkway",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "78e3d8c2a255385e6311904b462d0b71",
+        "name": "Bukit Panjang Post Office",
         "band": 0,
-        "createdAt": "08 October 2021, 08:30 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 08:30 AM"
       },
       {
         "id": "347",
+        "name": "FairPrice - Kampung Admiralty",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "68026ddc-833a-4008-8bca-0a7a23449d4d",
+        "name": "PRIME Hougang 106",
         "band": 3,
-        "createdAt": "08 October 2021, 10:20 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:10 AM"
       },
       {
         "id": "B4239A3C-FF33-41F6-9C41-1C049A797A6F",
+        "name": "Beach at Area E2",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "863b33d96ab03c7e6bf2f51b623be59a",
+        "name": "Lim Ah Pin Road Post Office",
         "band": 0,
-        "createdAt": "08 October 2021, 08:30 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 08:30 AM"
       },
       {
         "id": "CD0D505F-58D9-4F92-BA68-2AE9128BF27B",
+        "name": "Big Dog Run ",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "00A4EBB1-B497-4AEC-B7AB-BC670E989602",
+        "name": "EAST COAST PARK CARPARK D5",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "9D21C088-5117-4E96-996F-F41EE48D9DBE",
+        "name": "Alexandra Arch - Southern Ridges",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "493",
-        "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "name": "FairPrice Shop - Blk 150 Silat Ave",
+        "band": 1,
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "8783727a-e856-4f2d-a0c8-ab3a6879a01d",
+        "name": "BLK 505 JURONG WEST ST 52",
         "band": 0,
-        "createdAt": "26 July 2021, 01:44 PM",
-        "trend": false
+        "createdAt": "26 July 2021, 01:44 PM"
       },
       {
         "id": "395",
+        "name": "FairPrice - Rivervale Mall",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "A6A81923-1071-4999-98D8-104BE328DF01",
+        "name": "Esplanade Park - Heroes Lawn",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "485",
-        "band": 1,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "name": "FairPrice - Serangoon View",
+        "band": 0,
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "3c2c5cd4-77e3-49f9-90ab-084529a6d129",
-        "band": 2,
-        "createdAt": "08 October 2021, 10:20 AM",
-        "trend": false
+        "name": "CHONG PANG MARKET & FOOD CENTRE",
+        "band": 3,
+        "createdAt": "08 October 2021, 11:06 AM"
       },
       {
         "id": "61CF52E7-9EC2-41CC-8B9A-AC53F6963CAE",
+        "name": "Jurong Lake Gardens - Forest Ramble",
         "band": -2,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "b75d985c-d9bc-424c-9287-c0648fbb8334",
+        "name": "PRIME Punggol Field 108",
         "band": 0,
-        "createdAt": "08 October 2021, 10:16 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:10 AM"
       },
       {
         "id": "341",
+        "name": "FairPrice - New Upper Changi",
         "band": 1,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "435",
+        "name": "FairPrice - Buona Vista CC",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "422",
+        "name": "FairPrice - Tampines CC",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "FV",
+        "name": null,
         "band": 0,
-        "createdAt": "08 October 2021, 09:59 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 10:59 AM"
       },
       {
         "id": "311",
+        "name": "FairPrice - Bedok Reservoir",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "6ea43aaaa7b7109e8d248a1d1ddeb49e",
+        "name": "Toa Payoh North Post Office",
         "band": 0,
-        "createdAt": "08 October 2021, 08:37 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 08:37 AM"
       },
       {
         "id": "480353C9-FB2F-4C61-B490-36B72264F9E4",
+        "name": "Sun Plaza Park (Plaza Area)",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "332",
+        "name": "FairPrice - Jurong Point",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "a9b640c978ad089baa3e69ac1232b72b",
+        "name": "Simpang Bedok Post Office",
         "band": 1,
-        "createdAt": "08 October 2021, 10:00 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 10:00 AM"
       },
       {
         "id": "333",
+        "name": "FairPrice Finest - Funan",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "d20e3489830040fea3df6bddefb6106c",
+        "name": "Clarke Quay",
         "band": 0,
-        "createdAt": "01 October 2021, 10:00 AM",
-        "trend": true
+        "createdAt": "01 October 2021, 11:00 AM"
       },
       {
         "id": "CW",
+        "name": null,
         "band": 0,
-        "createdAt": "08 October 2021, 09:59 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 10:59 AM"
       },
       {
         "id": "aa8d924638adbdea52a34501282199bb",
+        "name": "YewTee Point",
         "band": 0,
-        "createdAt": "08 October 2021, 10:20 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "326",
+        "name": "FairPrice Finest - Hougang A",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "35c2c746d3c80face0faac651a53be36",
+        "name": "Waterway Point",
         "band": 0,
-        "createdAt": "08 October 2021, 10:20 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:11 AM"
       },
       {
         "id": "343",
+        "name": "FairPrice Finest - Artra",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "d476e9eb5f098170a63c185f45789106",
+        "name": "Hillion",
         "band": 0,
-        "createdAt": "01 October 2021, 10:00 AM",
-        "trend": true
+        "createdAt": "01 October 2021, 11:00 AM"
       },
       {
         "id": "320",
+        "name": "FairPrice - Clementi B",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "370",
+        "name": "FairPrice  Canberra Plaza",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "f0819808440630d4dcdaafdbb887131d",
-        "band": -2,
-        "createdAt": "07 October 2021, 08:00 PM",
-        "trend": false
+        "name": "General Post Office",
+        "band": 1,
+        "createdAt": "08 October 2021, 10:34 AM"
       },
       {
         "id": "6T",
+        "name": null,
         "band": 0,
-        "createdAt": "08 October 2021, 09:59 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 10:59 AM"
       },
       {
         "id": "352",
+        "name": "FairPrice - Serangoon B",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "430",
+        "name": "FairPrice - Upper Boon Keng",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "466",
+        "name": "FairPrice Finest - Valley Point",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "GM",
+        "name": null,
         "band": 0,
-        "createdAt": "08 October 2021, 09:59 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 10:59 AM"
       },
       {
         "id": "107a438e-fe23-4476-b62c-f0a51abc83d4",
+        "name": "PRIME BUKIT BATOK 373",
         "band": 3,
-        "createdAt": "08 October 2021, 10:16 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:10 AM"
       },
       {
         "id": "21cf8f14102b1c861476034b12d5193f",
+        "name": "Paragon",
         "band": 0,
-        "createdAt": "08 October 2021, 10:20 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "53F93D57-7E8B-4C1F-8B24-C7E2501B6E93",
+        "name": "Singapore Botanic Gardens - Tanglin Heritage Core",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "474",
+        "name": "FairPrice - NUH Medical Center",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "28bfd0f7-4ce7-4c89-a339-66c94d258bac",
+        "name": "Dawson Place",
         "band": 0,
-        "createdAt": "08 October 2021, 10:20 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:10 AM"
       },
       {
         "id": "448",
+        "name": "FairPrice - Orchid Country Club",
         "band": -2,
-        "createdAt": "30 June 2021, 06:36 PM",
-        "trend": false
+        "createdAt": "30 June 2021, 06:36 PM"
       },
       {
         "id": "2A",
+        "name": null,
         "band": 0,
-        "createdAt": "08 October 2021, 09:59 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 10:59 AM"
       },
       {
         "id": "13621b4b",
+        "name": "Prime Sembawang 365",
         "band": 0,
-        "createdAt": "16 March 2021, 07:30 AM",
-        "trend": false
+        "createdAt": "16 March 2021, 07:30 AM"
       },
       {
         "id": "73683ffa",
+        "name": "Prime Joo Seng 01",
         "band": 0,
-        "createdAt": "16 March 2021, 12:14 PM",
-        "trend": false
+        "createdAt": "16 March 2021, 12:14 PM"
       },
       {
         "id": "457",
+        "name": "FairPrice - Geylang 38",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "3749715c",
+        "name": "Prime Buangkok 991",
         "band": 0,
-        "createdAt": "16 March 2021, 08:00 AM",
-        "trend": false
+        "createdAt": "16 March 2021, 08:00 AM"
       },
       {
         "id": "e34e75b769de81c5ed95812e7c3ef12d",
+        "name": "Choa Chu Kang Central Post Office",
         "band": 0,
-        "createdAt": "08 October 2021, 08:30 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 08:30 AM"
       },
       {
         "id": "W4",
+        "name": null,
         "band": 0,
-        "createdAt": "08 October 2021, 09:59 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 10:59 AM"
       },
       {
         "id": "438",
+        "name": "FairPrice - Joo Chiat Complex",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "eef7ffd22dbcc37fa6f20036bd40f963",
+        "name": "Changi City Point",
         "band": 0,
-        "createdAt": "08 October 2021, 10:20 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:11 AM"
       },
       {
         "id": "d2659b4c-a64d-45b0-ae73-f98fd99baf62",
+        "name": "PRIME Century Square ",
         "band": 0,
-        "createdAt": "08 October 2021, 10:19 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:09 AM"
       },
       {
         "id": "B6D718B9-8D0B-4301-B9EA-23D1CBD69A48",
+        "name": "Pasir Ris Park Area 1",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "7e916fc5fd72df737e58eb232d005118",
+        "name": "Crawford Post Office",
         "band": 0,
-        "createdAt": "08 October 2021, 08:30 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 08:30 AM"
       },
       {
         "id": "422CFA32-C4D8-4FB1-9E29-38A45CA7A2A4",
+        "name": "Palawan Beach",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "446",
+        "name": "FairPrice Shop - Circuit",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "8FFAF561-2FA3-4610-86DB-86C6725E33CD",
+        "name": "Fort Canning Park - Fort Green",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "3C37B669-DEBF-4025-AD05-24E7941D4D8B",
+        "name": "Coney Island Park (West Entrance - from Punggol Promenade)",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "7d3a0987-fc4e-4b27-89d6-b85dba053831",
+        "name": "JLL Loyang Point",
         "band": 0,
-        "createdAt": "08 October 2021, 10:20 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:11 AM"
       },
       {
         "id": "408",
+        "name": "FairPrice Finest - Tiong Bahru",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "bd0618f7efd04dea8c3b9c6a5b73b3d6",
+        "name": "Sunplaza",
         "band": 0,
-        "createdAt": "08 October 2021, 10:20 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "15b92fcd8fce8a2f2f404f48d316e9a2",
+        "name": "Tampines 1",
         "band": 0,
-        "createdAt": "08 October 2021, 10:20 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:11 AM"
       },
       {
         "id": "2aa081f9b7e69d9bf77405b233027495",
+        "name": "Funan",
         "band": 0,
-        "createdAt": "01 October 2021, 10:00 AM",
-        "trend": true
+        "createdAt": "01 October 2021, 11:00 AM"
       },
       {
         "id": "03bee82a-53f8-45cb-8adf-98af94d6d293",
+        "name": "PRIME Teck Whye 142",
         "band": 0,
-        "createdAt": "08 October 2021, 10:10 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:11 AM"
       },
       {
         "id": "063df23c-558c-4ee0-a730-c47cc7e32605",
-        "band": 0,
-        "createdAt": "08 October 2021, 10:16 AM",
-        "trend": false
+        "name": "PRIME King George 803",
+        "band": 1,
+        "createdAt": "08 October 2021, 11:09 AM"
       },
       {
         "id": "413",
+        "name": "FairPrice - Tampines D",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "34869E6A-1D34-4B18-92A5-F1FB4C3A0F00",
+        "name": "Ulu Pandan North Bank (Clementi Rd to AYE)",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "b4ac6e66-69b6-417e-8f2f-f67a9fe1c578",
+        "name": "Joo Chiat Complex",
         "band": 2,
-        "createdAt": "01 January 2021, 10:54 AM",
-        "trend": true
+        "createdAt": "01 January 2021, 11:55 AM"
       },
       {
         "id": "494",
+        "name": "FairPrice - Tai Seng",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "367",
+        "name": "FairPrice - White Sands",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "329",
+        "name": "FairPrice - Hougang Lifestyle",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "TS",
+        "name": null,
         "band": 0,
-        "createdAt": "08 October 2021, 09:59 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 10:59 AM"
       },
       {
         "id": "0c59c61f21d8a00f7cca31e845720a11",
+        "name": "Geylang East Post Office",
         "band": 0,
-        "createdAt": "08 October 2021, 08:46 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 08:46 AM"
       },
       {
         "id": "EEDE72C5-04F8-402E-9BD2-EB99C90F6CFD",
+        "name": "Jurong Central Park",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "322",
+        "name": "FairPrice - The POIZ Centre",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "456",
-        "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "name": "FairPrice - Lekong Tiga",
+        "band": 1,
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "459",
+        "name": "FairPrice Finest - Scotts Square",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "1AA9D381-430B-402B-94BE-30729ED9493B",
+        "name": "HortPark gardens",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "AJ",
+        "name": null,
         "band": 0,
-        "createdAt": "08 October 2021, 09:59 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 10:59 AM"
       },
       {
         "id": "4b0b64cf128fa1c3dca53d98b2437658",
+        "name": "Teban Garden Post Office",
         "band": 0,
-        "createdAt": "08 October 2021, 08:30 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 08:30 AM"
       },
       {
         "id": "307",
+        "name": "FairPrice - Bukit Merah",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "398",
+        "name": "FairPrice - Khatib",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "dd85d0bb-8288-413f-8ed7-791ec999008a",
+        "name": "PRIME Jurong West 763",
         "band": 3,
-        "createdAt": "08 October 2021, 10:19 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:11 AM"
       },
       {
         "id": "452",
+        "name": "FairPrice - Ang Mo Kio 215",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "c4dbe2a4-5f46-4e57-83ca-63ef29823f3f",
-        "band": 1,
-        "createdAt": "08 October 2021, 10:19 AM",
-        "trend": false
+        "name": "Punggol Plaza",
+        "band": 3,
+        "createdAt": "08 October 2021, 11:11 AM"
       },
       {
         "id": "4b6c263c-af42-48a6-b2c9-73312e65be36",
+        "name": "KITCHENER COMPLEX",
         "band": 0,
-        "createdAt": "08 October 2021, 09:23 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 10:58 AM"
       },
       {
         "id": "432",
+        "name": "FairPrice - Lor Limau",
         "band": 1,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "Y1",
+        "name": null,
         "band": 0,
-        "createdAt": "08 October 2021, 09:59 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 10:59 AM"
       },
       {
         "id": "65B744DA-FCAA-4CB4-AA31-CC3404FE7426",
+        "name": "Alexandra Park Connector - Zion Road",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "ECCAB690-1D27-4568-8141-7F8CFFA0D94D",
+        "name": "Zhenghua Nature Park",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "87c9a859368378d6490c55a06522b439",
-        "band": 1,
-        "createdAt": "01 October 2021, 10:30 AM",
-        "trend": true
+        "name": "SQUARE 2",
+        "band": 2,
+        "createdAt": "01 October 2021, 11:30 AM"
+      },
+      {
+        "id": "61892a711888c229ab667c5a6edf9f81",
+        "name": "KALLANG WAVE MALL",
+        "band": 0,
+        "createdAt": "01 October 2021, 11:00 AM"
       },
       {
         "id": "337",
+        "name": "FairPrice - Limbang",
         "band": 0,
-        "createdAt": "26 July 2021, 04:25 PM",
-        "trend": false
+        "createdAt": "26 July 2021, 04:25 PM"
       },
       {
         "id": "B36FB0AF-8AB9-4897-B0FE-26875B1723A7",
+        "name": "EAST COAST PARK CARPARK D4",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "J9",
+        "name": null,
         "band": 0,
-        "createdAt": "08 October 2021, 09:59 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 10:59 AM"
       },
       {
         "id": "357",
+        "name": "FairPrice - Tampines B",
         "band": 1,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "F5DF87DA-AADD-4B86-9ADD-9C0F4F006BA0",
+        "name": "Sungei Buloh Wetland Reserve - Visitor Centre",
         "band": -2,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "BA2DEA27-B7D1-47E8-8145-07CFCDC63F89",
+        "name": "Chestnut Nature Park",
         "band": -2,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "9286b0bc-8126-4197-ada5-9ce65ba29f44",
+        "name": "PRIME Chai Chee 25A",
         "band": 0,
-        "createdAt": "08 October 2021, 10:17 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:00 AM"
       },
       {
         "id": "6P",
+        "name": null,
         "band": 0,
-        "createdAt": "08 October 2021, 09:59 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 10:59 AM"
       },
       {
         "id": "371",
+        "name": "FairPrice Xtra - Hougang Point",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "0F0611CE-6E94-4A81-A041-EF5CCF40ED6C",
+        "name": "Alexandra Park Connector - Delta Ave",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "ff0dc8871f455dbd2c084f99fe9794f2",
+        "name": "Pasir Ris Central Post Office",
         "band": 0,
-        "createdAt": "08 October 2021, 09:50 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 09:50 AM"
       },
       {
         "id": "480",
+        "name": "FairPrice Finest - Seletar Mall",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "410",
+        "name": "FairPrice - Punggol Plaza",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "595",
+        "name": "Beach Station Carpark",
         "band": 0,
-        "createdAt": "08 October 2021, 10:20 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:11 AM"
       },
       {
         "id": "06f1221d-153e-4977-8d87-022c0f18b7f1",
+        "name": "21 MARSILING LANE MARSILING WET MARKET",
         "band": 3,
-        "createdAt": "08 October 2021, 10:21 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:11 AM"
       },
       {
         "id": "338",
+        "name": "FairPrice - Lot 1 Shopper's Mall",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "420",
+        "name": "FairPrice Xtra - Ang Mo Kio Hub",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "498",
+        "name": "FairPrice - Hillion Mall",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "491",
+        "name": "FairPrice Shop - Jurong East Blk 249",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "838369a0a51f1caf00cff4c5606ba942",
-        "band": 0,
-        "createdAt": "01 October 2021, 10:00 AM",
-        "trend": true
+        "name": "Junction 8",
+        "band": 1,
+        "createdAt": "01 October 2021, 11:00 AM"
       },
       {
         "id": "b43b8e72495db8db389e899b",
+        "name": "TanJong Beach",
         "band": 0,
-        "createdAt": "08 October 2021, 08:00 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 10:00 AM"
       },
       {
         "id": "309",
+        "name": "FairPrice - Bedok North B",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "9B54EA82-8817-43AE-8839-D3272387CFE1",
+        "name": "Jurong Lake Gardens - Clusia Cove",
         "band": -2,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "211f939215214fdabdf8d8d54dfa5c29",
+        "name": "The Seletar Mall",
         "band": 0,
-        "createdAt": "08 October 2021, 10:20 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "415",
+        "name": "FairPrice - Serangoon Central",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "405",
+        "name": "FairPrice - Bukit Batok East",
         "band": 1,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "467",
+        "name": "FairPrice - West Coast",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "406",
-        "band": 1,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "name": "FairPrice - Senja Grand",
+        "band": 0,
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "489",
+        "name": "FairPrice - Macpherson Mall",
         "band": 0,
-        "createdAt": "30 June 2021, 06:36 PM",
-        "trend": false
+        "createdAt": "30 June 2021, 06:36 PM"
       },
       {
         "id": "9B3CCE7E-172A-4E3B-9DC4-82DD35B6FA12",
+        "name": "Coney Island Park East Entrance (from Lorong Halus) ",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "F6D210EC-E89A-433A-866E-45356EA49A9C",
+        "name": "Singapore Botanic Gardens - Gallop",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "45d7422d58467b7b6e403e919133ecaa",
+        "name": "Ghim Moh Estate Post Office",
         "band": 0,
-        "createdAt": "08 October 2021, 08:30 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 08:30 AM"
       },
       {
         "id": "b3c2e2f0-4ce9-4be7-b11f-c0c179b45cdc",
+        "name": "Great World",
         "band": 0,
-        "createdAt": "08 October 2021, 10:20 AM",
-        "trend": false
-      },
-      {
-        "id": "634af54c-6cfb-4c3d-b54e-cd3b93ef4812",
-        "band": -2,
-        "createdAt": "07 November 2020, 01:03 PM",
-        "trend": true
+        "createdAt": "08 October 2021, 11:11 AM"
       },
       {
         "id": "424",
+        "name": "FairPrice - Downtown East",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "79270f0a814b019be6920652",
+        "name": "Resort World Station",
         "band": 1,
-        "createdAt": "08 October 2021, 10:15 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 10:15 AM"
       },
       {
         "id": "C1B25F10-6430-4AE7-8C47-8B93DD1AD525",
+        "name": "Labrador Park",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "32a0090c0424676c37f352e23578d65c",
+        "name": "Bishan Post Office",
         "band": 0,
-        "createdAt": "08 October 2021, 09:30 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 09:30 AM"
       },
       {
         "id": "JB",
+        "name": null,
         "band": 0,
-        "createdAt": "07 October 2021, 03:59 PM",
-        "trend": false
+        "createdAt": "07 October 2021, 03:59 PM"
       },
       {
         "id": "W2",
+        "name": null,
         "band": 0,
-        "createdAt": "08 October 2021, 09:59 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 10:59 AM"
       },
       {
         "id": "356",
+        "name": "FairPrice - Tampines A",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "9766697A-A982-4356-9780-9A913AA10E3D",
+        "name": "Hindhede Nature Park",
         "band": -2,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "895f8e76337e8e008e5f19420150fc77",
+        "name": "Bukit Timah Post Office",
         "band": 0,
-        "createdAt": "08 October 2021, 09:39 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 10:59 AM"
       },
       {
         "id": "W3",
+        "name": null,
         "band": 0,
-        "createdAt": "08 October 2021, 09:59 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 10:59 AM"
       },
       {
         "id": "3bccf12ddb2bf4105130ddb45082502f",
+        "name": "Marine Parade Post Office",
         "band": 0,
-        "createdAt": "08 October 2021, 08:30 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 08:30 AM"
       },
       {
         "id": "308",
+        "name": "FairPrice - Bedok North A",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "BB",
+        "name": null,
         "band": 0,
-        "createdAt": "08 October 2021, 09:59 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 10:59 AM"
       },
       {
         "id": "3B11A717-04F2-4FF8-B88E-B18C311CA7F0",
+        "name": "Changi Beach Park Plaza Area",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "360",
+        "name": "FairPrice - Teban Garden",
         "band": 1,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "340",
+        "name": "FairPrice Finest - Marine Parade",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "228BADFF-18D1-4CA4-87CF-62B2378B1EB1",
+        "name": "Bukit Batok Town Park",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "f7e16e54",
+        "name": "Prime Punggol Field 108",
         "band": 0,
-        "createdAt": "11 October 2020, 01:31 PM",
-        "trend": false
+        "createdAt": "11 October 2020, 01:31 PM"
       },
       {
         "id": "d8eacd7f-bff7-4f8f-a570-916548024cd0",
+        "name": "CLEMENTI STADIUM",
         "band": 1,
-        "createdAt": "08 October 2021, 10:13 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 10:36 AM"
       },
       {
         "id": "EEB70858-32AE-4587-86A2-CE767B0C480B",
+        "name": "Main Village & Jetty",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "951C9884-4B77-4DB3-A453-4C34C808550A",
+        "name": "Tampines Eco Green (South Entrance)",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "484",
+        "name": "FairPrice Finest - Waterway Point",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "593",
+        "name": "Imbiah Carpark",
         "band": 0,
-        "createdAt": "08 October 2021, 10:20 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:11 AM"
       },
       {
         "id": "301",
+        "name": "FairPrice - Tampines HUB",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "cc8ce12dd39de5a3324122a9415176bf",
+        "name": "Clarke Quay Central",
         "band": 0,
-        "createdAt": "01 October 2021, 10:30 AM",
-        "trend": true
+        "createdAt": "01 October 2021, 11:30 AM"
       },
       {
         "id": "30F040CF-19E2-4BFC-8926-612CEA9F9C32",
+        "name": "Beach in front of Marine Cove, ECP",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "MS",
+        "name": null,
         "band": 0,
-        "createdAt": "08 October 2021, 09:59 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 10:59 AM"
       },
       {
         "id": "4e800363-c4b1-4ce6-be65-d1da867fc9d8",
+        "name": "FAIRPRICE HUB",
         "band": 0,
-        "createdAt": "08 October 2021, 10:20 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:11 AM"
       },
       {
         "id": "8T",
+        "name": null,
         "band": 0,
-        "createdAt": "08 October 2021, 09:59 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 10:59 AM"
       },
       {
         "id": "TH",
+        "name": null,
         "band": 0,
-        "createdAt": "08 October 2021, 09:59 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 10:59 AM"
       },
       {
         "id": "481",
+        "name": "FairPrice - RedHill",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "51792A65-23B2-4ACF-AAD3-99901E7EA10B",
+        "name": "Kranji Reservoir Park",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "402",
+        "name": "FairPrice Finest - Junction 8",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "TP",
+        "name": null,
         "band": 0,
-        "createdAt": "08 October 2021, 09:59 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 10:59 AM"
       },
       {
         "id": "TW",
+        "name": null,
         "band": 0,
-        "createdAt": "08 October 2021, 09:59 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 10:59 AM"
       },
       {
         "id": "5b62e75c",
+        "name": "Prime Bukit Batok 159",
         "band": 0,
-        "createdAt": "16 March 2021, 06:30 AM",
-        "trend": false
+        "createdAt": "16 March 2021, 06:30 AM"
       },
       {
         "id": "f85ac71b",
+        "name": "Prime Chai Chee 25A",
         "band": 0,
-        "createdAt": "16 March 2021, 06:30 AM",
-        "trend": false
+        "createdAt": "16 March 2021, 06:30 AM"
       },
       {
         "id": "7436A15D-C70A-4FE2-A2D1-5A846DFC7ABA",
+        "name": "Dairy Farm Nature Park",
         "band": -2,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "18005A8F-214E-482D-AFE1-601C9E934F3D",
+        "name": "Esplanade Park - Cenotaph ",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "A3",
+        "name": null,
         "band": 0,
-        "createdAt": "08 October 2021, 09:59 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 10:59 AM"
       },
       {
         "id": "10708DCE-C424-4C12-AA04-B061075C2DFB",
+        "name": "Duxton Plain Park - Fitness Corner",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "395a31a5a4f88c20d0cd9700459d8afa",
+        "name": "Geylang Post Office",
         "band": 0,
-        "createdAt": "08 October 2021, 09:00 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 09:00 AM"
       },
       {
         "id": "PC",
+        "name": null,
         "band": 0,
-        "createdAt": "08 October 2021, 09:59 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 10:59 AM"
       },
       {
         "id": "T1",
+        "name": null,
         "band": 0,
-        "createdAt": "08 October 2021, 09:59 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 10:59 AM"
       },
       {
         "id": "496",
+        "name": "FairPrice Finest - Wisteria Mall",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "495",
+        "name": "FairPrice - Northpoint City",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "3067aa26-645a-4d37-bae1-6e3aa620c9ce",
+        "name": "JURONG WEST STADIUM",
         "band": 3,
-        "createdAt": "08 October 2021, 09:25 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:02 AM"
       },
       {
         "id": "4c93132ca0cafef881a4cec9",
+        "name": "Beach Interchange",
         "band": 0,
-        "createdAt": "08 October 2021, 10:15 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 10:15 AM"
       },
       {
         "id": "463",
+        "name": "FairPrice - Chinatown Point",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "db78934e",
+        "name": "Prime Tampines Century Square",
         "band": 0,
-        "createdAt": "16 March 2021, 09:55 AM",
-        "trend": false
+        "createdAt": "16 March 2021, 09:55 AM"
       },
       {
         "id": "3454D186-77C4-4B88-A109-F516209D6AAA",
+        "name": "Siglap Canal",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "cd034bcc-613e-4c34-b63c-f245a32a5e98",
-        "band": 0,
-        "createdAt": "08 October 2021, 10:19 AM",
-        "trend": false
+        "name": "CHOA CHU KANG STADIUM & TENNIS COURTS",
+        "band": 1,
+        "createdAt": "08 October 2021, 10:59 AM"
       },
       {
         "id": "3b5ae0c0-5171-4bd1-9936-1ed9dcd73021",
+        "name": "PRIME Tampines 823",
         "band": 3,
-        "createdAt": "08 October 2021, 10:20 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:11 AM"
       },
       {
         "id": "4593b92f698fbd26c0c08e42",
+        "name": "Imbiah Lookout Cable Car Station",
         "band": 0,
-        "createdAt": "08 October 2021, 10:15 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 10:15 AM"
       },
       {
         "id": "5178f6cafa373bf91ef93691",
+        "name": "Palawan Beach",
         "band": 0,
-        "createdAt": "08 October 2021, 08:00 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 10:00 AM"
       },
       {
         "id": "938b1fa2-56e2-4c89-be85-6d9ae2229746",
+        "name": "NEX",
         "band": 0,
-        "createdAt": "08 October 2021, 10:20 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:11 AM"
       },
       {
         "id": "479",
+        "name": "FairPrice - Jurong East 345",
         "band": 1,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "fbf13c90",
+        "name": "Prime Teck Whye 142",
         "band": 0,
-        "createdAt": "16 March 2021, 06:30 AM",
-        "trend": false
+        "createdAt": "16 March 2021, 06:30 AM"
       },
       {
         "id": "3b115f9a-08e3-487b-934d-9b3a52a7dacb",
+        "name": "OUR TAMPINES HUB",
         "band": 1,
-        "createdAt": "08 October 2021, 10:19 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:11 AM"
       },
       {
         "id": "492",
+        "name": "FairPrice Shop - Ang Mo Kio 574",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "EB80F094-5919-46F6-9D76-ECA0CEC5DC0F",
+        "name": "Cyclist Park",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "SM",
+        "name": null,
         "band": 0,
-        "createdAt": "08 October 2021, 09:59 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 10:59 AM"
       },
       {
         "id": "2D793C82-664C-4777-ADA0-1474A8B0265E",
+        "name": "Adventure Playground",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "335b7bf4",
+        "name": "Prime Jurong West 962",
         "band": 0,
-        "createdAt": "16 March 2021, 04:02 PM",
-        "trend": false
+        "createdAt": "16 March 2021, 04:02 PM"
       },
       {
         "id": "FJ",
+        "name": null,
         "band": 0,
-        "createdAt": "08 October 2021, 09:59 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 10:59 AM"
       },
       {
         "id": "A4C0C852-5CAC-41FC-A205-52C333101865",
+        "name": "Siloso Beach",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "d998766c06f9100286529a70",
+        "name": "Fort Siloso",
         "band": 0,
-        "createdAt": "08 October 2021, 10:15 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 10:15 AM"
       },
       {
         "id": "28E06543-5180-4AA2-8E9A-4D1F6D5AAD4A",
+        "name": "Empress Place - Empress Lawn",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "394",
-        "band": 1,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "name": "FairPrice - Limbang",
+        "band": 0,
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "4fefe50f-dace-43a8-b5dc-68d29bedd317",
+        "name": "QUEENSTOWN SWIMMING COMPLEX",
         "band": 3,
-        "createdAt": "08 October 2021, 10:06 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:03 AM"
       },
       {
         "id": "AB71E4DA-1B4E-42D0-99C7-DE18CAF53BF4",
+        "name": "Fort Canning Park - Jubilee Park",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "CB",
+        "name": null,
         "band": 0,
-        "createdAt": "08 October 2021, 09:59 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 10:59 AM"
       },
       {
         "id": "4F9BD22E-F185-4145-8702-BBF564CD1798",
+        "name": "Labrador Nature Reserve",
         "band": -2,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "b6d94102-993a-43cd-a381-b56f49c4f81e",
-        "band": -2,
-        "createdAt": "12 November 2020, 10:58 PM",
-        "trend": true
+        "name": "JURONG EAST SPORT CENTRE",
+        "band": 0,
+        "createdAt": "06 November 2020, 11:45 AM"
       },
       {
         "id": "bc644c4663e25864376bb11da9d31a33",
-        "band": 1,
-        "createdAt": "01 October 2021, 10:00 AM",
-        "trend": true
+        "name": "CompassOne",
+        "band": 2,
+        "createdAt": "01 October 2021, 11:00 AM"
       },
       {
         "id": "853D3D89-D403-4E06-9B27-B11BC5D60706",
+        "name": "Upper Peirce Reservoir Park",
         "band": -2,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "6CB2A890-2BB8-4765-BC76-0E0B8E9D5E34",
+        "name": "Ketam Mountain Bike Park",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "A02EA6CA-41AC-4D36-B1BF-58FF63784F43",
+        "name": "Sembawang Hot Spring Park (Core Area)",
         "band": -2,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "440",
+        "name": "FairPrice - Kang Kar",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "e30152cad06298d23b2184883486a722",
-        "band": 0,
-        "createdAt": "01 October 2021, 10:00 AM",
-        "trend": true
+        "name": "JCube",
+        "band": 1,
+        "createdAt": "01 October 2021, 11:00 AM"
       },
       {
         "id": "0f1b79ed-4e61-427d-a6ec-81be8486c27e",
+        "name": "RIVERVALE PLAZA",
         "band": 0,
-        "createdAt": "08 October 2021, 10:20 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:11 AM"
       },
       {
         "id": "67256054-7110-4258-92C7-626E581959CD",
+        "name": "Singapore Botanic Gardens - Tyersall",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "0BD5DB20-A668-4907-B098-3259F6820F5C",
+        "name": "Chestnut Nature Park Car Park",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "355",
+        "name": "FairPrice - Sun Plaza",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "f369e3275c7dce87094658d9",
+        "name": "Beach Station",
         "band": 0,
-        "createdAt": "08 October 2021, 10:15 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 10:15 AM"
       },
       {
         "id": "11ee111ad740c210749a8f4d1c29b01d",
+        "name": "Sembawang Post Office",
         "band": 0,
-        "createdAt": "08 October 2021, 09:30 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 09:30 AM"
       },
       {
         "id": "f6d936a4",
+        "name": "Prime King George 803",
         "band": 0,
-        "createdAt": "10 October 2020, 10:07 PM",
-        "trend": false
+        "createdAt": "10 October 2020, 10:07 PM"
       },
       {
         "id": "5328fab2",
+        "name": "Prime Tampines 823",
         "band": 0,
-        "createdAt": "20 October 2020, 02:58 PM",
-        "trend": false
+        "createdAt": "20 October 2020, 02:58 PM"
       },
       {
         "id": "351",
+        "name": "FairPrice - Punggol Oasis",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "dbd0b569-d275-447d-84d4-819153e53777",
+        "name": "West Mall",
         "band": 0,
-        "createdAt": "08 October 2021, 10:20 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:11 AM"
       },
       {
         "id": "AB7B632F-F391-4804-9361-35D1B7889B7E",
+        "name": "Tanjong Beach",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "9fca58ad6c47164a8b8b52f598d34af4",
+        "name": "CITY SQUARE",
         "band": 0,
-        "createdAt": "08 October 2021, 08:00 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 09:00 AM"
       },
       {
         "id": "3EC8DDFC-EAD8-4F40-9E71-5844E8B14D5A",
+        "name": "Ulu Pandan PC (AYE to West Coast Road)",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "TC",
+        "name": null,
         "band": 0,
-        "createdAt": "08 October 2021, 09:59 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 10:59 AM"
       },
       {
         "id": "0D2B193D-7C39-4E7B-9FCF-2E9B69AD0B9B",
+        "name": "Carparks 2 & 3",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "98dcb4e80aed7223cef97132",
+        "name": "Siloso Point Cable Car Station",
         "band": 0,
-        "createdAt": "08 October 2021, 10:15 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 10:15 AM"
       },
       {
         "id": "71590ea5-b88c-4f32-9c62-e097a93b49b1",
+        "name": "BUKIT GOMBAK STADIUM",
         "band": 3,
-        "createdAt": "08 October 2021, 10:20 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 10:51 AM"
       },
       {
         "id": "c901287d",
+        "name": "Prime Serangoon 542B",
         "band": 0,
-        "createdAt": "16 March 2021, 07:00 AM",
-        "trend": false
+        "createdAt": "16 March 2021, 07:00 AM"
       },
       {
         "id": "b98c1aad-5a66-40af-8f1d-7b1d98fbd950",
+        "name": "ESPLANADE - THEATRES ON THE BAY",
         "band": 0,
-        "createdAt": "08 October 2021, 10:19 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:11 AM"
       },
       {
         "id": "a29acda2-e9ab-4d1d-a364-824395e0829a",
+        "name": "Tanglin Mall",
         "band": 0,
-        "createdAt": "08 October 2021, 10:20 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:11 AM"
       },
       {
         "id": "8c33e825ef0da03ad51d9edfc60d7ddf",
+        "name": "Tanjong Pagar Post Office",
         "band": 0,
-        "createdAt": "08 October 2021, 08:30 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 08:30 AM"
       },
       {
         "id": "478",
+        "name": "FairPrice - Warehouse Club",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "464",
+        "name": "FairPrice Finest - Amara",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "09CE2E15-F8A7-485C-80A0-E9C42A03790D",
+        "name": "Singapore Botanic Gardens - Palm Valley",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "8540BEA7-FD0B-4C65-A34A-5A84FEE11741",
+        "name": "Pang Sua PC (Choa Chu Kang Link to Choa Chu Kang Road)",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "401e5d5104843cf37d4e166ebc0d92ec",
-        "band": -2,
-        "createdAt": "07 October 2021, 07:00 PM",
-        "trend": false
+        "name": "Yishun Central Post Office",
+        "band": 0,
+        "createdAt": "08 October 2021, 11:00 AM"
       },
       {
         "id": "JW",
+        "name": null,
         "band": 0,
-        "createdAt": "08 October 2021, 09:59 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 10:59 AM"
       },
       {
         "id": "71B59501-54A6-48D6-A746-783659AC3387",
+        "name": "Tiong Bahru Park - Open Plaza",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "437",
+        "name": "FairPrice - Yew Tee Point",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "2B",
+        "name": null,
         "band": 0,
-        "createdAt": "08 October 2021, 09:59 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 10:59 AM"
       },
       {
         "id": "6d79e334-1417-42de-b586-e393e32ae433",
+        "name": "Joo Chiat Complex",
         "band": 0,
-        "createdAt": "08 October 2021, 10:19 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:11 AM"
       },
       {
         "id": "3CC4226A-E6A8-4ED7-A6AC-7CB16F9514E1",
+        "name": "Toilet,F&B & carpark",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "29248f8f-6b19-4dfd-ba4f-37ff57146d83",
+        "name": "Jem",
         "band": 0,
-        "createdAt": "08 October 2021, 10:20 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:11 AM"
       },
       {
         "id": "472",
+        "name": "FairPrice - Kitchener Complex",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "iokj90kdxsjjda",
+        "name": "Thomson Plaza",
         "band": 0,
-        "createdAt": "08 October 2021, 10:20 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "260ea43862397a3eaf15b5c2643c0cdf",
-        "band": 0,
-        "createdAt": "01 October 2021, 10:00 AM",
-        "trend": true
+        "name": "Plaza Singapura",
+        "band": 1,
+        "createdAt": "01 October 2021, 11:00 AM"
       },
       {
         "id": "425",
+        "name": "FairPrice - Stirling Road",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "36af0a4d1886897d52244275bce612a0",
+        "name": "Lot One",
         "band": 0,
-        "createdAt": "01 October 2021, 10:00 AM",
-        "trend": true
+        "createdAt": "01 October 2021, 11:00 AM"
       },
       {
         "id": "ecf62423",
+        "name": "Prime Yishun 761",
         "band": 0,
-        "createdAt": "16 March 2021, 02:03 PM",
-        "trend": false
+        "createdAt": "16 March 2021, 02:03 PM"
       },
       {
         "id": "DS",
+        "name": null,
         "band": 0,
-        "createdAt": "08 October 2021, 09:59 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 10:59 AM"
       },
       {
         "id": "325",
+        "name": "FairPrice - Geylang East",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "F3694208-18F9-4B76-ABBA-E3A70439565E",
+        "name": "Ulu Pandan (AYE to Boon Lay Way)",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "4565c6fe515dd72eba6c4102482968ce",
+        "name": "Causeway Point",
         "band": 0,
-        "createdAt": "08 October 2021, 10:20 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:11 AM"
       },
       {
         "id": "68a2cceaf725021f018f25b9a3550af7",
+        "name": "Bras Basah Post Office",
         "band": 0,
-        "createdAt": "08 October 2021, 09:30 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 09:30 AM"
       },
       {
         "id": "37d20258e58245b07de600898ed5b41c",
+        "name": "Bedok Mall",
         "band": 0,
-        "createdAt": "01 October 2021, 10:00 AM",
-        "trend": true
+        "createdAt": "01 October 2021, 11:00 AM"
       },
       {
         "id": "A72B2409-5524-4EFA-A25A-C5633B6EA2C7",
+        "name": "Punggol Promenade Punggol Point Park",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "6508d7fe85b30335912faa176694e9d4",
+        "name": "Tanglin Post Office",
         "band": 0,
-        "createdAt": "08 October 2021, 08:30 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 08:30 AM"
       },
       {
         "id": "66c2f6ff-3e31-4642-ab26-d2fc11ecbdc4",
+        "name": "GEYLANG SERAI MARKET",
         "band": 0,
-        "createdAt": "26 July 2021, 01:40 PM",
-        "trend": false
+        "createdAt": "26 July 2021, 01:40 PM"
       },
       {
         "id": "391",
-        "band": 1,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "name": "FairPrice - Rivervale Plaza",
+        "band": 0,
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "331",
+        "name": "FairPrice - Jurong East",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "83531891cad93ef2e4b868cacba51860",
-        "band": 0,
-        "createdAt": "01 October 2021, 10:00 AM",
-        "trend": true
+        "name": "Bugis Junction",
+        "band": 1,
+        "createdAt": "01 October 2021, 11:00 AM"
       },
       {
         "id": "64397D6E-447D-40B6-B52D-82D4D73512D2",
+        "name": "Bedok Town Park (Allotment Garden)",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "BR",
+        "name": null,
         "band": 0,
-        "createdAt": "08 October 2021, 09:59 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 10:59 AM"
       },
       {
         "id": "79e03c6f30b411ca4d96d9d45e6e8868",
+        "name": "Vivocity",
         "band": 0,
-        "createdAt": "01 October 2021, 10:00 AM",
-        "trend": true
+        "createdAt": "01 October 2021, 11:00 AM"
       },
       {
         "id": "044692013d54b663bd3ba66a26a9c7d5",
-        "band": -2,
-        "createdAt": "07 October 2021, 08:00 PM",
-        "trend": false
+        "name": "Jurong Point Post Office",
+        "band": 0,
+        "createdAt": "08 October 2021, 10:30 AM"
       },
       {
         "id": "F1",
+        "name": null,
         "band": 0,
-        "createdAt": "08 October 2021, 09:59 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 10:59 AM"
       },
       {
         "id": "477",
+        "name": "FairPrice - Bukit Batok Home Team",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "462",
+        "name": "FairPrice Finest - Zhong Shan Park",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "b8d6f262-b68a-418c-8197-9a9c23457678",
+        "name": "PRIME NTU",
         "band": 0,
-        "createdAt": "08 October 2021, 10:19 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:09 AM"
       },
       {
         "id": "c755255b3162916109934cd31de32616",
+        "name": "Alexandra Post Office",
         "band": 1,
-        "createdAt": "08 October 2021, 09:45 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 09:45 AM"
       },
       {
         "id": "445",
+        "name": "FairPrice Shop - Eunos Crescent",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "1W",
+        "name": null,
         "band": 0,
-        "createdAt": "08 October 2021, 09:59 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 10:59 AM"
       },
       {
         "id": "596",
+        "name": "Tanjong2 Carpark",
         "band": 0,
-        "createdAt": "08 October 2021, 10:20 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:11 AM"
       },
       {
         "id": "3f52a9d6c0f6adeb1b758f59962e1f1d",
+        "name": "West Coast Plaza",
         "band": 0,
-        "createdAt": "01 October 2021, 10:30 AM",
-        "trend": true
+        "createdAt": "01 October 2021, 11:30 AM"
       },
       {
         "id": "D0E7155D-36D4-47BE-9C36-F9A6DB7DACE6",
+        "name": "Activity Lawn",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "69636972-F9EA-4A4E-AE05-0B8E4CBB5569",
+        "name": "EAST COAST PARK CARPARK G",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "361",
+        "name": "FairPrice - Tanjong Pagar",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "5FE2ECD8-50DC-4FEB-A2DA-A61953911332",
+        "name": "Ulu Pandan PC (Commonwealth Ave West - Clementi Rd)",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "07d527e330a254de220d47c2e613528a",
+        "name": "Macpherson Road Post Office",
         "band": 0,
-        "createdAt": "08 October 2021, 08:30 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 08:30 AM"
       },
       {
         "id": "a737fc2381c90c261802ffeed5ba04bb",
-        "band": 2,
-        "createdAt": "08 October 2021, 10:00 AM",
-        "trend": false
+        "name": "Velocity",
+        "band": 3,
+        "createdAt": "08 October 2021, 11:00 AM"
       },
       {
         "id": "F0B29585-C95D-4784-AE01-B76C07643242",
+        "name": "Mount Faber Park",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "ED",
+        "name": null,
         "band": 0,
-        "createdAt": "08 October 2021, 09:59 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 10:59 AM"
       },
       {
         "id": "A36654E8-AC5C-42A5-9CB5-C5E6E179D606",
+        "name": "Telok Blangah Hill Park",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "820cf60614d416f83d1cb09bb2e03ab4",
+        "name": "Clementi West Post Office",
         "band": 0,
-        "createdAt": "08 October 2021, 08:30 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 08:30 AM"
       },
       {
         "id": "@Microsoft.KeyVault(SecretUri=https://uraspaceoutvault.vault.azure.net/secrets/chongpang/)",
+        "name": "CHONG PANG MARKET & FOOD CENTRE",
         "band": 0,
-        "createdAt": "12 August 2021, 03:00 AM",
-        "trend": false
+        "createdAt": "12 August 2021, 03:00 AM"
       },
       {
         "id": "f2ab172bc0081045f79bf94803e75df8",
+        "name": "The Star Vista",
         "band": 0,
-        "createdAt": "01 October 2021, 10:00 AM",
-        "trend": true
+        "createdAt": "01 October 2021, 11:00 AM"
       },
       {
         "id": "470",
+        "name": "FairPrice - Jalan Kayu",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "421",
+        "name": "FairPrice - Square 2",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "C009C96C-0CB8-4FA7-8815-99E7942B51BB",
+        "name": "Area C4 ",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "655c16bb29a6072a540123b8bbb62330",
+        "name": "Serangoon Garden Post Office",
         "band": 0,
-        "createdAt": "08 October 2021, 08:30 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 08:30 AM"
       },
       {
         "id": "b17172de00d626170a044ccbd79d4ebc",
-        "band": -2,
-        "createdAt": "07 October 2021, 09:00 PM",
-        "trend": false
+        "name": "Clementi Central Post Office",
+        "band": 0,
+        "createdAt": "08 October 2021, 11:00 AM"
       },
       {
         "id": "455",
-        "band": 1,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "name": "FairPrice - Bishan North",
+        "band": 0,
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "1714d0a8a91e84147f851819653fe743",
+        "name": "City Square Post Office",
         "band": 0,
-        "createdAt": "08 October 2021, 10:00 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 10:00 AM"
       },
       {
         "id": "a4db3b8ab826c6f80af6055ab6bcf993",
+        "name": "Tiong Bahru Post Office",
         "band": 0,
-        "createdAt": "08 October 2021, 08:30 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 08:30 AM"
       },
       {
         "id": "316",
+        "name": "FairPrice Shop - Bendemeer Blk 30",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "b3e878ad-a9fd-4668-92f1-a0238822c86e",
+        "name": "PRIME Tampines 610",
         "band": 0,
-        "createdAt": "08 October 2021, 10:19 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:09 AM"
       },
       {
         "id": "469",
+        "name": "FairPrice Xtra - JEM",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "f3f6a6812ac7fc44cbca7f0f6a8e0100",
+        "name": "Whampoa Post Office",
         "band": 0,
-        "createdAt": "08 October 2021, 09:00 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 09:00 AM"
       },
       {
         "id": "396",
-        "band": 2,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "name": "FairPrice - Yishun Ring",
+        "band": 1,
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "a33833d463b2bc91701cc689",
-        "band": -2,
-        "createdAt": "08 October 2021, 08:00 AM",
-        "trend": false
+        "name": "Fort Siloso SkyWalk",
+        "band": 0,
+        "createdAt": "08 October 2021, 10:00 AM"
       },
       {
         "id": "91b459eaf62d1c986af083d9353c0a79",
+        "name": "Tiong Bahru Plaza",
         "band": 0,
-        "createdAt": "08 October 2021, 10:20 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:11 AM"
       },
       {
         "id": "343f58f4a6fd3f2f9e33a4c9c36a1f3e",
+        "name": "Northpoint City",
         "band": 0,
-        "createdAt": "08 October 2021, 10:20 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "a8fd93108e6f59925c91de47880be146",
+        "name": "Anchorpoint",
         "band": 0,
-        "createdAt": "08 October 2021, 10:20 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:11 AM"
       },
       {
         "id": "473",
+        "name": "FairPrice Finest - Bedok Mall",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "fa0daf47-b340-4484-a0bd-43a7de013e5b",
+        "name": "HOME OF ATHLETICS",
         "band": 0,
-        "createdAt": "08 October 2021, 10:02 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 10:56 AM"
       },
       {
         "id": "3928D4B1-19E2-40C5-9A30-B3D43BB87A14",
+        "name": "Bedok Reservoir Park (Berlin Wall)",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "305e12dc-dbf1-4fc0-9558-8ed6869c4ff8",
+        "name": "HOUGANG STADIUM",
         "band": 0,
-        "createdAt": "08 October 2021, 10:18 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:10 AM"
       },
       {
         "id": "W5",
+        "name": null,
         "band": 0,
-        "createdAt": "08 October 2021, 09:59 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 10:59 AM"
       },
       {
         "id": "39ef9f31-f8ea-485d-8b11-28c76a8a394a",
-        "band": 0,
-        "createdAt": "08 October 2021, 10:18 AM",
-        "trend": false
+        "name": "PRIME Bidadari 106",
+        "band": 2,
+        "createdAt": "08 October 2021, 11:11 AM"
       },
       {
         "id": "808FDA99-0E5E-4A8B-96A3-FD89FC956713",
+        "name": "Tampines Eco Green (North Entrance)",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "E7445FF9-2665-4864-A875-A7539E46C476",
+        "name": "EAST COAST PARK CARPARK F2",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "20BCB351-FB60-4769-8ABB-634F930EC7EF",
+        "name": "Henderson Waves - Southern Ridges",
         "band": 1,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "A65CD411-FBED-40C2-A9D2-5FD01B17134A",
+        "name": "Choa Chu Kang Park ",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "336",
+        "name": "FairPrice - Kallang Bahru",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "a5455c75-82fc-44e9-8627-92f4970938d6",
+        "name": "BEDOK STADIUM",
         "band": 0,
-        "createdAt": "08 October 2021, 10:10 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 10:34 AM"
       },
       {
         "id": "7a2e714204fee2a9cdd674ad",
-        "band": -2,
-        "createdAt": "08 October 2021, 08:00 AM",
-        "trend": false
+        "name": "Harbourfront Cablecar Station",
+        "band": 0,
+        "createdAt": "08 October 2021, 10:00 AM"
       },
       {
         "id": "486a7daefffc5db182c75c346d0236b6",
+        "name": "Aperia",
         "band": 0,
-        "createdAt": "01 October 2021, 10:00 AM",
-        "trend": true
+        "createdAt": "01 October 2021, 11:00 AM"
       },
       {
         "id": "c42aa7b4-3865-4395-a485-af5ba66e7cfa",
+        "name": "JLL Buangkok Square",
         "band": 0,
-        "createdAt": "08 October 2021, 10:19 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:09 AM"
       },
       {
         "id": "9c1c5d5d04a1ef1c915726b29cb56882",
+        "name": "Ang Mo Kio Central Post Office",
         "band": 0,
-        "createdAt": "08 October 2021, 08:30 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 08:30 AM"
       },
       {
         "id": "1B",
+        "name": null,
         "band": 0,
-        "createdAt": "08 October 2021, 09:59 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 10:59 AM"
       },
       {
         "id": "BC",
+        "name": null,
         "band": 0,
-        "createdAt": "08 October 2021, 09:59 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 10:59 AM"
       },
       {
         "id": "363",
+        "name": "FairPrice - Taman Jurong",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "434",
+        "name": "FairPrice Xtra - Jurong Point",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "527FCBE6-8329-4228-9E20-7D64A1F6CBCF",
+        "name": "Springleaf Nature Park",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "3A4755B9-5D33-4EA4-BB83-CD72CE0C4418",
+        "name": "Lower Peirce Reservoir Park",
         "band": -2,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "SG",
+        "name": null,
         "band": 0,
-        "createdAt": "08 October 2021, 09:59 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 10:59 AM"
       },
       {
         "id": "8edb2c657340fb50b631dc9fa4a1babe",
+        "name": "Towner Post Office",
         "band": 0,
-        "createdAt": "08 October 2021, 08:30 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 08:30 AM"
       },
       {
         "id": "f67225df6dc37cd83a45035961415278",
-        "band": -2,
-        "createdAt": "07 October 2021, 07:00 PM",
-        "trend": false
+        "name": "Bukit Batok Central Post Office",
+        "band": 0,
+        "createdAt": "08 October 2021, 11:00 AM"
       },
       {
         "id": "1b53ff53-44ec-4ef0-93f6-daca925a61e4",
+        "name": "AMK Hub",
         "band": 0,
-        "createdAt": "08 October 2021, 10:20 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:11 AM"
       },
       {
         "id": "436A1B87-15E2-4C71-9762-AA9DC5022A2C",
+        "name": "Upper Seletar Reservoir Park",
         "band": -2,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "319",
+        "name": "FairPrice - Clementi A",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "74040750",
+        "name": "Prime Yishun Blossom Spring 461",
         "band": 0,
-        "createdAt": "16 March 2021, 01:44 PM",
-        "trend": false
+        "createdAt": "16 March 2021, 01:44 PM"
       },
       {
         "id": "407",
+        "name": "FairPrice - Dawson",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "2634E438-A19C-4F07-8BD5-1CB17092721A",
+        "name": "Bridge 4",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "0aa896f8-4fa2-4918-9946-3eac9839d466",
+        "name": "PRIME Hougang 159A ",
         "band": 2,
-        "createdAt": "08 October 2021, 10:18 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:10 AM"
       },
       {
         "id": "454",
+        "name": "FairPrice - Kim Tian",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "SN",
+        "name": null,
         "band": 0,
-        "createdAt": "08 October 2021, 09:59 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 10:59 AM"
       },
       {
         "id": "38eccae76e6779977a198bb9cf5e2bf2",
+        "name": "Hougang One",
         "band": 0,
-        "createdAt": "01 October 2021, 10:30 AM",
-        "trend": true
+        "createdAt": "01 October 2021, 11:30 AM"
       },
       {
         "id": "5157D1B2-4B7E-4FDB-818D-4447C82641EC",
+        "name": "Singapore Botanic Gardens - Jacob Ballas Children's Garden",
         "band": -2,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "451",
+        "name": "FairPrice Finest - My Village",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "327",
-        "band": 1,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "name": "FairPrice - Hougang B",
+        "band": 0,
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "429",
+        "name": "FairPrice - Dover",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "84fa572257abad774fa7885c037a7f1d",
+        "name": "Sengkang Central Post Office",
         "band": 0,
-        "createdAt": "08 October 2021, 08:30 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 08:30 AM"
       },
       {
         "id": "4abd0f44aa46845751f29414321db812",
+        "name": "Novena Post Office",
         "band": 1,
-        "createdAt": "08 October 2021, 08:31 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 08:31 AM"
       },
       {
         "id": "PR",
+        "name": null,
         "band": 0,
-        "createdAt": "08 October 2021, 09:59 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 10:59 AM"
       },
       {
         "id": "458",
+        "name": "FairPrice - Ang Mo Kio 712",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "366",
+        "name": "FairPrice Finest - 111 Somerset",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "321",
+        "name": "FairPrice - Coronation Plaza",
         "band": 0,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "5e4cdf6357f547ba1154232c",
+        "name": "Imbiah Lookout",
         "band": 0,
-        "createdAt": "08 October 2021, 10:15 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 10:15 AM"
       },
       {
         "id": "75a001d4-5da4-42f5-acfc-dfb76293f355",
+        "name": "PRIME Yishun Blossom Spring 461",
         "band": 0,
-        "createdAt": "08 October 2021, 10:19 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:09 AM"
       },
       {
         "id": "473DD7DD-FF43-4366-B59E-625CF569D666",
+        "name": "Jurong Lake Gardens - South Carpark",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "53279B81-C8FF-4356-BFD2-AB6BCA81EF29",
+        "name": "Ficus Green",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "0A3796DC-C21B-43AE-9251-F7817662A27C",
+        "name": "Bukit Timah Railway Station",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "400",
-        "band": 1,
-        "createdAt": "08 October 2021, 10:12 AM",
-        "trend": false
+        "name": "FairPrice - Orchard Grand Court",
+        "band": 0,
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "0db0471e-eb25-4872-b2d1-a5d1f1e68693",
+        "name": "UE Square Shopping Mall",
         "band": 3,
-        "createdAt": "08 October 2021, 10:18 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:11 AM"
       },
       {
         "id": "EM",
+        "name": null,
         "band": 0,
-        "createdAt": "08 October 2021, 09:59 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 10:59 AM"
       },
       {
         "id": "59dbb4a5f38c1f9b9bfd6e6624378f83",
+        "name": "The Centrepoint",
         "band": 0,
-        "createdAt": "08 October 2021, 10:20 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:11 AM"
       },
       {
         "id": "50192a505ef2c1763dbb7b8f02758f25",
+        "name": "Potong Pasir Post Office",
         "band": 0,
-        "createdAt": "08 October 2021, 09:30 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 09:30 AM"
       },
       {
         "id": "C3",
+        "name": null,
         "band": 0,
-        "createdAt": "08 October 2021, 09:59 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 10:59 AM"
       },
       {
         "id": "0a1d24c6-fea3-4127-8936-9fa98f88e081",
+        "name": "Ngee Ann City Occupancy",
         "band": 0,
-        "createdAt": "08 October 2021, 10:20 AM",
-        "trend": false
+        "createdAt": "08 October 2021, 11:12 AM"
       },
       {
         "id": "A70C5970-2C34-4514-BA45-E4DF9F153085",
+        "name": "Jurong Lake Gardens - North Carpark",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       },
       {
         "id": "428",
+        "name": "FairPrice Finest - Changi Airport Terminal 3",
         "band": -2,
-        "createdAt": "30 June 2021, 06:36 PM",
-        "trend": false
+        "createdAt": "30 June 2021, 06:36 PM"
       },
       {
         "id": "E6B68E6E-AC2A-4CF6-9563-0CA1EFDB0BC2",
+        "name": "Taman Kembangan Park",
         "band": 0,
-        "createdAt": "01 October 2021, 10:40 PM",
-        "trend": false
+        "createdAt": "01 October 2021, 10:40 PM"
       }
     ]
   }
