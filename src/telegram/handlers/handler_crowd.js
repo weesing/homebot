@@ -32,7 +32,7 @@ export class HandlerCrowd extends HandlerBase {
       .replace(/\)/g, `\\)`)
       .replace(/\,/g, `\n`);
     defaultLogger.info(crowdedStr);
-    let msg = `[SpaceOut](https://www.spaceout.gov.sg)\n\n${crowdStr}`;
+    let msg = `[SpaceOut](https://www.spaceout.gov.sg)\n\n${crowdedStr}`;
     this.sendMessage({ context, msg, opts });
   }
 }
