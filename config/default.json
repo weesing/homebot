@@ -40,5 +40,8 @@
         "3D Printer"
       ]
     }
+  },
+  "spaceout": {
+    "url": "https://www.spaceout.gov.sg/graphql?query={ facilities { id, name, band, createdAt } }"
   }
 }
