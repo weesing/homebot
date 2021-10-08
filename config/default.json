@@ -43,7 +43,6 @@
   },
   "spaceout": {
     "url": "https://www.spaceout.gov.sg/graphql",
-    "paramsAll": "{ facilities { id, name, band, createdAt }",
-    "paramsFacility": "{ facility(id: ${id}) { id, name, band, trend, createdAt, week, nearby } }"
+    "paramsAll": "{ facilities { id, name, band, createdAt } }"
   }
 }
