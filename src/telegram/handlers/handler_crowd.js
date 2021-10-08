@@ -28,6 +28,7 @@ export class HandlerCrowd extends HandlerBase {
     defaultLogger.info(crowdedStr);
     defaultLogger.info(typeof crowdedStr);
     crowdedStr = crowdedStr
+      .replace(/\-/g, `\\-`)
       .replace(/\(/g, `\\(`)
       .replace(/\)/g, `\\)`)
       .replace(/\,/g, `\n`);
