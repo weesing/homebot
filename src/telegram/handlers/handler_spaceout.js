@@ -7,15 +7,16 @@ export class HandlerSpaceout extends HandlerBase {
     const data = await spaceoutLib.getData();
 
     const crowded = data.filter((facility) => facility.band > 1);
-    const msg = crowded
+    let msg = crowded
       .map(
         (facility) =>
           `${facility.name} : ${facility.band} (${facility.createdAt})\n`
       )
       .toString();
     const opts = {
-      //parse_mode: 'MarkdownV2'
+      parse_mode: 'MarkdownV2'
     };
+    msg = msg.replace('-', '\-')
     this.sendMessage({ context, msg, opts });
   }
 }
