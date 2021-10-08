@@ -6,20 +6,42 @@ import cfg from '../configLoader';
 export class SpaceoutLib {
   async getData() {
     const url = `${cfg.spaceout.url}?query=${cfg.spaceout.paramsAll}`;
-    const data = await axios.post(url).then(response => {
+    var dataAll = await axios.post(url).then(response => {
       return response.data.data.facilities;
     });
-    for (const facility of data) {
-      // Get each real-time data
-      let facUrl = `${
-        cfg.spaceout.url
-      }?query=${cfg.spaceout.paramsFacility.replace('${id}', facility.id)}`;
-      const facData = await axios.post(facUrl).then(response => {
-        return response.data.data.facility
-      });
-      facility.band = facData.band;
-      facility.createdAt = facData.createdAt;
+    dataAll = dataAll.filter(data => !_.isNil(data.id) && !_.isNil(data.name) && !_.isNil(data.band));
+    const now = moment().unix();
+    const finalData = [];
+    // Filter by time
+    for (const data of dataAll) {
+        const createdAt = moment(data.createdAt).unix();
+        const diff = now - createdAt;
+        var ignore = false;
+        if (diff > 86400) {
+            ignore = true;
+        }
+        if (!ignore) {
+            for (var index = 0; index < finalData.length; ++index) {
+                const final = finalData[index];
+                if (data.name.toLowerCase() === final.name.toLowerCase()) {
+                    console.log(`${data.name}(${data.createdAt}) conflicts with ${final.name}(${final.createdAt}`);
+                    const finalCreatedAt = moment(final.createdAt).unix();
+                    if (finalCreatedAt > createdAt) {
+                        ignore = true;
+                    }
+                    else {
+                        console.log(`Removing old entry for ${finalData[index].name}`);
+                        finalData.splice(index, 1);
+                    }
+                    break;
+                }
+            }
+        }
+        if (!ignore) {
+            console.log(`Added entry for ${data.name}(${data.createdAt})`);
+            finalData.push(data);
+        }
     }
-    return data;
+    return finalData;
   }
 }

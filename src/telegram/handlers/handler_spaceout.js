@@ -6,10 +6,8 @@ export class HandlerSpaceout extends HandlerBase {
     const spaceoutLib = new SpaceoutLib();
     const data = await spaceoutLib.getData();
 
-    console.log(data);
     const crowded = data.filter(facility => facility.band > 1);
-console.log(crowded);
-    const msg = crowded.map(facility => `${facility.id} - ${facility.name} : ${facility.band}\n`).toString();
+    const msg = crowded.map(facility => `${facility.name} : ${facility.band} (${facility.createdAt})\n`).toString();
     const opts = {
        //parse_mode: 'MarkdownV2'
     };
