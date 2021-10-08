@@ -13,9 +13,7 @@ export class HandlerCrowd extends HandlerBase {
     let crowdedStr = crowded
       .map(
         (facility) =>
-          `${facility.band > 2 ? '\u{1F7E4}' : '\u{1F7E2}'} 
-          ${facility.band > 2 ? '**' + facility.name + '**' : facility.name}
-          (${moment(facility.createdAt).format('hh:mm A')})`
+          `${facility.band > 2 ? '\u{1F7E4}' : '\u{1F7E2}'} ${facility.band > 2 ? '**' + facility.name + '**' : facility.name} (${moment(facility.createdAt).format('hh:mm A')})`
       )
       .toString();
     const opts = {
