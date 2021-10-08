@@ -1,5 +1,6 @@
 import { HandlerBase } from './handler_base';
 import { SpaceoutLib } from '../../lib/spaceout';
+import defaultLogger from '../../common/logger';
 
 export class HandlerSpaceout extends HandlerBase {
   async handleMessage(context) {
@@ -19,6 +20,7 @@ export class HandlerSpaceout extends HandlerBase {
     msg = msg.replace('-', '\-');
     msg = msg.replace('(', '\(');
     msg = msg.replace(')', '\)');
+    defaultLogger.info(msg);
     this.sendMessage({ context, msg, opts });
   }
 }
