@@ -7,6 +7,8 @@ export class SpaceoutLib {
   async getData() {
     const url = cfg.spaceout.url;
     const data = await axios.post(url).then((response) => {
+       return response.data.data.facilities;
     });
+    return data;
   }
 }
