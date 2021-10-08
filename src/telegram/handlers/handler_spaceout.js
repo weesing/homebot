@@ -1,6 +1,7 @@
 import { HandlerBase } from './handler_base';
 import { SpaceoutLib } from '../../lib/spaceout';
 import defaultLogger from '../../common/logger';
+import _ from 'lodash';
 
 export class HandlerSpaceout extends HandlerBase {
   async handleMessage(context) {
@@ -8,19 +9,22 @@ export class HandlerSpaceout extends HandlerBase {
     const data = await spaceoutLib.getData();
 
     const crowded = data.filter((facility) => facility.band > 1);
-    let msg = crowded
+    let crowdedStr = crowded
       .map(
         (facility) =>
-          `${facility.name} : ${facility.band} (${facility.createdAt})\n`
+          `${facility.name} ${facility.band} (${facility.createdAt})`
       )
       .toString();
     const opts = {
       parse_mode: 'MarkdownV2'
     };
-    msg.replace('-', '\\-');
-    msg.replace('(', '\\(');
-    msg.replace(')', '\\)');
-    defaultLogger.info(msg);
+    defaultLogger.info(crowdedStr);
+    defaultLogger.info(typeof(crowdedStr));
+    crowdedStr = crowdedStr
+        .replace(/\(/g, `\\(`)
+        .replace(/\),/g, `\\)\n`);
+    defaultLogger.info(crowdedStr);
+    let msg = crowdedStr;
     this.sendMessage({ context, msg, opts });
   }
 }
