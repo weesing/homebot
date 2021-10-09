@@ -1,14 +1,7 @@
 {
   "snapshot": {
-    "protocol": "https",
-    "host": "weesing.tk",
-    "path": "/webcam/?action=snapshot",
-    "download_path": "./snapshots/"
   },
   "doorlock": {
-    "protocol": "http",
-    "url": "192.168.1.252",
-    "port": "8080",
     "api_path": {
       "lock": "/lock/",
       "status": "/lock/status/",
