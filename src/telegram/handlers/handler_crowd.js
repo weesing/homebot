@@ -22,7 +22,7 @@ export class HandlerCrowd extends HandlerBase {
         crowdedStr = crowded
           .map(
         (facility) =>
-          `${facility.band > 2 ? '\u{1F7E5}' : '\u{1F7E7}'}  ${
+          `${facility.band > 2 ? '\u{1f534}' : '\u{1f7e0}'}  ${
             facility.band > 2 ? '*' + facility.name + '*' : facility.name
           } (${moment(facility.createdAt).format('hh:mm A')})`
       )
