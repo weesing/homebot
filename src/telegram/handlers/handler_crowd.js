@@ -11,7 +11,7 @@ export class HandlerCrowd extends HandlerBase {
     const data = await spaceoutLib.getData();
 
     var crowded = _.orderBy(
-      data.filter((facility) => facility.band > 1),
+      data.filter((facility) => facility.band > 0),
       ['band', 'name'],
       ['desc', 'asc']
     );
