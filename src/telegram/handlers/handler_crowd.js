@@ -21,12 +21,18 @@ export class HandlerCrowd extends HandlerBase {
     } else {
         crowdedStr = crowded
           .map(
-        (facility) =>
-          `${facility.band >= 2 ? '\u{1f534}' : '\u{1f7e0}'}  ${
-            facility.band >= 2 ? '*' + facility.name + '*' : facility.name
-          } (${moment(facility.createdAt).format('hh:mm A')})`
-      )
-      .toString();
+            (facility) =>
+              `${
+                facility.band >= 2
+                  ? facility.band >= 3
+                    ? '\u{1f7e4}'
+                    : '\u{1f534}'
+                  : '\u{1f7e0}'
+              }  ${
+                facility.band >= 2 ? '*' + facility.name + '*' : facility.name
+              } (${moment(facility.createdAt).format('hh:mm A')})`
+          )
+          .toString();
     }
     const opts = {
       parse_mode: 'MarkdownV2',
