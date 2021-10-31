@@ -1,4 +1,3 @@
-
 import { HandlerBase } from './handler_base';
 import { SpaceoutLib } from '../../lib/spaceout';
 import defaultLogger from '../../common/logger';
@@ -15,11 +14,27 @@ export class HandlerCrowd extends HandlerBase {
       ['band', 'name'],
       ['desc', 'asc']
     );
+    let bands = {};
+    for (let facility of crowded) {
+      if (_.isNil(bands[facility.band])) {
+        bands[facility.band] = [];
+      }
+
+      bands[facility.band].push(facility);
+    }
+    
+    const opts = {
+      parse_mode: 'MarkdownV2',
+      disable_web_page_preview: true
+    };
     let crowdedStr = ``;
-    if (_.isEmpty(crowded)) {
+    let currBand = 0;
+    while (!_.isNil(bands[currBand])) {
+      let thisBand = bands[currBand];
+      if (_.isEmpty(thisBand)) {
         crowdedStr = `\u{1F7E6}  _Everywhere is empty / not opened_`;
-    } else {
-        crowdedStr = crowded
+      } else {
+        crowdedStr = thisBand
           .map(
             (facility) =>
               `${
@@ -33,19 +48,18 @@ export class HandlerCrowd extends HandlerBase {
               } (${moment(facility.createdAt).format('hh:mm A')})`
           )
           .toString();
+      }
+      crowdedStr = crowdedStr
+        .replace(/\-/g, `\\-`)
+        .replace(/\(/g, `\\(`)
+        .replace(/\)/g, `\\)`)
+        .replace(/\,/g, `\n`);
+      defaultLogger.info(crowdedStr);
+      let msg = `${crowdedStr}`;
+      this.sendMessage({ context, msg, opts });
     }
-    const opts = {
-      parse_mode: 'MarkdownV2',
-      disable_web_page_preview: true
-    };
-    crowdedStr = crowdedStr
-      .replace(/\-/g, `\\-`)
-      .replace(/\(/g, `\\(`)
-      .replace(/\)/g, `\\)`)
-      .replace(/\,/g, `\n`);
-    defaultLogger.info(crowdedStr);
-    let msg = `${crowdedStr}\n\nData retrieved from \\- [SpaceOut](https://www.spaceout.gov.sg)`;
-    this.sendMessage({ context, msg, opts });
+    let msg = `Data retrieved from \\- [SpaceOut](https://www.spaceout.gov.sg)`;
+    this.sendMessage({context, msg, opts});
   }
 }
 
