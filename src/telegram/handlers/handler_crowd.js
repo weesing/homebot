@@ -1,4 +1,4 @@
-esimport { HandlerBase } from './handler_base';
+import { HandlerBase } from './handler_base';
 import { SpaceoutLib } from '../../lib/spaceout';
 import defaultLogger from '../../common/logger';
 import _ from 'lodash';
