@@ -18,6 +18,7 @@ export class TelegramUtil {
         chatId = _.get(context, 'from.id');
         break;
       }
+      case 'supergroup':
       case 'group': {
         chatId = _.get(context, 'chat.id');
         break;
