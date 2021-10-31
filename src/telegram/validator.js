@@ -48,6 +48,7 @@ export class TelegramValidator {
         let userId = _.get(msg, "from.id");
         return this.validateUserId(msg, userId);
       }
+      case "supergroup":
       case "group": {
         let groupId = _.get(msg, "chat.id");
         return this.validateGroupId(msg, groupId);
