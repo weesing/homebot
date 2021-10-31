@@ -20,7 +20,11 @@ export class HandlerCrowd extends HandlerBase {
       disable_web_page_preview: true
     };
     if (_.isEmpty(crowded)) {
-      await this.sendMessage({ context, msg: '\u{1F7E6} _No facilities are crowded/opened_', opts });
+      await this.sendMessage({
+        context,
+        msg: '\u{1F7E6} _No facilities are crowded/opened_',
+        opts
+      });
       return;
     }
 
@@ -34,36 +38,42 @@ export class HandlerCrowd extends HandlerBase {
       bands[bandNum].push(facility);
     }
 
-    let crowdedStr = ``;
     let currBand = 1;
     const FACILITIES_LIMIT_PER_MSG = 80;
+    // Process individual bands
     while (!_.isNil(bands[currBand])) {
       let thisBand = bands[currBand];
       let msgs = [];
       if (_.isEmpty(thisBand)) {
         // Do nothing
       } else {
+        // Slice the facilities into FACILITIES_LIMIT_PER_MSG sizes so as not to exceed telegram message size limit
         let start = 0;
         let slice = thisBand.slice(start, start + FACILITIES_LIMIT_PER_MSG);
         while (!_.isEmpty(slice)) {
-          msgs.push(slice
-            .map(
-              (facility) =>
-                `${
-                  facility.band >= 2
-                    ? facility.band >= 3
-                      ? '\u{1f7e4}'
-                      : '\u{1f534}'
-                    : '\u{1f7e0}'
-                }  ${
-                  facility.band >= 2 ? '*' + facility.name + '*' : facility.name
-                } (${moment(facility.createdAt).format('hh:mm A')})`
-            )
-            .toString());
+          msgs.push(
+            slice
+              .map(
+                (facility) =>
+                  `${
+                    facility.band >= 2
+                      ? facility.band >= 3
+                        ? '\u{1f7e4}'
+                        : '\u{1f534}'
+                      : '\u{1f7e0}'
+                  }  ${
+                    facility.band >= 2
+                      ? '*' + facility.name + '*'
+                      : facility.name
+                  } (${moment(facility.createdAt).format('hh:mm A')})`
+              )
+              .toString()
+          );
           start = start + FACILITIES_LIMIT_PER_MSG + 1;
           slice = thisBand.slice(start, start + FACILITIES_LIMIT_PER_MSG);
         }
       }
+      // Print each of the message slices
       for (let msg of msgs) {
         let escMsg = msg
           .replace(/\-/g, `\\-`)
