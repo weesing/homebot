@@ -22,7 +22,7 @@ export class HandlerCrowd extends HandlerBase {
 
       bands[facility.band].push(facility);
     }
-    
+
     const opts = {
       parse_mode: 'MarkdownV2',
       disable_web_page_preview: true
@@ -56,10 +56,10 @@ export class HandlerCrowd extends HandlerBase {
         .replace(/\,/g, `\n`);
       defaultLogger.info(crowdedStr);
       let msg = `${crowdedStr}`;
-      this.sendMessage({ context, msg, opts });
+      await this.sendMessage({ context, msg, opts });
     }
-    let msg = `Data retrieved from \\- [SpaceOut](https://www.spaceout.gov.sg)`;
-    this.sendMessage({context, msg, opts});
+    let footer = `Data retrieved from \\- [SpaceOut](https://www.spaceout.gov.sg)`;
+    await this.sendMessage({ context, footer, opts });
   }
 }
 
