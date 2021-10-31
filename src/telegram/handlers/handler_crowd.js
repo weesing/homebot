@@ -1,4 +1,4 @@
-import { HandlerBase } from './handler_base';
+esimport { HandlerBase } from './handler_base';
 import { SpaceoutLib } from '../../lib/spaceout';
 import defaultLogger from '../../common/logger';
 import _ from 'lodash';
@@ -14,13 +14,14 @@ export class HandlerCrowd extends HandlerBase {
       ['band', 'name'],
       ['desc', 'asc']
     );
-    let bands = {};
+    let bands = [];
     for (let facility of crowded) {
-      if (_.isNil(bands[facility.band])) {
-        bands[facility.band] = [];
+      let bandNum = parseInt(facility.band);
+      if (_.isNil(bands[bandNum])) {
+        bands[bandNum] = [];
       }
 
-      bands[facility.band].push(facility);
+      bands[bandNum].push(facility);
     }
 
     const opts = {
@@ -28,7 +29,7 @@ export class HandlerCrowd extends HandlerBase {
       disable_web_page_preview: true
     };
     let crowdedStr = ``;
-    let currBand = 0;
+    let currBand = 1;
     while (!_.isNil(bands[currBand])) {
       let thisBand = bands[currBand];
       if (_.isEmpty(thisBand)) {
@@ -55,11 +56,12 @@ export class HandlerCrowd extends HandlerBase {
         .replace(/\)/g, `\\)`)
         .replace(/\,/g, `\n`);
       defaultLogger.info(crowdedStr);
-      let msg = `${crowdedStr}`;
+      let msg = `BAND ${currBand}\n\n${crowdedStr}`;
       await this.sendMessage({ context, msg, opts });
+      ++currBand;
     }
     let footer = `Data retrieved from \\- [SpaceOut](https://www.spaceout.gov.sg)`;
-    await this.sendMessage({ context, footer, opts });
+    await this.sendMessage({ context, msg: footer, opts });
   }
 }
 
