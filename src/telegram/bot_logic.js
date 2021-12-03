@@ -4,6 +4,7 @@ import { cfg } from '../configLoader';
 import TelegramBot from 'node-telegram-bot-api';
 import logger from '../common/logger';
 import util from 'util';
+import { exit } from 'process';
 
 export class BotLogic {
   static _instance;
@@ -73,7 +74,10 @@ export class BotLogic {
         this.bot.onText(matchCommandRegex, handlerFn);
       }
     }
-    this.bot.on('polling_error', (err) => logger.error(err));
+    this.bot.on('polling_error', (err) => {
+      logger.error(err);
+      exit(1);
+    });
     logger.info('   done');
   }
 }
