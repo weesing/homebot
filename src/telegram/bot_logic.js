@@ -75,6 +75,12 @@ export class BotLogic {
       }
     }
     this.bot.on('polling_error', (err) => {
+      logger.error('Telegram Bot polling error occurred!');
+      logger.error(err);
+      exit(1);
+    });
+    this.bot.on('error', (err) => {
+      logger.error('Telegram Bot (general) error occurred!');
       logger.error(err);
       exit(1);
     });
