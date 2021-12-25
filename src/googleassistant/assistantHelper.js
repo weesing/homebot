@@ -17,7 +17,7 @@ export class GoogleAssistantHelper {
   }
 
   async broadcast(message) {
-    let result = await this.assistant.assist(`Broadcast ${message}`);
+    let result = await this.assistant.assist(`Broadcast to home group, ${message}`);
     logger.info(result);
   }
 

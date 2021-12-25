@@ -42,7 +42,7 @@ export class SpaceoutLib {
         }
       }
       if (!ignore) {
-        logger.info(`Added entry for ${data.name} ${data.band} (${data.createdAt})`);
+        //logger.info(`Added entry for ${data.name} ${data.band} (${data.createdAt})`);
         finalData.push(data);
       }
     }

@@ -120,7 +120,7 @@ export class HandlerMenu extends HandlerBase {
   async initializeMenuCallback(botInstance) {
     botInstance.on(`callback_query`, (context) => {
       logger.info(`Received callback from menu`);
-      logger.info(context);
+      //logger.info(context);
       this.handleMenuCallback(context);
       botInstance.answerCallbackQuery(context.id);
     });
