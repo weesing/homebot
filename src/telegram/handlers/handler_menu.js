@@ -148,7 +148,7 @@ export class HandlerMenu extends HandlerBase {
 
   async handleBroadcast(context) {
     logger.info(`Handling broadcast with context`);
-    logger.info(context);
+    //logger.info(context);
     var buttonList = [];
     for (const [i, message] of this.broadcastMessages.entries()) {
       const buttonCallbackData = {
