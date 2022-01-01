@@ -128,7 +128,10 @@ export class HandlerMenu extends HandlerBase {
         logger.info(`Unauthorized usage of bot.`);
         this.sendMessage({
           context,
-          msg: `You are not authorized to perform this action.`
+          msg: `Sorry ${_.get(
+            context,
+            `from.first_name`
+          )}, you are not authorized to perform this action.`
         });
       } else {
         logger.info(`Validated source, handling menu command...`);
