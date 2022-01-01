@@ -126,6 +126,10 @@ export class HandlerMenu extends HandlerBase {
       const isValid = validator.validateSource(context);
       if (!isValid) {
         logger.info(`Unauthorized usage of bot.`);
+        this.sendMessage({
+          context,
+          msg: `You are not authorized to perform this action.`
+        });
       } else {
         logger.info(`Validated source, handling menu command...`);
         this.handleMenuCallback(context);
