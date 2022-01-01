@@ -30,6 +30,7 @@ import { HandlerDoorlockStatus } from './handler_doorlockstatus';
 import { HandlerDoorlockReboot } from './handler_doorlockreboot';
 import { HandlerRFIDReboot } from './handler_rfidreboot';
 import { HandlerCrowd } from './handler_crowd';
+import { TelegramValidator } from '../validator';
 
 export class HandlerMenu extends HandlerBase {
   constructor(args) {
@@ -120,8 +121,15 @@ export class HandlerMenu extends HandlerBase {
   async initializeMenuCallback(botInstance) {
     botInstance.on(`callback_query`, (context) => {
       logger.info(`Received callback from menu`);
-      //logger.info(context);
-      this.handleMenuCallback(context);
+      logger.info(context);
+      const validator = new TelegramValidator();
+      const isValid = validator.validateSource(context);
+      if (!isValid) {
+        logger.info(`Unauthorized usage of bot.`);
+      } else {
+        logger.info(`Validated source, handling menu command...`);
+        this.handleMenuCallback(context);
+      }
       botInstance.answerCallbackQuery(context.id);
     });
   }
