@@ -65,7 +65,7 @@ export class HandlerCrowd extends HandlerBase {
                     facility.band >= 2
                       ? '*' + facility.name + '*'
                       : facility.name
-                  } (${moment(facility.createdAt).format('hh:mm A')})`
+                  } (${moment(facility.createdAt).format('hh:mmA DD/MM')})`
               )
               .toString()
           );

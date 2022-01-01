@@ -121,7 +121,7 @@ export class HandlerMenu extends HandlerBase {
   async initializeMenuCallback(botInstance) {
     botInstance.on(`callback_query`, (context) => {
       logger.info(`Received callback from menu`);
-      logger.info(context);
+      //logger.info(context);
       const validator = new TelegramValidator();
       const isValid = validator.validateSource(context);
       if (!isValid) {

@@ -29,7 +29,7 @@ export class TelegramValidator {
     if (!_.isNil(groupId)) {
       if (allowedGroupIds.indexOf(groupId) >= 0) {
         logger.info(
-          `Authorized group: ${groupId} - ${_.get(msg, 'chat.title')}`
+          `Authorized group: ${groupId} - ${_.get(msg, 'chat.title', _.get(msg, 'message.chat.title'))}`
         );
         let command = '';
         let data = _.get(msg, 'data');
@@ -76,7 +76,7 @@ export class TelegramValidator {
   }
 
   validateSource(msg) {
-    let type = _.get(msg, 'chat.type');
+    let type = _.get(msg, 'chat.type', _.get(msg, 'message.chat.type'));
     logger.info(`Detected chat type ${type}`);
     switch (type) {
       case 'private': {
@@ -85,7 +85,7 @@ export class TelegramValidator {
       }
       case 'supergroup':
       case 'group': {
-        let groupId = _.get(msg, 'chat.id');
+        let groupId = _.get(msg, 'chat.id', _.get(msg, 'message.chat.id'));
         return this.validateGroupId(msg, groupId);
       }
       default: {
