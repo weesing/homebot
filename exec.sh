@@ -9,5 +9,5 @@ docker rm rata
 docker build -t weesing/rata:latest .
 
 # Run container.
-docker run --name rata -d --restart unless-stopped -p 8080:8080 weesing/rata
+docker run --name rata -d --restart=unless-stopped -p 8080:8080 weesing/rata
 
