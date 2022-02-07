@@ -1,12 +1,11 @@
 import { HandlerBase } from './handler_base';
-import { BTCLib } from '../../lib/btc';
+import { BullionStarLib } from '../../lib/bullion_star';
 
 export class HandlerPreciousMetals extends HandlerBase {
   async handleMessage(context) {
     const bullionStarLib = BullionStarLib();
     const data = await bullionStarLib.getPrices();
 
-    
     let msg = `*Precious Metals Current Price:*
 `;
     for (const currency of currencies) {
