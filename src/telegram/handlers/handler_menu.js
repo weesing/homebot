@@ -8,6 +8,7 @@ import {
   CMD_BROADCAST,
   CMD_BROADCAST_MESSAGE,
   CMD_BTC,
+  CMD_PRECIOUS_METALS,
   CMD_DEVICES,
   CMD_DEVICE_CONTROL,
   CMD_DEVICE_OFF,
@@ -31,6 +32,7 @@ import { HandlerDoorlockReboot } from './handler_doorlockreboot';
 import { HandlerRFIDReboot } from './handler_rfidreboot';
 import { HandlerCrowd } from './handler_crowd';
 import { TelegramValidator } from '../validator';
+import { HandlerPreciousMetals } from './handler_precious_metals';
 
 export class HandlerMenu extends HandlerBase {
   constructor(args) {
@@ -81,6 +83,10 @@ export class HandlerMenu extends HandlerBase {
       }
       case CMD_BTC: {
         this.handleBTC(context);
+        break;
+      }
+      case CMD_PRECIOUS_METALS: {
+        this.handlePreciousMetals(context);
         break;
       }
       case CMD_GENERATE_UUID: {
@@ -325,6 +331,13 @@ export class HandlerMenu extends HandlerBase {
     await btcPriceHandler.handleMessage(context);
   }
 
+  async handlePreciousMetals(context) {
+    const preciousMetalsPriceHandler = new HandlerPreciousMetals({
+      botInstance: this.botInstance
+    });
+    await preciousMetalsPriceHandler.handleMessage(context);
+  }
+
   async handleGenerateUUID(context) {
     const generateUUIDHandler = new HandlerUUID({
       botInstance: this.botInstance
@@ -401,6 +414,14 @@ export class HandlerMenu extends HandlerBase {
               command: CMD_BTC
             })
           },
+          {
+            text: `Precious Metals Prices`,
+            callback_data: JSON.stringify({
+              command: CMD_PRECIOUS_METALS
+            })
+          }
+        ],
+        [
           {
             text: `${AssetDefines.uuidIcon} Generate UUID`,
             callback_data: JSON.stringify({
