@@ -27,6 +27,22 @@ export class AssetDefines {
     return `\u{20BF}`;
   }
 
+  static get goldIcon() {
+    return `\u{91D1}`;
+  }
+
+  static get silverIcon() {
+    return `\u{9280}`;
+  }
+
+  static get platinumIcon() {
+    return `\u{9251}`;
+  }
+
+  static get palladiumIcon() {
+    return `\u{9200}`;
+  }
+
   static get deviceOnIcon() {
     return `\u{1F7E2}`;
   }
