@@ -60,7 +60,6 @@ export class HandlerPreciousMetals extends HandlerBase {
     msg += `
 <i>Last Updated on: ${data.lastUpdateDate}</i> from <a href="https://bullionstar.com">https://www.bullionstar.com</a>`;
 
-    console.log(msg);
     const opts = {
       parse_mode: 'HTML'
     };
