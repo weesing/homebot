@@ -415,7 +415,7 @@ export class HandlerMenu extends HandlerBase {
             })
           },
           {
-            text: `Precious Metals Prices`,
+            text: `${AssetDefines.goldIcon} Precious Metals Prices`,
             callback_data: JSON.stringify({
               command: CMD_PRECIOUS_METALS
             })
