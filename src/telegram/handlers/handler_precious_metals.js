@@ -57,6 +57,14 @@ export class HandlerPreciousMetals extends HandlerBase {
       msg += line;
     }
 
+    const pampData = data.pamp100g;
+    msg += `
+<u>100g PAMP Gold Cast Bar</u>
+Price - ${pampData.price}
+Buying - ${pampData.buying}
+Stock - ${pampData.stock}
+`;
+
     msg += `
 <i>Last Updated on: ${data.lastUpdateDate}</i> from <a href="https://bullionstar.com">https://www.bullionstar.com</a>`;
 
