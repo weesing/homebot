@@ -15,7 +15,6 @@ export class BullionStarLib {
       `${pamp100gUrl}${pamp100gPath}?${pamp100gQueryStr}`
     );
     const pamp100gData = _.first(responseData.products);
-    logger.info(pamp100gData);
 
     Object.assign(result, {
       pamp100g: {
@@ -24,8 +23,6 @@ export class BullionStarLib {
         stock: pamp100gData.totalAvailable
       }
     });
-
-    logger.info(result);
 
     return result;
   }
