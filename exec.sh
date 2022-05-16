@@ -2,12 +2,12 @@
 git pull
 
 # Stop the current docker container
-docker stop rata
-docker rm rata
+docker stop homebot
+docker rm homebot
 
 # Build
-docker build -t weesing/rata:latest .
+docker build -t weesing/homebot:latest .
 
 # Run container.
-docker run --name rata -d --restart=unless-stopped -p 8080:8080 weesing/rata
+docker run --name homebot -d --restart=unless-stopped -p 8080:8080 weesing/homebot
 
