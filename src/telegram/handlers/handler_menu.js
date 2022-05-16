@@ -18,8 +18,7 @@ import {
   CMD_TOGGLE_DOORLOCK,
   CMD_DOORLOCK_STATUS,
   CMD_DOORLOCK_REBOOT,
-  CMD_RFID_REBOOT,
-  CMD_CROWD
+  CMD_RFID_REBOOT
 } from '../../lib/command_defines';
 import { HandlerDeviceSwitchBase } from './handler_deviceswitch';
 import { HandlerBroadcast } from './handler_broadcast';
@@ -30,7 +29,6 @@ import { HandlerToggleDoorlock } from './handler_toggledoorlock';
 import { HandlerDoorlockStatus } from './handler_doorlockstatus';
 import { HandlerDoorlockReboot } from './handler_doorlockreboot';
 import { HandlerRFIDReboot } from './handler_rfidreboot';
-import { HandlerCrowd } from './handler_crowd';
 import { TelegramValidator } from '../validator';
 import { HandlerPreciousMetals } from './handler_precious_metals';
 
@@ -111,10 +109,6 @@ export class HandlerMenu extends HandlerBase {
       }
       case CMD_RFID_REBOOT: {
         this.handleRFIDReboot(context);
-        break;
-      }
-      case CMD_CROWD: {
-        this.handleSpaceout(context);
         break;
       }
       case CMD_BACK_TO_MAIN: {
@@ -345,13 +339,6 @@ export class HandlerMenu extends HandlerBase {
     await generateUUIDHandler.handleMessage(context);
   }
 
-  async handleSpaceout(context) {
-    const crowdHandler = new HandlerCrowd({
-      botInstance: this.botInstance
-    });
-    await crowdHandler.handleMessage(context);
-  }
-
   get mainMenuInlineKeyboard() {
     return JSON.stringify({
       inline_keyboard: [
@@ -426,14 +413,6 @@ export class HandlerMenu extends HandlerBase {
             text: `${AssetDefines.uuidIcon} Generate UUID`,
             callback_data: JSON.stringify({
               command: CMD_GENERATE_UUID
-            })
-          }
-        ],
-        [
-          {
-            text: `${AssetDefines.crowdIcon} Crowd Info`,
-            callback_data: JSON.stringify({
-              command: CMD_CROWD
             })
           }
         ]
