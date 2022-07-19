@@ -1,8 +1,8 @@
 version: "3.9"
 services:
-  rata:
-    image: weesing/rata:latest
-    container_name: rata
+  homebot:
+    image: weesing/homebot:latest
+    container_name: homebot
     build: .
     ports:
       - "8080:8080"
