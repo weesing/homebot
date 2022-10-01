@@ -64,13 +64,16 @@ export class BotLogic {
     if (!this.bot.isPolling()) {
       this.pollingCheckCount = 0;
       this.handlePollingError();
-    } else if (this.pollingCheckCount % 10 == 0) {
-      this.pollingCheckCount = 0;
+    } else if (
+      (this.pollingCheckCount * BotLogic.POLLING_CHECK_INTERVAL) / 1000 >=
+      3600
+    ) {
       logger.info(
         `Bot is still polling after ${
-          BotLogic.POLLING_CHECK_INTERVAL / 100
-        }s...`
+          (this.pollingCheckCount * BotLogic.POLLING_CHECK_INTERVAL) / 1000
+        }s and ${this.pollingCheckCount} checks...`
       );
+      this.pollingCheckCount = 0;
     }
   }
 
