@@ -51,8 +51,9 @@ export class BotLogic {
         log.info(`Bot is not polling, attempting to restart polling...`);
         this.bot.startPolling({ restart: true });
         log.info(`Bot polling started`);
+      } else {
+        log.info(`Bot is still polling...`);
       }
-      log.info(`Bot is still polling...`);
     }, POLLING_CHECK_INTERVAL);
     logger.info(`  done`);
   }
