@@ -20,7 +20,7 @@
     "lodash": "^4.17.15",
     "moment": "^2.29.1",
     "morgan": "~1.9.1",
-    "node-telegram-bot-api": "^0.53.0",
+    "node-telegram-bot-api": "^0.59.0",
     "pino": "^6.11.3",
     "pino-pretty": "^4.8.0",
     "superagent": "^5.3.1",

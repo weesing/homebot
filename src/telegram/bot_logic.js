@@ -9,6 +9,9 @@ import { exit } from 'process';
 export class BotLogic {
   static _instance;
 
+  static POLLING_CHECK_INTERVAL = 5000;
+  pollingCheckIntervalId = 0;
+
   static getInstance() {
     if (_.isNil(BotLogic._instance)) {
       logger.info(`Creating new BotLogic instance...`);
@@ -18,6 +21,7 @@ export class BotLogic {
   }
 
   constructor() {
+    this.pollingCheckIntervalId = 0;
     this.initialize();
   }
 
@@ -39,6 +43,17 @@ export class BotLogic {
     logger.info(`  creating new Telegram Bot`);
     this.secret = _.get(cfg, `telegram.token`);
     this.bot = new TelegramBot(this.secret, { polling: true });
+    if (pollingCheckIntervalId > 0) {
+      clearInterval(pollingCheckIntervalId);
+    }
+    pollingCheckIntervalId = setInterval(() => {
+      if (!this.bot.isPolling()) {
+        log.info(`Bot is not polling, attempting to restart polling...`);
+        this.bot.startPolling({ restart: true });
+        log.info(`Bot polling started`);
+      }
+      log.info(`Bot is still polling...`);
+    }, POLLING_CHECK_INTERVAL);
     logger.info(`  done`);
   }
 
@@ -81,7 +96,7 @@ export class BotLogic {
     this.bot.on('polling_error', (err) => {
       logger.error('Telegram Bot polling error occurred!');
       logger.error(err);
-      exit(1);
+      // exit(1);
     });
     this.bot.on('error', (err) => {
       logger.error('Telegram Bot (general) error occurred!');
