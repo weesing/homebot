@@ -57,7 +57,7 @@ export class BotLogic {
     }, POLLING_CHECK_INTERVAL);
   }
 
-  pollCheck() {
+  checkBotPollingStatus() {
     if (!this.bot.isPolling()) {
       this.handlePollingError();
     } else {
@@ -67,7 +67,7 @@ export class BotLogic {
 
   startPollingCheckInterval() {
     this.pollingCheckIntervalId = setInterval(() => {
-      this.pollCheck();
+      this.checkBotPollingStatus();
     }, POLLING_CHECK_INTERVAL);
   }
 
