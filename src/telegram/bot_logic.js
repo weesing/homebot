@@ -8,11 +8,8 @@ import { exit } from 'process';
 
 export class BotLogic {
   static _instance;
-
   static POLLING_RESTART_DELAY = 5000;
   static POLLING_CHECK_INTERVAL = 5000;
-  pollingCheckIntervalId = 0;
-  pollingCheckCount = 0;
 
   static getInstance() {
     if (_.isNil(BotLogic._instance)) {
@@ -24,6 +21,7 @@ export class BotLogic {
 
   constructor() {
     this.pollingCheckIntervalId = 0;
+    this.pollingCheckCount = 0;
     this.initialize();
   }
 
