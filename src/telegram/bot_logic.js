@@ -45,16 +45,16 @@ export class BotLogic {
       clearInterval(this.pollingCheckIntervalId);
       this.pollingCheckIntervalId = 0;
     }
-    log.info(
+    logger.info(
       `Bot is not polling, attempting to restart polling in ${
         BotLogic.POLLING_RESTART_DELAY / 1000
       }s...`
     );
     setTimeout(() => {
-      log.info(`Attempting to restart polling now...`);
+      logger.info(`Attempting to restart polling now...`);
       this.bot.startPolling({ restart: true });
       this.startPollingCheckInterval();
-      log.info(`Bot polling started`);
+      logger.info(`Bot polling started`);
     }, BotLogic.POLLING_RESTART_DELAY);
   }
 
@@ -62,7 +62,7 @@ export class BotLogic {
     if (!this.bot.isPolling()) {
       this.handlePollingError();
     } else {
-      log.info(`Bot is still polling...`);
+      logger.info(`Bot is still polling...`);
     }
   }
 
