@@ -9,6 +9,7 @@ import { exit } from 'process';
 export class BotLogic {
   static _instance;
 
+  static POLLING_RESTART_DELAY = 5000;
   static POLLING_CHECK_INTERVAL = 5000;
   pollingCheckIntervalId = 0;
 
@@ -46,7 +47,7 @@ export class BotLogic {
     }
     log.info(
       `Bot is not polling, attempting to restart polling in ${
-        POLLING_CHECK_INTERVAL / 1000
+        BotLogic.POLLING_RESTART_DELAY / 1000
       }s...`
     );
     setTimeout(() => {
@@ -54,7 +55,7 @@ export class BotLogic {
       this.bot.startPolling({ restart: true });
       this.startPollingCheckInterval();
       log.info(`Bot polling started`);
-    }, POLLING_CHECK_INTERVAL);
+    }, BotLogic.POLLING_RESTART_DELAY);
   }
 
   checkBotPollingStatus() {
@@ -68,7 +69,7 @@ export class BotLogic {
   startPollingCheckInterval() {
     this.pollingCheckIntervalId = setInterval(() => {
       this.checkBotPollingStatus();
-    }, POLLING_CHECK_INTERVAL);
+    }, BotLogic.POLLING_CHECK_INTERVAL);
   }
 
   initializeTelegramBot() {
