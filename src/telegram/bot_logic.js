@@ -43,6 +43,7 @@ export class BotLogic {
     if (this.pollingCheckIntervalId > 0) {
       clearInterval(this.pollingCheckIntervalId);
       this.pollingCheckIntervalId = 0;
+      this.pollingCheckCount = 0;
     }
     logger.info(
       `Bot is not polling, attempting to restart polling in ${
@@ -60,7 +61,6 @@ export class BotLogic {
   checkBotPollingStatus() {
     ++this.pollingCheckCount;
     if (!this.bot.isPolling()) {
-      this.pollingCheckCount = 0;
       this.handlePollingError();
     } else if (
       (this.pollingCheckCount * BotLogic.POLLING_CHECK_INTERVAL) / 1000 >=
@@ -128,7 +128,7 @@ export class BotLogic {
     this.bot.on('polling_error', (err) => {
       logger.error('Telegram Bot polling error occurred!');
       logger.error(err);
-      // exit(1);
+      this.handlePollingError();
     });
     this.bot.on('error', (err) => {
       logger.error('Telegram Bot (general) error occurred!');
