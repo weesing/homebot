@@ -10,8 +10,9 @@ export class BotLogic {
   static _instance;
 
   static POLLING_RESTART_DELAY = 5000;
-  static POLLING_CHECK_INTERVAL = 5000;
+  static POLLING_CHECK_INTERVAL = 20000;
   pollingCheckIntervalId = 0;
+  pollingCheckCount = 0;
 
   static getInstance() {
     if (_.isNil(BotLogic._instance)) {
@@ -59,10 +60,12 @@ export class BotLogic {
   }
 
   checkBotPollingStatus() {
+    ++this.pollingCheckCount;
     if (!this.bot.isPolling()) {
       this.handlePollingError();
-    } else {
-      logger.info(`Bot is still polling...`);
+    } else if (this.pollingCheckCount % 10 == 0) {
+      logger.info(`Bot is still polling after ${BotLogic.POLLING_CHECK_INTERVAL / 100}s...`);
+      this.pollingCheckCount = 0;
     }
   }
 
