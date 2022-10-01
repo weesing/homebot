@@ -39,22 +39,43 @@ export class BotLogic {
     logger.info('++++++++ Initialization completed');
   }
 
+  handlePollingError() {
+    if (this.pollingCheckIntervalId > 0) {
+      clearInterval(this.pollingCheckIntervalId);
+      this.pollingCheckIntervalId = 0;
+    }
+    log.info(
+      `Bot is not polling, attempting to restart polling in ${
+        POLLING_CHECK_INTERVAL / 1000
+      }s...`
+    );
+    setTimeout(() => {
+      log.info(`Attempting to restart polling now...`);
+      this.bot.startPolling({ restart: true });
+      this.startPollingCheckInterval();
+      log.info(`Bot polling started`);
+    }, POLLING_CHECK_INTERVAL);
+  }
+
+  pollCheck() {
+    if (!this.bot.isPolling()) {
+      this.handlePollingError();
+    } else {
+      log.info(`Bot is still polling...`);
+    }
+  }
+
+  startPollingCheckInterval() {
+    this.pollingCheckIntervalId = setInterval(() => {
+      this.pollCheck();
+    }, POLLING_CHECK_INTERVAL);
+  }
+
   initializeTelegramBot() {
     logger.info(`  creating new Telegram Bot`);
     this.secret = _.get(cfg, `telegram.token`);
     this.bot = new TelegramBot(this.secret, { polling: true });
-    if (pollingCheckIntervalId > 0) {
-      clearInterval(pollingCheckIntervalId);
-    }
-    pollingCheckIntervalId = setInterval(() => {
-      if (!this.bot.isPolling()) {
-        log.info(`Bot is not polling, attempting to restart polling...`);
-        this.bot.startPolling({ restart: true });
-        log.info(`Bot polling started`);
-      } else {
-        log.info(`Bot is still polling...`);
-      }
-    }, POLLING_CHECK_INTERVAL);
+    this.startPollingCheckInterval();
     logger.info(`  done`);
   }
 
