@@ -62,10 +62,15 @@ export class BotLogic {
   checkBotPollingStatus() {
     ++this.pollingCheckCount;
     if (!this.bot.isPolling()) {
+      this.pollingCheckCount = 0;
       this.handlePollingError();
     } else if (this.pollingCheckCount % 10 == 0) {
-      logger.info(`Bot is still polling after ${BotLogic.POLLING_CHECK_INTERVAL / 100}s...`);
       this.pollingCheckCount = 0;
+      logger.info(
+        `Bot is still polling after ${
+          BotLogic.POLLING_CHECK_INTERVAL / 100
+        }s...`
+      );
     }
   }
 
