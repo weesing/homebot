@@ -1,10 +1,11 @@
-import _ from 'lodash';
-import path from 'path';
-import { cfg } from '../configLoader';
-import TelegramBot from 'node-telegram-bot-api';
-import logger from '../common/logger';
-import util from 'util';
-import { exit } from 'process';
+import _ from "lodash";
+import path from "path";
+import { cfg } from "../configLoader";
+import TelegramBot from "node-telegram-bot-api";
+import logger from "../common/logger";
+import util from "util";
+import { exit } from "process";
+import { TotoLib } from "../lib/toto";
 
 export class BotLogic {
   static _instance;
@@ -26,9 +27,9 @@ export class BotLogic {
   }
 
   initialize() {
-    logger.info('++++++++ Initializing BotLogic');
+    logger.info("++++++++ Initializing BotLogic");
     if (this.isInitalized) {
-      logger.info('Has been initialized before! Skipping');
+      logger.info("Has been initialized before! Skipping");
       return;
     }
 
@@ -36,7 +37,10 @@ export class BotLogic {
     this.initializeEvents();
 
     this.isInitalized = true;
-    logger.info('++++++++ Initialization completed');
+    logger.info("++++++++ Initialization completed");
+
+    const totoLib = new TotoLib();
+    totoLib.getLatestTotoResults();
   }
 
   handlePollingError() {
@@ -76,7 +80,7 @@ export class BotLogic {
   }
 
   initializeEvents() {
-    logger.info('   events registration in progress...');
+    logger.info("   events registration in progress...");
     const commands = [
       { clazzPath: `./handlers/handler_help`, cmdMatch: /\/help/ },
       { clazzPath: `./handlers/handler_status`, cmdMatch: /\/status/ },
@@ -88,10 +92,10 @@ export class BotLogic {
       { clazzPath: `./handlers/handler_btcprice`, cmdMatch: /\/btcprice/ },
       {
         clazzPath: `./handlers/handler_precious_metals`,
-        cmdMatch: /\/preciousmetals/
+        cmdMatch: /\/preciousmetals/,
       },
       { clazzPath: `./handlers/handler_uuid`, cmdMatch: /\/uuid/ },
-      { clazzPath: `./handlers/handler_menu`, cmdMatch: /\/m/ }
+      { clazzPath: `./handlers/handler_menu`, cmdMatch: /\/m/ },
     ];
     for (const command of commands) {
       const handlerClazzPath = path.resolve(
@@ -111,16 +115,16 @@ export class BotLogic {
         this.bot.onText(matchCommandRegex, handlerFn);
       }
     }
-    this.bot.on('polling_error', (err) => {
-      logger.error('Telegram Bot polling error occurred!');
+    this.bot.on("polling_error", (err) => {
+      logger.error("Telegram Bot polling error occurred!");
       logger.error(err);
       this.handlePollingError();
     });
-    this.bot.on('error', (err) => {
-      logger.error('Telegram Bot (general) error occurred!');
+    this.bot.on("error", (err) => {
+      logger.error("Telegram Bot (general) error occurred!");
       logger.error(err);
       exit(1);
     });
-    logger.info('   done');
+    logger.info("   done");
   }
 }
