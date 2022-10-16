@@ -51,3 +51,5 @@ export class TotoLib {
     return data;
   }
 }
+
+module.exports = TotoLib;

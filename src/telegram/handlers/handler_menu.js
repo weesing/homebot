@@ -9,6 +9,7 @@ import {
   CMD_BROADCAST_MESSAGE,
   CMD_BTC,
   CMD_PRECIOUS_METALS,
+  CMD_TOTO,
   CMD_DEVICES,
   CMD_DEVICE_CONTROL,
   CMD_DEVICE_OFF,
@@ -31,6 +32,7 @@ import { HandlerDoorlockReboot } from './handler_doorlockreboot';
 import { HandlerRFIDReboot } from './handler_rfidreboot';
 import { TelegramValidator } from '../validator';
 import { HandlerPreciousMetals } from './handler_precious_metals';
+import { HandlerToto } from './handler_toto';
 
 export class HandlerMenu extends HandlerBase {
   constructor(args) {
@@ -85,6 +87,10 @@ export class HandlerMenu extends HandlerBase {
       }
       case CMD_PRECIOUS_METALS: {
         this.handlePreciousMetals(context);
+        break;
+      }
+      case CMD_TOTO: {
+        this.handleToto(context);
         break;
       }
       case CMD_GENERATE_UUID: {
@@ -332,6 +338,13 @@ export class HandlerMenu extends HandlerBase {
     await preciousMetalsPriceHandler.handleMessage(context);
   }
 
+  async handleToto(context) {
+    const totoHandler = new HandlerToto({
+      botInstance: this.botInstance
+    });
+    await totoHandler.handleMessage(context);
+  }
+
   async handleGenerateUUID(context) {
     const generateUUIDHandler = new HandlerUUID({
       botInstance: this.botInstance
@@ -409,6 +422,12 @@ export class HandlerMenu extends HandlerBase {
           }
         ],
         [
+          {
+            text: `${AssetDefines.totoIcon} Toto Results`,
+            callback_data: JSON.stringify({
+              command: CMD_TOTO
+            })
+          },
           {
             text: `${AssetDefines.uuidIcon} Generate UUID`,
             callback_data: JSON.stringify({

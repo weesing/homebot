@@ -94,8 +94,9 @@ export class BotLogic {
         clazzPath: `./handlers/handler_precious_metals`,
         cmdMatch: /\/preciousmetals/,
       },
+      { clazzPath: `./handlers/handler_toto`, cmdMatch: /\/toto/ },
       { clazzPath: `./handlers/handler_uuid`, cmdMatch: /\/uuid/ },
-      { clazzPath: `./handlers/handler_menu`, cmdMatch: /\/m/ },
+      { clazzPath: `./handlers/handler_menu`, cmdMatch: /\/m/ }
     ];
     for (const command of commands) {
       const handlerClazzPath = path.resolve(

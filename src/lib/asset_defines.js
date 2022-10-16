@@ -55,6 +55,10 @@ export class AssetDefines {
     return `\u{1F194}`;
   }
 
+  static get totoIcon() {
+    return ``;
+  }
+
   static get lockIcon() {
     return `\u{1F512}`;
   }
