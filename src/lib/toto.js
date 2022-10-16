@@ -26,7 +26,6 @@ export class TotoLib {
     const targetDivId = `ctl00_ctl36_g_7daddb1d_8fe5_43c9_ba4a_6a00b22a7111_ctl00_divSingleResult`;
     const $ = require("jquery")(dom.window);
     const allTableElements = $(`#${targetDivId}`).find(`table`).toArray();
-    console.log(allTableElements);
     let findTableTitles = {
       "Winning Numbers": `winningNumbers`,
       "Additional Number": `additionalNumber`,
@@ -46,6 +45,12 @@ export class TotoLib {
         }
       }
     }
+    const drawDateClass = `.drawDate`;
+    const drawNumberClass = `.drawNumber`;
+    data.drawDate = $(`#${targetDivId}`).find(drawDateClass).get(0).innerHTML;
+    data.drawNumber = $(`#${targetDivId}`)
+      .find(drawNumberClass)
+      .get(0).innerHTML;
     logger.info(`data - ${util.inspect(data, { depth: 99 })}`);
 
     return data;

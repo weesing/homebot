@@ -6,17 +6,21 @@ import util from "util";
 export class HandlerToto extends HandlerBase {
   async handleMessage(context) {
     const totoLib = new TotoLib();
-    let msg = `<u><b>Toto Results</b></u>`;
-    const { winningNumbers, additionalNumber, group1Prize } =
-      await totoLib.getLatestTotoResults();
-    console.log(`${winningNumbers}, ${additionalNumber}, ${group1Prize}`);
-    // const data = await totoLib.getLatestTotoResults();
-    // console.log(`${util.inspect(data, { depth: 99 })}`);
+    const {
+      drawDate,
+      drawNumber,
+      winningNumbers,
+      additionalNumber,
+      group1Prize,
+    } = await totoLib.getLatestTotoResults();
+
+    let msg = `<u><b>Toto Results</b></u>
+<i>${drawDate}</i> (${drawNumber})`;
 
     msg += `
 
-Winning numbers - ${winningNumbers.join(", ")}
-Additional number - ${additionalNumber[0]}
+Winning numbers - <em>${winningNumbers.join(", ")}</em>
+Additional number - <em>${additionalNumber[0]}</em>
 Group 1 Prize - ${group1Prize[0]}
 
 `;
