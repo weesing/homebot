@@ -21,7 +21,7 @@ export class HandlerToto extends HandlerBase {
 
 Winning numbers - <em>${winningNumbers.join(", ")}</em>
 Additional number - <em>${additionalNumber[0]}</em>
-Group 1 Prize - ${group1Prize[0]}
+Group 1 Prize - ${group1Prize[0] || '-'}
 
 `;
 
