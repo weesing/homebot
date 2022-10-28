@@ -38,7 +38,6 @@ export class SilverBullionLib {
 
   getStock($) {
     const addItemToCartForm = $(`.sgi-item-add`).toArray();
-    console.log(addItemToCartForm);
     if (addItemToCartForm.length === 0) {
       return '0';
     }
