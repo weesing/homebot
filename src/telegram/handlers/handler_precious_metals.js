@@ -1,23 +1,24 @@
-import _ from 'lodash';
-import { HandlerBase } from './handler_base';
-import { BullionStarLib } from '../../lib/bullion_star';
-import { AssetDefines } from '../../lib/asset_defines';
+import _ from "lodash";
+import { HandlerBase } from "./handler_base";
+import { BullionStarLib } from "../../lib/bullion_star";
+import { SilverBullionLib } from "../../lib/silver_bullion";
+import { AssetDefines } from "../../lib/asset_defines";
 
 export class HandlerPreciousMetals extends HandlerBase {
   async handleMessage(context) {
     const elements = [
-      { key: 'XAU', name: 'Gold', icon: `${AssetDefines.goldIcon}` },
-      { key: 'XAG', name: 'Silver', icon: `${AssetDefines.silverIcon}` },
-      { key: 'XPT', name: 'Platinum', icon: `${AssetDefines.platinumIcon}` },
-      { key: 'XPD', name: 'Palladium', icon: `${AssetDefines.palladiumIcon}` }
+      { key: "XAU", name: "Gold", icon: `${AssetDefines.goldIcon}` },
+      { key: "XAG", name: "Silver", icon: `${AssetDefines.silverIcon}` },
+      { key: "XPT", name: "Platinum", icon: `${AssetDefines.platinumIcon}` },
+      { key: "XPD", name: "Palladium", icon: `${AssetDefines.palladiumIcon}` },
     ];
 
     const bullionStarLib = new BullionStarLib();
-    const data = await bullionStarLib.getPrices();
+    const bullionStarData = await bullionStarLib.getPrices();
 
-    var formatter = new Intl.NumberFormat('en-US', {
-      style: 'currency',
-      currency: 'SGD'
+    const formatter = new Intl.NumberFormat("en-US", {
+      style: "currency",
+      currency: "SGD",
     });
 
     /*
@@ -49,7 +50,7 @@ export class HandlerPreciousMetals extends HandlerBase {
 
 `;
     for (const element of elements) {
-      const elemData = data.spotPrices[element.key];
+      const elemData = bullionStarData.spotPrices[element.key];
       let elemValue = _.round(parseFloat(elemData.value.split(` `)[1]), 2);
       elemValue = formatter.format(elemValue * 100);
       let line = `${element.icon} ${element.name} <b>${elemValue}</b>
@@ -57,32 +58,40 @@ export class HandlerPreciousMetals extends HandlerBase {
       msg += line;
     }
 
-    const pampData = data.pamp100g;
+    const pampData = bullionStarData.pamp100g;
     msg += `
-<u>100g PAMP Gold Cast Bar</u>
+<u>100g PAMP Gold Cast Bar</u> [<a href="https://www.bullionstar.com/buy/product/gold-pamp-cast-100g">Bullion Star</a>]
 Price - ${pampData.price}
 Buying - ${pampData.buying}
 Stock - ${pampData.stock}
 `;
 
+    const silverBullionLib = new SilverBullionLib();
+    const {
+      pamp100gPrice: silverBullionPrice,
+      pamp100gBuyBack: silverBullionBuyBack,
+      pamp100gStock: silverBullionStock,
+    } = await silverBullionLib.getPrices();
+
+    msg += `
+<u>100g PAMP Gold Cast Bar</u> [<a href="https://www.silverbullion.com.sg/Product/Detail/Gold_100_gram_PAMP_Suisse_cast_bar">Silver Bullion</a>]
+Price - ${silverBullionPrice}
+Buying - ${silverBullionBuyBack}
+Stock - ${silverBullionStock}
+`;
+
     msg += `
 `;
-    msg += `<i>Last Updated on: ${data.lastUpdateDate}</i> from `;
+    msg += `<i>Last Updated on: ${bullionStarData.lastUpdateDate}</i> from `;
     msg += `<a href="https://bullionstar.com">`;
-    msg += `https://www.bullionstar.com`
-    msg += `</a>`;
-    msg += `
-`;
+    msg += `https://www.bullionstar.com`;
+    msg += `</a> and `;
     msg += `<a href="https://www.silverbullion.com.sg">`;
     msg += `https://www.silverbullion.com.sg`;
     msg += `</a>`;
-    msg += ` `;
-    msg += `[<a href="https://www.silverbullion.com.sg/Product/Detail/Gold_100_gram_PAMP_Suisse_cast_bar">`;
-    msg += `PAMP Gold bar`;
-    msg += `</a>]`;
 
     const opts = {
-      parse_mode: 'HTML'
+      parse_mode: "HTML",
     };
     this.sendMessage({ context, msg, opts });
   }

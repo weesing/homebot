@@ -5,12 +5,12 @@ import TelegramBot from "node-telegram-bot-api";
 import logger from "../common/logger";
 import util from "util";
 import { exit } from "process";
-import { TotoLib } from "../lib/toto";
 
 export class BotLogic {
   static _instance;
   static POLLING_RESTART_DELAY = 5000;
   static POLLING_CHECK_INTERVAL = 5000;
+  static RESTART_AFTER_POLLS = 100;
 
   static getInstance() {
     if (_.isNil(BotLogic._instance)) {
@@ -21,12 +21,14 @@ export class BotLogic {
   }
 
   constructor() {
-    this.pollingCheckIntervalId = 0;
-    this.pollingCheckCount = 0;
     this.initialize();
   }
 
   initialize() {
+    this.pollingCheckIntervalId = 0;
+    this.pollsCheckCount = 0;
+    this.pollsSinceLastRestart = 0;
+
     logger.info("++++++++ Initializing BotLogic");
     if (this.isInitalized) {
       logger.info("Has been initialized before! Skipping");
@@ -38,9 +40,6 @@ export class BotLogic {
 
     this.isInitalized = true;
     logger.info("++++++++ Initialization completed");
-
-    const totoLib = new TotoLib();
-    totoLib.getLatestTotoResults();
   }
 
   handlePollingError() {
@@ -48,24 +47,34 @@ export class BotLogic {
     exit(1);
   }
 
+  /**
+   * Polling checks are done every POLLING_CHECK_INTERVAL ms.
+   */
   checkBotPollingStatus() {
-    ++this.pollingCheckCount;
+    ++this.pollsCheckCount;
+
     if (!this.bot.isPolling()) {
       this.handlePollingError();
-    } else if (
-      (this.pollingCheckCount * BotLogic.POLLING_CHECK_INTERVAL) / 1000 >=
-      3600
-    ) {
+    } else if (this.pollsCheckCount >= BotLogic.RESTART_AFTER_POLLS) {
+      // Force reinitialization after a while.
+      let secondsSinceLastPrint =
+        (this.pollsCheckCount * BotLogic.POLLING_CHECK_INTERVAL) / 1000;
       logger.info(
-        `Bot is still polling after ${
-          (this.pollingCheckCount * BotLogic.POLLING_CHECK_INTERVAL) / 1000
-        }s and ${this.pollingCheckCount} checks...`
+        `Bot is restarting polling after ${secondsSinceLastPrint}s and ${this.pollsCheckCount} poll checks...`
       );
-      this.pollingCheckCount = 0;
+      // reinit
+      this.initialize();
     }
   }
 
   startPollingCheckInterval() {
+    if (this.pollingCheckIntervalId !== 0) {
+      logger.info(`Stopping polling check interval.`);
+      clearInterval(this.pollingCheckIntervalId);
+      this.pollingCheckIntervalId = 0;
+    }
+
+    logger.info(`Starting polling check interval.`);
     this.pollingCheckIntervalId = setInterval(() => {
       this.checkBotPollingStatus();
     }, BotLogic.POLLING_CHECK_INTERVAL);
@@ -96,7 +105,7 @@ export class BotLogic {
       },
       { clazzPath: `./handlers/handler_toto`, cmdMatch: /\/toto/ },
       { clazzPath: `./handlers/handler_uuid`, cmdMatch: /\/uuid/ },
-      { clazzPath: `./handlers/handler_menu`, cmdMatch: /\/m/ }
+      { clazzPath: `./handlers/handler_menu`, cmdMatch: /\/m/ },
     ];
     for (const command of commands) {
       const handlerClazzPath = path.resolve(

@@ -1,5 +1,5 @@
-import _ from 'lodash';
-import logger from '../common/logger';
+import _ from "lodash";
+import logger from "../common/logger";
 
 export class TelegramUtil {
   static get instance() {
@@ -12,15 +12,15 @@ export class TelegramUtil {
 
   getReplyId(context) {
     let chatId;
-    let type = _.get(context, 'chat.type');
+    let type = _.get(context, "chat.type");
     switch (type) {
-      case 'private': {
-        chatId = _.get(context, 'from.id');
+      case "private": {
+        chatId = _.get(context, "from.id");
         break;
       }
-      case 'supergroup':
-      case 'group': {
-        chatId = _.get(context, 'chat.id');
+      case "supergroup":
+      case "group": {
+        chatId = _.get(context, "chat.id");
         break;
       }
     }
@@ -42,22 +42,22 @@ export class TelegramUtil {
   async sendMessage({ bot, context, msg, opts = null }) {
     const chatId = this.getReplyId(context);
     if (_.isNil(opts)) {
-      return await bot.sendMessage(chatId, msg);
+      return bot.sendMessage(chatId, msg);
     }
-    return await bot.sendMessage(chatId, msg, opts);
+    return bot.sendMessage(chatId, msg, opts);
   }
 
   async editMarkupMessage({ bot, context, replyMarkup }) {
     const chatId = this.getReplyId(context);
     const messageId = this.getMessageId(context);
-    return await bot.editMessageReplyMarkup(replyMarkup, {
+    return bot.editMessageReplyMarkup(replyMarkup, {
       chat_id: chatId,
-      message_id: messageId
+      message_id: messageId,
     });
   }
 
   async sendPhoto({ bot, context, caption, imagePath }) {
     const chatId = this.getReplyId(context);
-    return await bot.sendPhoto(chatId, imagePath);
+    return bot.sendPhoto(chatId, imagePath);
   }
 }
