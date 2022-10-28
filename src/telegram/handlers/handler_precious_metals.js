@@ -85,7 +85,7 @@ Stock - ${pampData.stock}
     msg += `<i>Last Updated on: ${bullionStarData.lastUpdateDate}</i> from `;
     msg += `<a href="https://www.silverbullion.com.sg">`;
     msg += `https://www.silverbullion.com.sg`;
-    msg += `</a> and`;
+    msg += `</a> and `;
     msg += `<a href="https://bullionstar.com">`;
     msg += `https://www.bullionstar.com`;
     msg += `</a>`;
