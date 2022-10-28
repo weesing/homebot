@@ -58,14 +58,6 @@ export class HandlerPreciousMetals extends HandlerBase {
       msg += line;
     }
 
-    const pampData = bullionStarData.pamp100g;
-    msg += `
-<u>100g PAMP Gold Cast Bar</u> [<a href="https://www.bullionstar.com/buy/product/gold-pamp-cast-100g">Bullion Star</a>]
-Price - ${pampData.price}
-Buying - ${pampData.buying}
-Stock - ${pampData.stock}
-`;
-
     const silverBullionLib = new SilverBullionLib();
     const {
       pamp100gPrice: silverBullionPrice,
@@ -80,14 +72,22 @@ Buying - ${silverBullionBuyBack}
 Stock - ${silverBullionStock}
 `;
 
+    const pampData = bullionStarData.pamp100g;
+    msg += `
+<u>100g PAMP Gold Cast Bar</u> [<a href="https://www.bullionstar.com/buy/product/gold-pamp-cast-100g">Bullion Star</a>]
+Price - ${pampData.price}
+Buying - ${pampData.buying}
+Stock - ${pampData.stock}
+`;
+
     msg += `
 `;
     msg += `<i>Last Updated on: ${bullionStarData.lastUpdateDate}</i> from `;
-    msg += `<a href="https://bullionstar.com">`;
-    msg += `https://www.bullionstar.com`;
-    msg += `</a> and `;
     msg += `<a href="https://www.silverbullion.com.sg">`;
     msg += `https://www.silverbullion.com.sg`;
+    msg += `</a> and`;
+    msg += `<a href="https://bullionstar.com">`;
+    msg += `https://www.bullionstar.com`;
     msg += `</a>`;
 
     const opts = {
