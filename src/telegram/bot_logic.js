@@ -66,7 +66,13 @@ export class BotLogic {
       exit(1);
     }
 
-    logger.info(`Polling count - ${this.pollsCheckCount}`);
+    if (this.pollsCheckCount % 10 === 0) {
+      logger.info(
+        `Polling count - ${this.pollsCheckCount}, lifetime - ${
+          (this.pollsCheckCount * BotLogic.POLLING_CHECK_INTERVAL) / 1000
+        }s`
+      );
+    }
   }
 
   async startPollingCheckInterval() {
