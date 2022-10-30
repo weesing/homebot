@@ -9,8 +9,8 @@ import { exit } from "process";
 export class BotLogic {
   static _instance;
   static POLLING_RESTART_DELAY = 5000;
-  static POLLING_CHECK_INTERVAL = 1000;
-  static RESTART_AFTER_POLLS = 3;
+  static POLLING_CHECK_INTERVAL = 5000;
+  static RESTART_AFTER_POLLS = 100;
 
   static getInstance() {
     if (_.isNil(BotLogic._instance)) {
