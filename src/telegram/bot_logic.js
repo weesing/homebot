@@ -5,6 +5,7 @@ import TelegramBot from "node-telegram-bot-api";
 import logger from "../common/logger";
 import util from "util";
 import { exit } from "process";
+import moment from "moment";
 
 export class BotLogic {
   static _instance;
@@ -28,8 +29,9 @@ export class BotLogic {
     this.pollingCheckIntervalId = 0;
     this.pollsCheckCount = 0;
     this.pollsSinceLastRestart = 0;
+    this.logicStartTime = moment().unix();
 
-    logger.info("++++++++ Initializing BotLogic");
+    logger.info(`++++++++ Initializing BotLogic, started at ${this.logicStartTime}`);
     if (this.isInitalized) {
       logger.info("Has been initialized before! Skipping");
       return;
@@ -53,12 +55,11 @@ export class BotLogic {
   async checkBotPollingStatus() {
     ++this.pollsCheckCount;
 
+    let secondsSinceLastPrint = moment().unix() - this.logicStartTime;
     if (!this.bot.isPolling()) {
       this.handlePollingError();
     } else if (this.pollsCheckCount >= BotLogic.RESTART_AFTER_POLLS) {
       // Force reinitialization after a while.
-      let secondsSinceLastPrint =
-        (this.pollsCheckCount * BotLogic.POLLING_CHECK_INTERVAL) / 1000;
       logger.info(
         `Bot is restarting polling after ${secondsSinceLastPrint}s and ${this.pollsCheckCount} poll checks...`
       );
@@ -68,9 +69,7 @@ export class BotLogic {
 
     if (this.pollsCheckCount % 10 === 0) {
       logger.info(
-        `Polling count - ${this.pollsCheckCount}, lifetime - ${
-          (this.pollsCheckCount * BotLogic.POLLING_CHECK_INTERVAL) / 1000
-        }s`
+        `Polling count - ${this.pollsCheckCount}, lifetime - ${secondsSinceLastPrint}s`
       );
     }
   }
