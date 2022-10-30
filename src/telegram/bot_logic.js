@@ -9,8 +9,8 @@ import { exit } from "process";
 export class BotLogic {
   static _instance;
   static POLLING_RESTART_DELAY = 5000;
-  static POLLING_CHECK_INTERVAL = 5000;
-  static RESTART_AFTER_POLLS = 100;
+  static POLLING_CHECK_INTERVAL = 1000;
+  static RESTART_AFTER_POLLS = 3;
 
   static getInstance() {
     if (_.isNil(BotLogic._instance)) {
@@ -24,7 +24,7 @@ export class BotLogic {
     this.initialize();
   }
 
-  initialize() {
+  async initialize() {
     this.pollingCheckIntervalId = 0;
     this.pollsCheckCount = 0;
     this.pollsSinceLastRestart = 0;
@@ -35,8 +35,8 @@ export class BotLogic {
       return;
     }
 
-    this.initializeTelegramBot();
-    this.initializeEvents();
+    await this.initializeTelegramBot();
+    await this.initializeEvents();
 
     this.isInitalized = true;
     logger.info("++++++++ Initialization completed");
@@ -50,7 +50,7 @@ export class BotLogic {
   /**
    * Polling checks are done every POLLING_CHECK_INTERVAL ms.
    */
-  checkBotPollingStatus() {
+  async checkBotPollingStatus() {
     ++this.pollsCheckCount;
 
     if (!this.bot.isPolling()) {
@@ -63,32 +63,39 @@ export class BotLogic {
         `Bot is restarting polling after ${secondsSinceLastPrint}s and ${this.pollsCheckCount} poll checks...`
       );
       // reinit
-      this.initialize();
+      exit(1);
     }
+
+    logger.info(`Polling count - ${this.pollsCheckCount}`);
   }
 
-  startPollingCheckInterval() {
+  async startPollingCheckInterval() {
+    await this.stopPollingCheckInterval();
+
+    logger.info(`Starting polling check interval.`);
+    this.pollingCheckIntervalId = setInterval(async () => {
+      await this.checkBotPollingStatus();
+    }, BotLogic.POLLING_CHECK_INTERVAL);
+  }
+
+  async stopPollingCheckInterval() {
     if (this.pollingCheckIntervalId !== 0) {
       logger.info(`Stopping polling check interval.`);
       clearInterval(this.pollingCheckIntervalId);
       this.pollingCheckIntervalId = 0;
     }
-
-    logger.info(`Starting polling check interval.`);
-    this.pollingCheckIntervalId = setInterval(() => {
-      this.checkBotPollingStatus();
-    }, BotLogic.POLLING_CHECK_INTERVAL);
   }
 
-  initializeTelegramBot() {
+  async initializeTelegramBot() {
     logger.info(`  creating new Telegram Bot`);
     this.secret = _.get(cfg, `telegram.token`);
     this.bot = new TelegramBot(this.secret, { polling: true });
+    logger.info(`  Bot created.`);
     this.startPollingCheckInterval();
     logger.info(`  done`);
   }
 
-  initializeEvents() {
+  async initializeEvents() {
     logger.info("   events registration in progress...");
     const commands = [
       { clazzPath: `./handlers/handler_help`, cmdMatch: /\/help/ },
