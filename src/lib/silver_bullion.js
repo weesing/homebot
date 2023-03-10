@@ -46,7 +46,7 @@ export class SilverBullionLib {
       const itemAvailablePs = $(form).find(`.item-available`).toArray();
       if (itemAvailablePs.length > 0) {
         const stockString = itemAvailablePs[0].innerHTML.trim();
-        const regex = /^In\-Stock: (\d) bar[s]?$/;
+        const regex = /^In\-Stock: (\d+) bar[s]?$/;
         if (regex.test(stockString)) {
           const result = regex.exec(stockString)[1];
           logger.info(`In stock ${result}`);
