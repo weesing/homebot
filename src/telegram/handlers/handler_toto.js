@@ -27,17 +27,19 @@ Group 1 Prize - ${group1Prize[0] || '-'}
 
 `;
 
-    msg += `<a href="https://www.singaporepools.com.sg/en/product/sr/Pages/toto_results.aspx">`;
-    msg += `https://www.singaporepools.com.sg/en/product/sr/Pages/toto_results.aspx`;
-    msg += `</a>`;
-
     const opts = {
       parse_mode: 'HTML'
     };
     this.sendMessage({ context, msg, opts });
     this.sendMessage({
       context,
-      msg: `Next Draw - <em>${nextDrawDate} ( ${nextJackpot} )</em>`,
+      msg: `
+Next Draw - <em>${nextDrawDate} ( ${nextJackpot} )</em>
+
+<a href="https://www.singaporepools.com.sg/en/product/sr/Pages/toto_results.aspx">
+https://www.singaporepools.com.sg/en/product/sr/Pages/toto_results.aspx
+</a>
+`,
       opts
     });
   }
