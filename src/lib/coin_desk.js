@@ -12,7 +12,7 @@ export class CoinDeskLib {
           .then((response) => {
             return { response, currency };
           })
-      ); //test
+      );
     }
 
     return await Promise.all(promises).then((results) => {
