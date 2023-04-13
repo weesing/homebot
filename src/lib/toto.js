@@ -48,8 +48,8 @@ export class TotoLib {
     }
     const drawDateClass = `.drawDate`;
     const drawNumberClass = `.drawNumber`;
-    data.drawDate = $(`#${targetDivId}`).find(drawDateClass).get(0).innerHTML;
-    data.drawNumber = $(`#${targetDivId}`)
+    data.drawDate = $(`${targetDivId}`).find(drawDateClass).get(0).innerHTML;
+    data.drawNumber = $(`${targetDivId}`)
       .find(drawNumberClass)
       .get(0).innerHTML;
     logger.info(`data - ${util.inspect(data, { depth: 99 })}`);
