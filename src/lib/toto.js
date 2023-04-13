@@ -1,7 +1,7 @@
-import axios from "axios";
-import { JSDOM } from "jsdom";
-import logger from "../common/logger";
-import util from "util";
+import axios from 'axios';
+import { JSDOM } from 'jsdom';
+import logger from '../common/logger';
+import util from 'util';
 
 export class TotoLib {
   extractTdValues($, tableElem) {
@@ -15,7 +15,7 @@ export class TotoLib {
   }
 
   async getLatestTotoResults() {
-    logger.info("Get Latest Toto Results");
+    logger.info('Get Latest Toto Results');
 
     const singaporePoolsUrl = `https://www.singaporepools.com.sg`;
     const queryStr = `/en/product/sr/Pages/toto_results.aspx`;
@@ -23,13 +23,14 @@ export class TotoLib {
       `${singaporePoolsUrl}${queryStr}`
     );
     const dom = new JSDOM(htmlString);
-    const targetDivId = `ctl00_ctl36_g_7daddb1d_8fe5_43c9_ba4a_6a00b22a7111_ctl00_divSingleResult`;
-    const $ = require("jquery")(dom.window);
-    const allTableElements = $(`#${targetDivId}`).find(`table`).toArray();
+    //const targetDivId = `#ctl00_ctl37_g_7daddb1d_8fe5_43c9_ba4a_6a00b22a7111_ctl00_divSingleResult`;
+    const targetDivId = `.divSingleDraw`;
+    const $ = require('jquery')(dom.window);
+    const allTableElements = $(`${targetDivId}`).find(`table`).toArray();
     let findTableTitles = {
-      "Winning Numbers": `winningNumbers`,
-      "Additional Number": `additionalNumber`,
-      "Group 1 Prize": `group1Prize`,
+      'Winning Numbers': `winningNumbers`,
+      'Additional Number': `additionalNumber`,
+      'Group 1 Prize': `group1Prize`
     };
     let titles = Object.keys(findTableTitles);
     let data = {};
