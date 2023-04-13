@@ -23,7 +23,6 @@ export class TotoLib {
       `${singaporePoolsUrl}${queryStr}`
     );
     const dom = new JSDOM(htmlString);
-    //const targetDivId = `#ctl00_ctl37_g_7daddb1d_8fe5_43c9_ba4a_6a00b22a7111_ctl00_divSingleResult`;
     const targetDivId = `.divSingleDraw`;
     const $ = require('jquery')(dom.window);
     const allTableElements = $(`${targetDivId}`).find(`table`).toArray();
