@@ -25,7 +25,7 @@ Winning numbers - <em>${winningNumbers.join(', ')}</em>
 Additional number - <em>${additionalNumber[0]}</em>
 Group 1 Prize - ${group1Prize[0] || '-'}
 
-Next Draw - <em>${nextDrawDate} (${nextJackpot})</em>
+Next Draw - <em>${nextDrawDate} ( ${nextJackpot} )</em>
 
 `;
 
@@ -37,6 +37,7 @@ Next Draw - <em>${nextDrawDate} (${nextJackpot})</em>
       parse_mode: 'HTML'
     };
     this.sendMessage({ context, msg, opts });
+    this.sendMessage({ context, msg: "GOOD LUCK!", opts });
   }
 }
 
