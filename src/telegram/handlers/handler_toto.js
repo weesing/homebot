@@ -41,8 +41,7 @@ Group 1 Prize - ${group1Prize[0] || '-'}
 █▄▄▄▒█▄▄▄▒█▄▄▄▒█
 ▀▄▄▄▄▀▄▄▄▄▀▄▄▄▄▀
 
-    Good Luck!
-
+Good Luck!
 <a href="https://www.singaporepools.com.sg/en/product/sr/Pages/toto_results.aspx">
 https://www.singaporepools.com.sg/en/product/sr/Pages/toto_results.aspx
 </a>`,
