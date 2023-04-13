@@ -33,7 +33,9 @@ Group 1 Prize - ${group1Prize[0] || '-'}
     this.sendMessage({ context, msg, opts });
     this.sendMessage({
       context,
-      msg: `Next Draw - <em>${nextDrawDate} ( ${nextJackpot} )</em>
+      msg: `<u><b>Next Draw</b></u>
+<em>${nextDrawDate} ----- ${nextJackpot}</em>
+55555555555555555555555555555555555555555555555555555555555
 <a href="https://www.singaporepools.com.sg/en/product/sr/Pages/toto_results.aspx">
 https://www.singaporepools.com.sg/en/product/sr/Pages/toto_results.aspx
 </a>`,
