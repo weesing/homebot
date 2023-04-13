@@ -35,19 +35,16 @@ Group 1 Prize - ${group1Prize[0] || '-'}
       context,
       msg: `<u><b>Next Draw</b></u>
 <em>${nextDrawDate} ----- ${nextJackpot}</em>
-555555555555555555
-555555555555555555
-5▄▄███▄▄·▄▄███▄▄·5
-5██╔════╝██╔════╝5
-5███████╗███████╗5
-5╚════██║╚════██║5
-5███████║███████║5
-5╚═▀▀▀══╝╚═▀▀▀══╝5
-555555555555555555
-555555555555555555
-
+ ________      
+|\   ____\     
+\ \  \___|_    
+ \ \_____  \   
+  \|____|\  \  
+    ____\_\  \ 
+   |\_________\
+   \|_________|
+               
     Good Luck!
-
 
 <a href="https://www.singaporepools.com.sg/en/product/sr/Pages/toto_results.aspx">
 https://www.singaporepools.com.sg/en/product/sr/Pages/toto_results.aspx
