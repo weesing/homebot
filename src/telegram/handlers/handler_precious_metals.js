@@ -1,24 +1,24 @@
-import _ from "lodash";
-import { HandlerBase } from "./handler_base";
-import { BullionStarLib } from "../../lib/bullion_star";
-import { SilverBullionLib } from "../../lib/silver_bullion";
-import { AssetDefines } from "../../lib/asset_defines";
+import _ from 'lodash';
+import { HandlerBase } from './handler_base';
+import { BullionStarLib } from '../../lib/bullion_star';
+import { SilverBullionLib } from '../../lib/silver_bullion';
+import { AssetDefines } from '../../lib/asset_defines';
 
 export class HandlerPreciousMetals extends HandlerBase {
   async handleMessage(context) {
     const elements = [
-      { key: "XAU", name: "Gold", icon: `${AssetDefines.goldIcon}` },
-      { key: "XAG", name: "Silver", icon: `${AssetDefines.silverIcon}` },
-      { key: "XPT", name: "Platinum", icon: `${AssetDefines.platinumIcon}` },
-      { key: "XPD", name: "Palladium", icon: `${AssetDefines.palladiumIcon}` },
+      { key: 'XAU', name: 'Gold', icon: `${AssetDefines.goldIcon}` },
+      { key: 'XAG', name: 'Silver', icon: `${AssetDefines.silverIcon}` },
+      { key: 'XPT', name: 'Platinum', icon: `${AssetDefines.platinumIcon}` },
+      { key: 'XPD', name: 'Palladium', icon: `${AssetDefines.palladiumIcon}` }
     ];
 
     const bullionStarLib = new BullionStarLib();
     const bullionStarData = await bullionStarLib.getPrices();
 
-    const formatter = new Intl.NumberFormat("en-US", {
-      style: "currency",
-      currency: "SGD",
+    const formatter = new Intl.NumberFormat('en-US', {
+      style: 'currency',
+      currency: 'SGD'
     });
 
     /*
@@ -62,7 +62,7 @@ export class HandlerPreciousMetals extends HandlerBase {
     const {
       pamp100gPrice: silverBullionPrice,
       pamp100gBuyBack: silverBullionBuyBack,
-      pamp100gStock: silverBullionStock,
+      pamp100gStock: silverBullionStock
     } = await silverBullionLib.getPrices();
 
     msg += `
@@ -82,6 +82,23 @@ Stock - ${pampData.stock}
 
     msg += `
 `;
+    msg += `
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣟⠿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠏⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⠀⠈⠙⢿⣿⣿⣿⣿⠟⢁⣠⣀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀⠀⠈⠻⣿⣧⡾⠟⠉⠙⠻⢿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣷⠀⣀⣤⡶⠟⠋⠁⠀⠀⠀⠀⣀⣄⡉⠛⠿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⡿⠞⠋⠁⠀⠀⠀⠀⣀⣤⣶⠿⠛⢉⣠⡴⠾⠛⣿⣤⣿⣿
+⣿⣛⠋⢩⣷⠟⠋⢁⣤⣄⡀⠀⣀⣤⣶⠿⠛⠉⣠⣴⠾⠛⠁⠀⠀⠀⠸⣿⣿⣿
+⣿⣿⣿⣾⠛⠷⣦⣄⡈⠙⠿⡿⠟⠋⣀⣤⡶⠟⠋⠀⠀⠀⠀⠀⠀⢀⣤⣿⣿⣿
+⣿⣿⣿⠇⠀⠀⠀⠉⠛⠷⣦⣤⡶⠟⠋⠁⠀⠀⠀⠀⠀⢀⣠⣴⣾⣿⣿⣿⣿⣿
+⣿⣿⣿⡀⠀⠀⠀⠀⠀⠀⢸⡏⠀⠀⠀⠀⠀⢀⣠⣴⠾⠛⠉⠀⠙⢿⣿⣿⣿⣿
+⣿⣿⣿⣿⣷⣦⣄⡀⠀⠀⢸⡇⠀⢀⣠⣴⠾⠛⠉⣤⣤⣀⣀⡀⠀⠈⢻⣿⣿⣿
+⣿⣿⣿⣿⣿⡿⠉⠻⢷⣤⣼⣧⣶⣟⠋⠁⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣶⣿⣿⣿
+⣿⣿⣿⣿⣿⣧⣶⣿⣿⣿⣿⣿⣿⣿⣆⠀⠀⠀⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣧⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+`;
     msg += `<i>Last Updated on: ${bullionStarData.lastUpdateDate}</i> from `;
     msg += `<a href="https://www.silverbullion.com.sg">`;
     msg += `https://www.silverbullion.com.sg`;
@@ -91,7 +108,7 @@ Stock - ${pampData.stock}
     msg += `</a>`;
 
     const opts = {
-      parse_mode: "HTML",
+      parse_mode: 'HTML'
     };
     this.sendMessage({ context, msg, opts });
   }
