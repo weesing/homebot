@@ -24,7 +24,7 @@ export class TotoLib {
     );
     const dom = new JSDOM(htmlString);
     const targetDivId = `.divSingleDraw`;
-    const $ = require('jquery')(dom.window);
+    let $ = require('jquery')(dom.window);
     const allTableElements = $(`${targetDivId}`).find(`table`).toArray();
     let findTableTitles = {
       'Winning Numbers': `winningNumbers`,
@@ -47,20 +47,25 @@ export class TotoLib {
     }
     const drawDateClass = `.drawDate`;
     const drawNumberClass = `.drawNumber`;
-    const nextDrawDateClass = `.toto-draw-date`;
     data.drawDate = $(`${targetDivId}`).find(drawDateClass).get(0).innerHTML;
     data.drawNumber = $(`${targetDivId}`)
       .find(drawNumberClass)
       .get(0).innerHTML;
-    data.nextDrawDate = $(`${targetDivId}`)
-      .find(nextDrawDateClass)
-      .get(0).innerHTML;
-    data.nextJackpot = $(`${targetDivId}`)
-      .find(nextDrawDateClass)
-      .parent()
+
+
+    const { data: nextDrawHtml } = await axios.get(
+      `${singaporePoolsUrl}/DataFileArchive/Lottery/Output/toto_next_draw_estimate_en.html`
+    );
+    const nextDrawDom = new JSDOM(nextDrawHtml);
+    $ = require('jquery')(nextDrawDom.window); 
+    const nextDrawDateClass = `.toto-draw-date`;
+    data.nextDrawDate = $(nextDrawDateClass)
+      .get(0)
+      .innerHTML;
+    data.nextJackpot = $(":root")
       .find(`span`)
-      .toArray()
       .get(0).innerHTML;
+
     logger.info(`data - ${util.inspect(data, { depth: 99 })}`);
 
     return data;
