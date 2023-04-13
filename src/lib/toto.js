@@ -47,9 +47,19 @@ export class TotoLib {
     }
     const drawDateClass = `.drawDate`;
     const drawNumberClass = `.drawNumber`;
+    const nextDrawDateClass = `.toto-draw-date`;
     data.drawDate = $(`${targetDivId}`).find(drawDateClass).get(0).innerHTML;
     data.drawNumber = $(`${targetDivId}`)
       .find(drawNumberClass)
+      .get(0).innerHTML;
+    data.nextDrawDate = $(`${targetDivId}`)
+      .find(nextDrawDateClass)
+      .get(0).innerHTML;
+    data.nextJackpot = $(`${targetDivId}`)
+      .find(nextDrawDateClass)
+      .parent()
+      .find(`span`)
+      .toArray()
       .get(0).innerHTML;
     logger.info(`data - ${util.inspect(data, { depth: 99 })}`);
 

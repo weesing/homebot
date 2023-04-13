@@ -1,7 +1,7 @@
-import _ from "lodash";
-import { HandlerBase } from "./handler_base";
-import { TotoLib } from "../../lib/toto";
-import util from "util";
+import _ from 'lodash';
+import { HandlerBase } from './handler_base';
+import { TotoLib } from '../../lib/toto';
+import util from 'util';
 
 export class HandlerToto extends HandlerBase {
   async handleMessage(context) {
@@ -12,6 +12,8 @@ export class HandlerToto extends HandlerBase {
       winningNumbers,
       additionalNumber,
       group1Prize,
+      nextDrawDate,
+      nextJackpot
     } = await totoLib.getLatestTotoResults();
 
     let msg = `<u><b>Toto Results</b></u>
@@ -19,9 +21,11 @@ export class HandlerToto extends HandlerBase {
 
     msg += `
 
-Winning numbers - <em>${winningNumbers.join(", ")}</em>
+Winning numbers - <em>${winningNumbers.join(', ')}</em>
 Additional number - <em>${additionalNumber[0]}</em>
 Group 1 Prize - ${group1Prize[0] || '-'}
+
+Next Draw - <em>${nextDrawDate} (${nextJackpot})</em>
 
 `;
 
@@ -30,7 +34,7 @@ Group 1 Prize - ${group1Prize[0] || '-'}
     msg += `</a>`;
 
     const opts = {
-      parse_mode: "HTML",
+      parse_mode: 'HTML'
     };
     this.sendMessage({ context, msg, opts });
   }
