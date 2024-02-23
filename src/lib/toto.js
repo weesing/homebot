@@ -135,7 +135,7 @@ export class TotoLib {
             logger.info(
                 `Recording Toto stats - ${util.inspect(results, { depth: 99 })}`
             );
-            this.sheetsGoogleAuth.insertTopRow(this.SHEET_NAME, [
+            await this.sheetsGoogleAuth.insertTopRow(this.SHEET_NAME, [
                 results.rawDrawNumber,
                 results.rawDrawDateUnixMs,
                 results.drawDate,
