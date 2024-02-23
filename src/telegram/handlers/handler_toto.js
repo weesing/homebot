@@ -46,6 +46,7 @@ Group 1 Prize - ${group1Prize[0] || "-"}
 Recommended: <b>${recommendedNumbersDisplay}</b>
 Extra Recommended: ${tieNumbers}
 Stats: <code>${recommendedNumbers}</code>
+<i>**Aggregating since 23 Feb 2024**</i>
 
 ████████████████
 █░▄▄▄█░▄▄▄█░▄▄▄█
