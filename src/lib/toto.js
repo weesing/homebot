@@ -241,19 +241,19 @@ export class TotoLib {
     async getRecommendedNumbers(count) {
         return this.aggregateNumberOccurences().then((sortedWinningNumbers) => {
             let recommendedNumbersData = sortedWinningNumbers.splice(0, 6);
-            let tieNumbersData = [];
+            let extraNumbersData = [];
             let lastPublish = _.last(recommendedNumbersData);
             for (let nextNumber of sortedWinningNumbers) {
                 if (lastPublish.occurences === nextNumber.occurences) {
-                    tieNumbersData.push(nextNumber);
+                    extraNumbersData.push(nextNumber);
                 }
             }
-            if (tieNumbersData.length > 0) {
-                tieNumbersData = [lastPublish, ...tieNumbersData];
+            if (extraNumbersData.length > 0) {
+                extraNumbersData = [lastPublish, ...extraNumbersData];
             }
             return {
                 recommendedNumbersData,
-                tieNumbersData,
+                extraNumbersData,
             };
         });
     }

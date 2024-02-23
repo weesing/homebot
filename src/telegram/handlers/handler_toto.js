@@ -16,13 +16,13 @@ export class HandlerToto extends HandlerBase {
             nextJackpot,
         } = await totoLib.getLatestTotoResults();
 
-        const { recommendedNumbersData, tieNumbersData } =
+        const { recommendedNumbersData, extraNumbersData } =
             await totoLib.getRecommendedNumbers();
         const recommendedNumbersDisplay = recommendedNumbersData.map((data) => `${data.number}`).join(', ');
         const recommendedNumbers = recommendedNumbersData
             .map((data) => `
   <b>'${data.number}'</b> occurred ${data.occurences} times`);
-        const tieNumbers = tieNumbersData.length > 0 ? tieNumbersData.map((data) => data.number).join(", ") : '<em>None</em>';
+        const extraNumbers = extraNumbersData.length > 0 ? extraNumbersData.map((data) => data.number).join(", ") : '<em>None</em>';
 
         let msg = `<u><b>Toto Results</b></u>
 <i>${drawDate}</i> (${drawNumber})`;
@@ -44,7 +44,7 @@ Group 1 Prize - ${group1Prize[0] || "-"}
             msg: `<u><b>Next Draw</b></u>
 <em>${nextDrawDate} ----->> ${nextJackpot}</em>
 Recommended: <b>${recommendedNumbersDisplay}</b>
-Extra Recommended: ${tieNumbers}
+Extra Recommended: ${extraNumbers}
 Stats: <code>${recommendedNumbers}</code>
 <i>**Aggregating since 23 Feb 2024**</i>
 
