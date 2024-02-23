@@ -232,6 +232,9 @@ export class TotoLib {
                 }
             }
         });
+        logger.info(
+            `--- Sorted ${util.inspect(sortedNumberOccurences, { depth: 99 })}`
+        );
         return sortedNumberOccurences;
     }
 
@@ -242,15 +245,15 @@ export class TotoLib {
             let lastPublish = _.last(recommendedNumbersData);
             for (let nextNumber of sortedWinningNumbers) {
                 if (lastPublish.occurences === nextNumber.occurences) {
-                  tieNumbersData.push(nextNumber);
+                    tieNumbersData.push(nextNumber);
                 }
             }
             if (tieNumbersData.length > 0) {
-              tieNumbersData = [lastPublish, ...tieNumbersData];
+                tieNumbersData = [lastPublish, ...tieNumbersData];
             }
             return {
-              recommendedNumbersData,
-              tieNumbersData
+                recommendedNumbersData,
+                tieNumbersData,
             };
         });
     }
