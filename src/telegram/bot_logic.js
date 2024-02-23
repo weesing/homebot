@@ -6,6 +6,7 @@ import logger from "../common/logger";
 import util from "util";
 import { exit } from "process";
 import moment from "moment";
+import { TotoLib } from "../lib/toto";
 
 export class BotLogic {
   static _instance;
@@ -39,9 +40,22 @@ export class BotLogic {
 
     await this.initializeTelegramBot();
     await this.initializeEvents();
+    this.totoInterval = -1;
+    await this.initializeSchedule();
 
     this.isInitalized = true;
     logger.info("++++++++ Initialization completed");
+  }
+
+  async initializeSchedule() {
+    this.totoLib = new TotoLib();
+    if (this.totoInterval !== -1) {
+      clearInterval(this.totoInterval);
+    }
+    this.totoLib.fetchAndInsertTopRow();
+    this.totoInterval = setInterval(() => {
+      this.totoLib.fetchAndInsertTopRow();
+    }, 86400);
   }
 
   handlePollingError() {
@@ -147,6 +161,7 @@ export class BotLogic {
       logger.error(err);
       exit(1);
     });
+
     logger.info("   done");
   }
 }

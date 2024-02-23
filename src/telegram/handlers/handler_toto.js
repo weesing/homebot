@@ -1,40 +1,51 @@
-import _ from 'lodash';
-import { HandlerBase } from './handler_base';
-import { TotoLib } from '../../lib/toto';
-import util from 'util';
+import _ from "lodash";
+import { HandlerBase } from "./handler_base";
+import { TotoLib } from "../../lib/toto";
+import util from "util";
 
 export class HandlerToto extends HandlerBase {
-  async handleMessage(context) {
-    const totoLib = new TotoLib();
-    const {
-      drawDate,
-      drawNumber,
-      winningNumbers,
-      additionalNumber,
-      group1Prize,
-      nextDrawDate,
-      nextJackpot
-    } = await totoLib.getLatestTotoResults();
+    async handleMessage(context) {
+        const totoLib = new TotoLib();
+        const {
+            drawDate,
+            drawNumber,
+            winningNumbers,
+            additionalNumber,
+            group1Prize,
+            nextDrawDate,
+            nextJackpot,
+        } = await totoLib.getLatestTotoResults();
 
-    let msg = `<u><b>Toto Results</b></u>
+        const { recommendedNumbersData, tieNumbersData } =
+            await totoLib.getRecommendedNumbers();
+        const recommendedNumbers = recommendedNumbersData.map(
+            (data) => data.number
+        ).join(', ');
+        const tieNumbers = tieNumbersData.map(
+            (data) => data.number
+        ).join(', ');
+
+        let msg = `<u><b>Toto Results</b></u>
 <i>${drawDate}</i> (${drawNumber})`;
 
-    msg += `
+        msg += `
 
-Winning numbers - <em>${winningNumbers.join(', ')}</em>
+Winning numbers - <em>${winningNumbers.join(", ")}</em>
 Additional number - <em>${additionalNumber[0]}</em>
-Group 1 Prize - ${group1Prize[0] || '-'}
+Group 1 Prize - ${group1Prize[0] || "-"}
 
 `;
 
-    const opts = {
-      parse_mode: 'HTML'
-    };
-    this.sendMessage({ context, msg, opts });
-    this.sendMessage({
-      context,
-      msg: `<u><b>Next Draw</b></u>
+        const opts = {
+            parse_mode: "HTML",
+        };
+        this.sendMessage({ context, msg, opts });
+        this.sendMessage({
+            context,
+            msg: `<u><b>Next Draw</b></u>
 <em>${nextDrawDate} ----->> ${nextJackpot}</em>
+Recommended: ${recommendedNumbers}
+Extra Recommended: ${tieNumbers}
 
 ████████████████
 █░▄▄▄█░▄▄▄█░▄▄▄█
@@ -45,9 +56,9 @@ Good Luck!
 <a href="https://www.singaporepools.com.sg/en/product/sr/Pages/toto_results.aspx">
 https://www.singaporepools.com.sg/en/product/sr/Pages/toto_results.aspx
 </a>`,
-      opts
-    });
-  }
+            opts,
+        });
+    }
 }
 
 module.exports = HandlerToto;
