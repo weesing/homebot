@@ -8,9 +8,13 @@ import { cfg } from "../configLoader";
 import { SheetsGoogleAuth } from "../google/sheetsGoogleAuth";
 
 export class TotoLib {
-    SHEET_NAME = `HomeBot Sheet`;
-    DRAW_NUMBER_RANGE = `Sheet1!A:A`;
-    WINNING_NUMBERS_RANGE = `Sheet1!D:I`;
+    SPREADSHEET_NAME = `HomeBot Sheet`;
+    SHEET_NAME = `Sheet1`;
+    ALL_DATA_RANGE = `${this.SHEET_NAME}!A:J`;
+    RES_DRAW_NUMBER_INDEX = 0;
+    RES_RAW_DATA_INDEX = 9;
+    RAW_DATA_COL = `J`;
+    WINNING_NUMBERS_RANGE = `${this.SHEET_NAME}!D:I`;
 
     constructor() {
         const googleServiceAccountCreds = cfg.googleapi.service_account;
@@ -21,11 +25,11 @@ export class TotoLib {
 
     async initializePersistence() {
         this.sheetsGoogleAuth
-            .getSheet(this.SHEET_NAME)
+            .getSheet(this.SPREADSHEET_NAME)
             .then((existingSheet) => {
                 if (_.isNil(existingSheet)) {
                     existingSheet = this.sheetsGoogleAuth.createNewSheet(
-                        this.SHEET_NAME
+                        this.SPREADSHEET_NAME
                     );
                 } else {
                     logger.info(
@@ -107,41 +111,77 @@ export class TotoLib {
         return this.sheetsGoogleAuth
             .getSheet(spreadsheetName)
             .then(async (spreadsheetInfo) => {
-                const readRes =
+                const allDataReadRes =
                     await this.sheetsGoogleAuth.sheets.spreadsheets.values.get({
                         spreadsheetId: spreadsheetInfo.spreadsheetId,
                         majorDimension: "COLUMNS",
-                        range: this.DRAW_NUMBER_RANGE,
+                        range: this.ALL_DATA_RANGE,
                     });
-                return _.isNil(readRes.data.values)
-                    ? []
-                    : readRes.data.values[0];
+                if (!_.isNil(allDataReadRes.data.values)) {
+                    const drawNumbers =
+                        allDataReadRes.data.values[this.RES_DRAW_NUMBER_INDEX];
+                    const rawDataObjectStrs =
+                        allDataReadRes.data.values[this.RES_RAW_DATA_INDEX];
+                    const drawNumberRawDataMap = {};
+                    for (let i = 0; i < drawNumbers.length; ++i) {
+                        const drawNumber = drawNumbers[i];
+                        const rawDataObjectStr = rawDataObjectStrs[i];
+                        drawNumberRawDataMap[drawNumber] = {
+                            rowNum: i,
+                            rawDataObjectStr,
+                        };
+                    }
+                    return drawNumberRawDataMap;
+                } else {
+                    return {};
+                }
             });
     }
 
     async fetchAndInsertTopRow() {
         const results = await this.getLatestTotoResults();
-        const allDrawNumbers = new Set(
-            (await this.findAllDrawNumbers(this.SHEET_NAME)).map((dateStr) =>
-                parseInt(dateStr)
-            )
+        const drawNumberRawDataMap = await this.findAllDrawNumbers(
+            this.SPREADSHEET_NAME
         );
 
-        if (allDrawNumbers.has(results.rawDrawNumber)) {
+        const resultDrawNumber = results.rawDrawNumber;
+        const resultRawDataObjectStr = util.inspect(results, { depth: 99 });
+        if (!_.isNil(drawNumberRawDataMap[resultDrawNumber])) {
             logger.info(
-                `Draw number ${results.rawDrawNumber} was found before, skipping.`
+                `Draw number ${resultDrawNumber} was found before, inspecting raw data...`
             );
+            const { rawDataObjectStr, rowNum } =
+                drawNumberRawDataMap[resultDrawNumber];
+            if (rawDataObjectStr !== resultRawDataObjectStr) {
+                // Need to update
+                const cellRange = `${this.SHEET_NAME}!${this.RAW_DATA_COL}${rowNum + 1}:${this.RAW_DATA_COL}${rowNum + 1}`;
+                await this.sheetsGoogleAuth.updateCell({
+                    spreadsheetName: this.SPREADSHEET_NAME,
+                    cell: cellRange,
+                    values: [[resultRawDataObjectStr]],
+                });
+                logger.info(
+                    `Draw number ${resultDrawNumber}'s raw data updated to ${resultRawDataObjectStr} - ${cellRange}`
+                );
+            } else {
+                logger.info(
+                    `Draw number ${resultDrawNumber}'s raw data unchanged.`
+                );
+            }
         } else {
             logger.info(
                 `Recording Toto stats - ${util.inspect(results, { depth: 99 })}`
             );
-            await this.sheetsGoogleAuth.insertTopRow(this.SHEET_NAME, [
-                results.rawDrawNumber,
-                results.rawDrawDateUnixMs,
-                results.drawDate,
-                ...results.winningNumbers,
-                util.inspect(results, { depth: 99 }),
-            ]);
+            await this.sheetsGoogleAuth.insertTopRow({
+                spreadsheetName: this.SPREADSHEET_NAME,
+                values: [
+                    results.rawDrawNumber,
+                    results.rawDrawDateUnixMs,
+                    results.drawDate,
+                    ...results.winningNumbers,
+                    util.inspect(results, { depth: 99 }),
+                ],
+            });
         }
 
         logger.info(
@@ -154,7 +194,7 @@ export class TotoLib {
 
     async getAllPastWinningNumbers() {
         return this.sheetsGoogleAuth
-            .getSheet(this.SHEET_NAME)
+            .getSheet(this.SPREADSHEET_NAME)
             .then(async (spreadsheetInfo) => {
                 const readRes =
                     await this.sheetsGoogleAuth.sheets.spreadsheets.values.get({

@@ -23,7 +23,19 @@ export class SheetsGoogleAuth {
         this.drive = google.drive({ version: "v3", auth: this.googleAuth });
     }
 
-    async insertTopRow(spreadsheetName, rowData) {
+    async updateCell({ spreadsheetName, cell, values }) {
+        const spreadsheetInfo = await this.getSheet(spreadsheetName);
+        return await this.sheets.spreadsheets.values.update({
+            spreadsheetId: spreadsheetInfo.spreadsheetId,
+            valueInputOption: "USER_ENTERED",
+            range: cell,
+            requestBody: {
+                values
+            }
+        });
+    }
+
+    async insertTopRow({ spreadsheetName, values }) {
         const spreadsheetInfo = await this.getSheet(spreadsheetName);
         const firstSheet = spreadsheetInfo.sheets[0];
         return await this.sheets.spreadsheets
@@ -51,7 +63,7 @@ export class SheetsGoogleAuth {
                     range: "Sheet1!A1",
                     valueInputOption: "USER_ENTERED",
                     requestBody: {
-                        values: [rowData],
+                        values: [values],
                     },
                 });
             });
@@ -129,10 +141,7 @@ export class SheetsGoogleAuth {
                         { depth: 99 }
                     )}`
                 );
-                await this.shareSpreadsheet(
-                    sheetName,
-                    "yap.wilj@gmail.com"
-                );
+                await this.shareSpreadsheet(sheetName, "yap.wilj@gmail.com");
                 return response.data;
             });
     }
