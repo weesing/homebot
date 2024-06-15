@@ -15,12 +15,13 @@ export class HandlerBase {
     this.botInstance = botInstance;
   }
 
-  async sendMessage({ context, msg, opts }) {
+  async sendMessage({ context, msg, opts, deleteAfterMs }) {
     await TelegramUtil.instance.sendMessage({
       bot: this.botInstance,
       context,
       msg,
-      opts
+      opts,
+      deleteAfterMs
     });
   }
 

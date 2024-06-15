@@ -7,6 +7,8 @@ import path from "path";
 import { TelegramUtil } from "../telegram_util";
 import logger from "../../common/logger";
 
+const DELETE_AFTER_MS = 30000;
+
 export class HandlerCheckpointLiveCams extends HandlerBase {
     async retrieveAndSendFromUrl({ snapshotURL, context }) {
         const fileName = `temp.png`;
@@ -29,6 +31,7 @@ export class HandlerCheckpointLiveCams extends HandlerBase {
                     context,
                     caption: `${snapshotURL}`,
                     imagePath: filePath,
+                    deleteAfterMs: DELETE_AFTER_MS,
                 });
                 resolve();
             });
@@ -50,14 +53,27 @@ export class HandlerCheckpointLiveCams extends HandlerBase {
         );
         const TUAS_URLS = _.get(cfg, `${LIVE_CAMERA_CONFIG_PATH}.${TUAS_KEY}`);
 
-        await this.sendMessage({ context, msg: `Fetching Woodlands Cameras` });
+        await this.sendMessage({
+            context,
+            msg: `[Fetching Woodlands Cameras...]`,
+            deleteAfterMs: DELETE_AFTER_MS,
+        });
         for (const url of WOODLANDS_URLS) {
             await this.retrieveAndSendFromUrl({ snapshotURL: url, context });
         }
-        await this.sendMessage({ context, msg: `Fetching Tuas Cameras` });
+        await this.sendMessage({
+            context,
+            msg: `[Fetching Tuas Cameras...]`,
+            deleteAfterMs: DELETE_AFTER_MS,
+        });
         for (const url of TUAS_URLS) {
             await this.retrieveAndSendFromUrl({ snapshotURL: url, context });
         }
+        await this.sendMessage({
+            context,
+            msg: `Deleting messages after ${DELETE_AFTER_MS / 1000} secs...`,
+            deleteAfterMs: DELETE_AFTER_MS,
+        });
     }
 
     async handleMessage(context) {
