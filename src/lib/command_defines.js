@@ -9,6 +9,7 @@ export const CMD_PRECIOUS_METALS = `preciousmetals`;
 export const CMD_TOTO = `toto`;
 export const CMD_GENERATE_UUID = `generate_uuid`;
 export const CMD_CAMERA_SNAPSHOT = `camera_snapshot`;
+export const CMD_CAMERA_CHECKPOINT_LIVE_CAMS = `camera_checkpoint_live_cams`;
 export const CMD_TOGGLE_DOORLOCK = `toggle_doorlock`;
 export const CMD_DOORLOCK_STATUS = `doorlock_status`;
 export const CMD_DOORLOCK_REBOOT = `doorlock_reboot`;

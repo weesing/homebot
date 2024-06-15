@@ -1,41 +1,59 @@
 {
-  "snapshot": {
-  },
-  "doorlock": {
-    "api_path": {
-      "lock": "/lock/",
-      "status": "/lock/status/",
-      "lock_reboot": "/lock/reboot/",
-      "rfid_reboot": "/rfid/reboot/"
+    "snapshot": {},
+    "doorlock": {
+        "api_path": {
+            "lock": "/lock/",
+            "status": "/lock/status/",
+            "lock_reboot": "/lock/reboot/",
+            "rfid_reboot": "/rfid/reboot/"
+        }
+    },
+    "telegram": {
+        "constants": {
+            "broadcast_messages": [
+                "Testing telegram bot",
+                "Please keep your volume down",
+                "I'm in a meeting, please keep your volume down",
+                "I'm in a meeting, please don't come into the room now",
+                "I'm busy at the moment, give me a minute",
+                "Wake up",
+                "It's bed time!",
+                "It's very late, please go and sleep now",
+                "Please go brush teeth and shower now",
+                "Please answer Mommy",
+                "Please answer Papa"
+            ],
+            "devices": [
+                "Living Room Aircon",
+                "Bedroom Aircon",
+                "Study Room Aircon",
+                "Living Room TV",
+                "Bedroom TV",
+                "3D Printer"
+            ]
+        }
+    },
+    "spaceout": {
+        "url": "https://www.spaceout.gov.sg/graphql",
+        "paramsAll": "{ facilities { id, name, band, createdAt } }"
+    },
+    "lta": {
+        "live-camera": {
+            "woodlands": {
+                "urls": [
+                    "https://traffic.causewaylink.com.my/live-camera?camera_id=2701",
+                    "https://traffic.causewaylink.com.my/live-camera?camera_id=2702"
+                ],
+                "backups": [
+                    "https://odis.sgp1.digitaloceanspaces.com/node/Woodland_to_BKE"
+                ]
+            },
+            "tuas": {
+                "urls": [
+                    "https://traffic.causewaylink.com.my/live-camera?camera_id=4703",
+                    "https://traffic.causewaylink.com.my/live-camera?camera_id=4713"
+                ]
+            }
+        }
     }
-  },
-  "telegram": {
-    "constants": {
-      "broadcast_messages": [
-        "Testing telegram bot",
-        "Please keep your volume down",
-        "I'm in a meeting, please keep your volume down",
-        "I'm in a meeting, please don't come into the room now",
-        "I'm busy at the moment, give me a minute",
-        "Wake up",
-        "It's bed time!",
-        "It's very late, please go and sleep now",
-        "Please go brush teeth and shower now",
-        "Please answer Mommy",
-        "Please answer Papa"
-      ],
-      "devices": [
-        "Living Room Aircon",
-        "Bedroom Aircon",
-        "Study Room Aircon",
-        "Living Room TV",
-        "Bedroom TV",
-        "3D Printer"
-      ]
-    }
-  },
-  "spaceout": {
-    "url": "https://www.spaceout.gov.sg/graphql",
-    "paramsAll": "{ facilities { id, name, band, createdAt } }"
-  }
 }
