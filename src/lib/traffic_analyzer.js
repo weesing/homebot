@@ -13,14 +13,15 @@ export class TrafficAnalyzerLib {
         console.log(
             `--------------- ANALYZING ${user_prompt} ${trafficSnapshotFilePath}`
         );
-        const url = `localhost:8082/api/analyze`;
+        const url = `http://localhost:8082/api/analyze`;
         const payload = {
-            system_prompt: "You are a traffic analyst that assist in evaluating traffic conditions.",
+            system_prompt:
+                "You are a traffic analyst that assist in evaluating traffic conditions.",
             user_prompt,
             file_path: "",
         };
         var response = await axios
-            .post(url, payload)
+            .post(url, payload, { timeout: 5000 })
             .then((response) => {
                 return response.data;
             })
@@ -34,7 +35,7 @@ export class TrafficAnalyzerLib {
         //   const diff = now - createdAt;
         //   var ignore = false;
         //   if (diff > 86400) {
-        //     ignore = true;
+        //     ignore = true;pip i
         //   }
         //   if (!ignore) {
         //     for (var index = 0; index < finalData.length; ++index) {
