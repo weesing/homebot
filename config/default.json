@@ -50,10 +50,10 @@
             },
             "tuas": {
                 "urls": [
-                    "https://traffic.causewaylink.com.my/live-camera?camera_id=4713"
+                    "https://traffic.causewaylink.com.my/live-camera?camera_id=4703"
                 ],
                 "backups": [
-                    "https://traffic.causewaylink.com.my/live-camera?camera_id=4703"
+                    "https://traffic.causewaylink.com.my/live-camera?camera_id=4713"
                 ]
             }
         }
