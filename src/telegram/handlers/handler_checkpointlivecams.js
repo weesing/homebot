@@ -39,9 +39,7 @@ export class HandlerCheckpointLiveCams extends HandlerBase {
                     imagePath: filePath,
                     deleteAfterMs: DELETE_AFTER_MS,
                 });
-                const prompt = `You are a traffic analyst that assist in evaluating traffic conditions. 
-
-                The still image provided is a snapshot showing the traffic density towards the causeway and towards BKE. 
+                const prompt = `The still image provided is a snapshot showing the traffic density towards the causeway and towards BKE. 
                 
                 Please give your analysis of the traffic density in 3 levels: "light", "medium" and "dense" for the direction towards johor and from johor.
                 

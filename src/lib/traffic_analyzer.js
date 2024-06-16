@@ -11,11 +11,11 @@ export class TrafficAnalyzerLib {
 
     async getAnalysis({ user_prompt, trafficSnapshotFilePath }) {
         console.log(
-            `--------------- ANALYZING ${prompt} ${trafficSnapshotFilePath}`
+            `--------------- ANALYZING ${user_prompt} ${trafficSnapshotFilePath}`
         );
         const url = `localhost:8082/api/analyze`;
         const payload = {
-            system_prompt: "You are a traffic density analyzer.",
+            system_prompt: "You are a traffic analyst that assist in evaluating traffic conditions.",
             user_prompt,
             file_path: "",
         };
