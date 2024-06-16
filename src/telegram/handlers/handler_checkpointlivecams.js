@@ -9,6 +9,20 @@ import logger from "../../common/logger.js";
 import TrafficAnalyzerLib from "../../lib/traffic_analyzer.js";
 
 const DELETE_AFTER_MS = 30000;
+const WOODLANDS_PROMPT = `The still image provided is a snapshot showing the traffic density towards Johor and towards Woodlands. 
+        
+Please give your analysis of the traffic density in 3 levels: "light", "medium" and "dense" for the direction towards Johor and towards Woodlands.
+
+Your final result should be in JSON form such as: {"towards-johor":"dense","towards-woodlands":"light"}
+
+Your final response should ONLY contain the JSON.`;
+const TUAS_PROMPT = `The still image provided is a snapshot showing the traffic density towards Johor and towards Tuas. 
+        
+Please give your analysis of the traffic density in 3 levels: "light", "medium" and "dense" for the direction towards Johor and towards Tuas.
+
+Your final result should be in JSON form such as: {"towards-johor":"dense","towards-tuas":"light"}
+
+Your final response should ONLY contain the JSON.`;
 
 export class HandlerCheckpointLiveCams extends HandlerBase {
     constructor({ botInstance }) {
@@ -16,7 +30,7 @@ export class HandlerCheckpointLiveCams extends HandlerBase {
         this.trafficAnalyzer = new TrafficAnalyzerLib();
     }
 
-    async retrieveAndSendFromUrl({ snapshotURL, context }) {
+    async retrieveAndSendFromUrl({ snapshotURL, context, analyzerPrompt }) {
         const fileName = `temp.png`;
         const filePath = path.resolve(path.join(__dirname, fileName));
         logger.info(`Retrieving snapshot from ${snapshotURL} into ${filePath}`);
@@ -39,14 +53,11 @@ export class HandlerCheckpointLiveCams extends HandlerBase {
                     imagePath: filePath,
                     deleteAfterMs: DELETE_AFTER_MS,
                 });
-                const prompt = `The still image provided is a snapshot showing the traffic density towards the causeway and towards BKE. 
-                
-                Please give your analysis of the traffic density in 3 levels: "light", "medium" and "dense" for the direction towards johor and from johor.
-                
-                Your final result should be in JSON form such as: {"towards-causeway":"dense","towards-bke":"light"}
-                
-                Your final response should ONLY contain the JSON.`;
-                await this.trafficAnalyzer.getAnalysis({user_prompt: prompt, trafficSnapshotFilePath: filePath});
+                const response = await this.trafficAnalyzer.getAnalysis({
+                    user_prompt: analyzerPrompt,
+                    trafficSnapshotFilePath: filePath,
+                });
+                console.log(response);
                 resolve();
             });
             imageFileWriteStream.on("error", async () => {
@@ -73,7 +84,11 @@ export class HandlerCheckpointLiveCams extends HandlerBase {
             deleteAfterMs: DELETE_AFTER_MS,
         });
         for (const url of WOODLANDS_URLS) {
-            await this.retrieveAndSendFromUrl({ snapshotURL: url, context });
+            await this.retrieveAndSendFromUrl({
+                snapshotURL: url,
+                context,
+                analyzerPrompt: WOODLANDS_PROMPT,
+            });
         }
         await this.sendMessage({
             context,
@@ -81,7 +96,11 @@ export class HandlerCheckpointLiveCams extends HandlerBase {
             deleteAfterMs: DELETE_AFTER_MS,
         });
         for (const url of TUAS_URLS) {
-            await this.retrieveAndSendFromUrl({ snapshotURL: url, context });
+            await this.retrieveAndSendFromUrl({
+                snapshotURL: url,
+                context,
+                analyzerPrompt: TUAS_PROMPT,
+            });
         }
         await this.sendMessage({
             context,

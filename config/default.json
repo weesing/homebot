@@ -41,17 +41,19 @@
         "live-camera": {
             "woodlands": {
                 "urls": [
-                    "https://traffic.causewaylink.com.my/live-camera?camera_id=2701",
-                    "https://traffic.causewaylink.com.my/live-camera?camera_id=2702"
+                    "https://traffic.causewaylink.com.my/live-camera?camera_id=2701"
                 ],
                 "backups": [
+                    "https://traffic.causewaylink.com.my/live-camera?camera_id=2702",
                     "https://odis.sgp1.digitaloceanspaces.com/node/Woodland_to_BKE"
                 ]
             },
             "tuas": {
                 "urls": [
-                    "https://traffic.causewaylink.com.my/live-camera?camera_id=4703",
                     "https://traffic.causewaylink.com.my/live-camera?camera_id=4713"
+                ],
+                "backups": [
+                    "https://traffic.causewaylink.com.my/live-camera?camera_id=4703"
                 ]
             }
         }

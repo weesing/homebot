@@ -21,11 +21,17 @@ export class TrafficAnalyzerLib {
             file_path: "",
         };
         // var response = await axios
-        //     .post(url, payload, { timeout: 5000 })
+        //     .post(url, payload, { timeout: 10000 })
         //     .then((response) => {
         //         return response.data;
         //     })
         //     .catch((e) => console.log(e));
+        // Mock data.
+        return {
+            "towards-johor": "dense",
+            "towards-tuas": "dense",
+            "towards-woodlands": "dense"
+        };
         // console.log(response);
         // const now = moment().unix();
         // const finalData = [];
