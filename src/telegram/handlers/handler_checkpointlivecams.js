@@ -1,15 +1,21 @@
 import _ from "lodash";
-import { HandlerBase } from "./handler_base";
-import cfg from "../../configLoader";
+import { HandlerBase } from "./handler_base.js";
+import cfg from "../../configLoader.js";
 import axios from "axios";
 import fs from "fs";
 import path from "path";
-import { TelegramUtil } from "../telegram_util";
-import logger from "../../common/logger";
+import { TelegramUtil } from "../telegram_util.js";
+import logger from "../../common/logger.js";
+import TrafficAnalyzerLib from "../../lib/traffic_analyzer.js";
 
 const DELETE_AFTER_MS = 30000;
 
 export class HandlerCheckpointLiveCams extends HandlerBase {
+    constructor({ botInstance }) {
+        super({ botInstance });
+        this.trafficAnalyzer = new TrafficAnalyzerLib();
+    }
+
     async retrieveAndSendFromUrl({ snapshotURL, context }) {
         const fileName = `temp.png`;
         const filePath = path.resolve(path.join(__dirname, fileName));
@@ -33,6 +39,16 @@ export class HandlerCheckpointLiveCams extends HandlerBase {
                     imagePath: filePath,
                     deleteAfterMs: DELETE_AFTER_MS,
                 });
+                prompt = `You are a traffic analyst that assist in evaluating traffic conditions. 
+
+                The still image provided is a snapshot showing the traffic density towards the causeway and towards BKE. 
+                
+                Please give your analysis of the traffic density in 3 levels: "light", "medium" and "dense" for the direction towards johor and from johor.
+                
+                Your final result should be in JSON form such as: {"towards-causeway":"dense","towards-bke":"light"}
+                
+                Your final response should ONLY contain the JSON.`;
+                await this.trafficAnalyzer.getAnalysis({prompt, trafficSnapshotFilePath: filePath});
                 resolve();
             });
             imageFileWriteStream.on("error", async () => {
