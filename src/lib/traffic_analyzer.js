@@ -20,13 +20,13 @@ export class TrafficAnalyzerLib {
             user_prompt,
             file_path: "",
         };
-        var response = await axios
-            .post(url, payload, { timeout: 5000 })
-            .then((response) => {
-                return response.data;
-            })
-            .catch((e) => console.log(e));
-        console.log(response);
+        // var response = await axios
+        //     .post(url, payload, { timeout: 5000 })
+        //     .then((response) => {
+        //         return response.data;
+        //     })
+        //     .catch((e) => console.log(e));
+        // console.log(response);
         // const now = moment().unix();
         // const finalData = [];
         // // Filter by time
