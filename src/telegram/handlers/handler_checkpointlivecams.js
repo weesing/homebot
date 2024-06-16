@@ -30,11 +30,7 @@ export class HandlerCheckpointLiveCams extends HandlerBase {
         this.trafficAnalyzer = new TrafficAnalyzerLib();
     }
 
-    async retrieveAndSendFromUrl({
-        snapshotURL: urlInfo,
-        context,
-        analyzerPrompt,
-    }) {
+    async retrieveAndSendFromUrl({ urlInfo, context, analyzerPrompt }) {
         logger.info(`Retrieving snapshot from ${urlInfo} into ${filePath}`);
         const { id, url, analyze } = urlInfo;
         const fileName = `${id}.png`;
