@@ -13,13 +13,16 @@ export class TrafficAnalyzerLib {
         console.log(
             `--------------- ANALYZING ${prompt} ${trafficSnapshotFilePath}`
         );
-        // const url = `${cfg.spaceout.url}?query=${cfg.spaceout.paramsAll}`;
-        // var dataAll = await axios.post(url).then((response) => {
-        //   return response.data.data.facilities;
-        // });
-        // dataAll = dataAll.filter(
-        //   (data) => !_.isNil(data.id) && !_.isNil(data.name) && !_.isNil(data.band)
-        // );
+        const url = `localhost:8082/api/analyze`;
+        const payload = {
+            system_prompt: "You are a traffic density analyzer.",
+            user_prompt: "Tell me about traffic today",
+            file_path: "",
+        };
+        var response = await axios.post(url, payload).then((response) => {
+            return response.data;
+        });
+        console.log(response);
         // const now = moment().unix();
         // const finalData = [];
         // // Filter by time
