@@ -40,21 +40,40 @@
     "lta": {
         "live-camera": {
             "woodlands": {
-                "urls": [
-                    "https://traffic.causewaylink.com.my/live-camera?camera_id=2701"
+                "urlsInfo": [
+                    {
+                        "id": "2701",
+                        "analyze": true,
+                        "url": "https://traffic.causewaylink.com.my/live-camera?camera_id=2701"
+                    },
+                    {
+                        "id": "2702",
+                        "analyze": false,
+                        "url": "https://traffic.causewaylink.com.my/live-camera?camera_id=2702"
+                    }
                 ],
                 "backups": [
-                    "https://traffic.causewaylink.com.my/live-camera?camera_id=2702",
-                    "https://odis.sgp1.digitaloceanspaces.com/node/Woodland_to_BKE"
+                    {
+                        "id": "Woodland_to_BKE",
+                        "analyze": false,
+                        "url": "https://odis.sgp1.digitaloceanspaces.com/node/Woodland_to_BKE"
+                    }
                 ]
             },
             "tuas": {
-                "urls": [
-                    "https://traffic.causewaylink.com.my/live-camera?camera_id=4703"
+                "urlsInfo": [
+                    {
+                        "id": "4703",
+                        "analyze": true,
+                        "url": "https://traffic.causewaylink.com.my/live-camera?camera_id=4703"
+                    },
+                    {
+                        "id": "4713",
+                        "analyze": false,
+                        "url": "https://traffic.causewaylink.com.my/live-camera?camera_id=4713"
+                    }
                 ],
-                "backups": [
-                    "https://traffic.causewaylink.com.my/live-camera?camera_id=4713"
-                ]
+                "backups": []
             }
         }
     }

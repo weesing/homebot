@@ -30,12 +30,17 @@ export class HandlerCheckpointLiveCams extends HandlerBase {
         this.trafficAnalyzer = new TrafficAnalyzerLib();
     }
 
-    async retrieveAndSendFromUrl({ snapshotURL, context, analyzerPrompt }) {
-        const fileName = `temp.png`;
+    async retrieveAndSendFromUrl({
+        snapshotURL: urlInfo,
+        context,
+        analyzerPrompt,
+    }) {
+        logger.info(`Retrieving snapshot from ${urlInfo} into ${filePath}`);
+        const { id, url, analyze } = urlInfo;
+        const fileName = `${id}.png`;
         const filePath = path.resolve(path.join(__dirname, fileName));
-        logger.info(`Retrieving snapshot from ${snapshotURL} into ${filePath}`);
         const imageFileWriteStream = fs.createWriteStream(filePath);
-        const response = await axios.get(snapshotURL, {
+        const response = await axios.get(url, {
             responseType: "stream",
         });
         response.data.pipe(imageFileWriteStream);
@@ -49,15 +54,17 @@ export class HandlerCheckpointLiveCams extends HandlerBase {
                 await telegramUtil.sendPhoto({
                     bot: this.botInstance,
                     context,
-                    caption: `${snapshotURL}`,
+                    caption: `${url}`,
                     imagePath: filePath,
                     deleteAfterMs: DELETE_AFTER_MS,
                 });
-                const response = await this.trafficAnalyzer.getAnalysis({
-                    user_prompt: analyzerPrompt,
-                    trafficSnapshotFilePath: filePath,
-                });
-                console.log(response);
+                if (analyze) {
+                    const response = await this.trafficAnalyzer.getAnalysis({
+                        user_prompt: analyzerPrompt,
+                        trafficSnapshotFilePath: filePath,
+                    });
+                    console.log(response);
+                }
                 resolve();
             });
             imageFileWriteStream.on("error", async () => {
@@ -83,9 +90,9 @@ export class HandlerCheckpointLiveCams extends HandlerBase {
             msg: `[Fetching Woodlands Cameras...]`,
             deleteAfterMs: DELETE_AFTER_MS,
         });
-        for (const url of WOODLANDS_URLS) {
+        for (const urlInfo of WOODLANDS_URLS) {
             await this.retrieveAndSendFromUrl({
-                snapshotURL: url,
+                urlInfo,
                 context,
                 analyzerPrompt: WOODLANDS_PROMPT,
             });
@@ -95,9 +102,9 @@ export class HandlerCheckpointLiveCams extends HandlerBase {
             msg: `[Fetching Tuas Cameras...]`,
             deleteAfterMs: DELETE_AFTER_MS,
         });
-        for (const url of TUAS_URLS) {
+        for (const urlInfo of TUAS_URLS) {
             await this.retrieveAndSendFromUrl({
-                snapshotURL: url,
+                urlInfo,
                 context,
                 analyzerPrompt: TUAS_PROMPT,
             });
