@@ -9,19 +9,22 @@ export class TrafficAnalyzerLib {
         console.log("Initializing analyzer...");
     }
 
-    async getAnalysis({ prompt, trafficSnapshotFilePath }) {
+    async getAnalysis({ user_prompt, trafficSnapshotFilePath }) {
         console.log(
             `--------------- ANALYZING ${prompt} ${trafficSnapshotFilePath}`
         );
         const url = `localhost:8082/api/analyze`;
         const payload = {
             system_prompt: "You are a traffic density analyzer.",
-            user_prompt: "Tell me about traffic today",
+            user_prompt,
             file_path: "",
         };
-        var response = await axios.post(url, payload).then((response) => {
-            return response.data;
-        });
+        var response = await axios
+            .post(url, payload)
+            .then((response) => {
+                return response.data;
+            })
+            .catch((e) => console.log(e));
         console.log(response);
         // const now = moment().unix();
         // const finalData = [];

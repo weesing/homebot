@@ -48,7 +48,7 @@ export class HandlerCheckpointLiveCams extends HandlerBase {
                 Your final result should be in JSON form such as: {"towards-causeway":"dense","towards-bke":"light"}
                 
                 Your final response should ONLY contain the JSON.`;
-                await this.trafficAnalyzer.getAnalysis({prompt, trafficSnapshotFilePath: filePath});
+                await this.trafficAnalyzer.getAnalysis({user_prompt: prompt, trafficSnapshotFilePath: filePath});
                 resolve();
             });
             imageFileWriteStream.on("error", async () => {
