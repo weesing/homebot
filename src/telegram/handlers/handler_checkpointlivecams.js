@@ -31,10 +31,10 @@ export class HandlerCheckpointLiveCams extends HandlerBase {
     }
 
     async retrieveAndSendFromUrl({ urlInfo, context, analyzerPrompt }) {
-        logger.info(`Retrieving snapshot from ${urlInfo} into ${filePath}`);
         const { id, url, analyze } = urlInfo;
         const fileName = `${id}.png`;
         const filePath = path.resolve(path.join(__dirname, fileName));
+        logger.info(`Retrieving snapshot from ${url} into ${filePath}`);
         const imageFileWriteStream = fs.createWriteStream(filePath);
         const response = await axios.get(url, {
             responseType: "stream",
