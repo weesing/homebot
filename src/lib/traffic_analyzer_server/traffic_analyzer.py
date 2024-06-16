@@ -2,7 +2,7 @@ from flask import Flask, request
 import glob
 import json
 import os
-from dotenv import load_dotenv,find_dotenv
+from dotenv.main import load_dotenv, find_dotenv
 from langchain.prompts.prompt import PromptTemplate
 from langchain.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser, JsonOutputParser
