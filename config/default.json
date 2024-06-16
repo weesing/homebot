@@ -40,7 +40,7 @@
     "lta": {
         "live-camera": {
             "woodlands": {
-                "urlsInfo": [
+                "urls_info": [
                     {
                         "id": "2701",
                         "analyze": true,
@@ -61,7 +61,7 @@
                 ]
             },
             "tuas": {
-                "urlsInfo": [
+                "urls_info": [
                     {
                         "id": "4703",
                         "analyze": true,

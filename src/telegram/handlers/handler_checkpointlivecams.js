@@ -8,6 +8,9 @@ import { TelegramUtil } from "../telegram_util.js";
 import logger from "../../common/logger.js";
 import TrafficAnalyzerLib from "../../lib/traffic_analyzer.js";
 
+const LIVE_CAMERA_CONFIG_PATH = "lta.live-camera";
+const WOODLANDS_KEY = "woodlands.urls_info";
+const TUAS_KEY = "tuas.urls_info";
 const DELETE_AFTER_MS = 30000;
 const WOODLANDS_PROMPT = `The still image provided is a snapshot showing the traffic density towards Johor and towards Woodlands. 
         
@@ -70,11 +73,6 @@ export class HandlerCheckpointLiveCams extends HandlerBase {
     }
 
     async sendCheckpointLiveCams(context) {
-        const LIVE_CAMERA_CONFIG_PATH = "lta.live-camera";
-
-        const WOODLANDS_KEY = "woodlands.urls";
-        const TUAS_KEY = "tuas.urls";
-
         const WOODLANDS_URLS = _.get(
             cfg,
             `${LIVE_CAMERA_CONFIG_PATH}.${WOODLANDS_KEY}`
