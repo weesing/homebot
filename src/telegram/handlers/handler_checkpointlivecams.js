@@ -39,7 +39,7 @@ export class HandlerCheckpointLiveCams extends HandlerBase {
                     imagePath: filePath,
                     deleteAfterMs: DELETE_AFTER_MS,
                 });
-                prompt = `You are a traffic analyst that assist in evaluating traffic conditions. 
+                const prompt = `You are a traffic analyst that assist in evaluating traffic conditions. 
 
                 The still image provided is a snapshot showing the traffic density towards the causeway and towards BKE. 
                 
