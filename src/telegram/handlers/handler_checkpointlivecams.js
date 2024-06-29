@@ -11,7 +11,6 @@ import TrafficAnalyzerLib from "../../lib/traffic_analyzer.js";
 const LIVE_CAMERA_CONFIG_PATH = "lta.live-camera";
 const WOODLANDS_KEY = "woodlands.urls_info";
 const TUAS_KEY = "tuas.urls_info";
-const DELETE_AFTER_MS = 30000;
 const WOODLANDS_PROMPT = `The still image provided is a snapshot showing the traffic density towards Johor and towards Woodlands. 
         
 Please give your analysis of the traffic density in 3 levels: "light", "medium" and "dense" for the direction towards Johor and towards Woodlands.
@@ -54,8 +53,7 @@ export class HandlerCheckpointLiveCams extends HandlerBase {
                     bot: this.botInstance,
                     context,
                     caption: `${url}`,
-                    imagePath: filePath,
-                    deleteAfterMs: DELETE_AFTER_MS,
+                    imagePath: filePath
                 });
                 if (analyze) {
                     const response = await this.trafficAnalyzer.getAnalysis({
@@ -81,8 +79,7 @@ export class HandlerCheckpointLiveCams extends HandlerBase {
 
         await this.sendMessage({
             context,
-            msg: `[Fetching Woodlands Cameras...]`,
-            deleteAfterMs: DELETE_AFTER_MS,
+            msg: `[Fetching Woodlands Cameras...]`
         });
         for (const urlInfo of WOODLANDS_URLS) {
             await this.retrieveAndSendFromUrl({
@@ -93,8 +90,7 @@ export class HandlerCheckpointLiveCams extends HandlerBase {
         }
         await this.sendMessage({
             context,
-            msg: `[Fetching Tuas Cameras...]`,
-            deleteAfterMs: DELETE_AFTER_MS,
+            msg: `[Fetching Tuas Cameras...]`
         });
         for (const urlInfo of TUAS_URLS) {
             await this.retrieveAndSendFromUrl({
@@ -103,11 +99,6 @@ export class HandlerCheckpointLiveCams extends HandlerBase {
                 analyzerPrompt: TUAS_PROMPT,
             });
         }
-        await this.sendMessage({
-            context,
-            msg: `Deleting messages after ${DELETE_AFTER_MS / 1000} secs...`,
-            deleteAfterMs: DELETE_AFTER_MS,
-        });
     }
 
     async handleMessage(context) {

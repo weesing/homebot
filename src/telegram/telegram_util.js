@@ -1,6 +1,8 @@
 import _ from "lodash";
 import logger from "../common/logger";
 
+const DEFAULT_DELETE_AFTER_MS = 30000;
+
 export class TelegramUtil {
     static get instance() {
         if (_.isNil(TelegramUtil._instance)) {
@@ -54,12 +56,14 @@ export class TelegramUtil {
             response = await bot.sendMessage(chatId, msg, opts);
         }
 
-        if (deleteAfterMs !== null) {
-            setTimeout(() => {
-                const { message_id: messageId } = response;
-                this.deleteMessage({ bot, context, chatId, messageId });
-            }, deleteAfterMs);
+        let finalDeleteAfterMs = DEFAULT_DELETE_AFTER_MS;
+        if (!_.isNil(deleteAfterMs)) {
+            finalDeleteAfterMs = deleteAfterMs;
         }
+        setTimeout(() => {
+            const { message_id: messageId } = response;
+            this.deleteMessage({ bot, context, chatId, messageId });
+        }, finalDeleteAfterMs);
 
         return response;
     }
@@ -82,12 +86,16 @@ export class TelegramUtil {
     }) {
         const chatId = this.getReplyId(context);
         const response = await bot.sendPhoto(chatId, imagePath);
-        if (deleteAfterMs != null) {
-            setTimeout(() => {
-                const { message_id: messageId } = response;
-                this.deleteMessage({ bot, context, chatId, messageId });
-            }, deleteAfterMs);
+
+
+        let finalDeleteAfterMs = DEFAULT_DELETE_AFTER_MS;
+        if (!_.isNil(deleteAfterMs)) {
+            finalDeleteAfterMs = deleteAfterMs;
         }
+        setTimeout(() => {
+            const { message_id: messageId } = response;
+            this.deleteMessage({ bot, context, chatId, messageId });
+        }, finalDeleteAfterMs);
         return response;
     }
 
