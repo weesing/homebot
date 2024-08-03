@@ -110,7 +110,8 @@ export class BotLogic {
     this.secret = _.get(cfg, `telegram.token`);
     this.bot = new TelegramBot(this.secret, { polling: true });
     logger.info(`  Bot created.`);
-    this.startPollingCheckInterval();
+    // Disable polling since we are now running in the cloud, should be more predictable.
+    // this.startPollingCheckInterval();
     logger.info(`  done`);
   }
 

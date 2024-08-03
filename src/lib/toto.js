@@ -272,9 +272,9 @@ export class TotoLib {
                 }
             }
         });
-        logger.info(
-            `--- Sorted ${util.inspect(sortedNumberOccurences, { depth: 99 })}`
-        );
+        // logger.info(
+        //     `--- Sorted ${util.inspect(sortedNumberOccurences, { depth: 99 })}`
+        // );
         return sortedNumberOccurences;
     }
 
