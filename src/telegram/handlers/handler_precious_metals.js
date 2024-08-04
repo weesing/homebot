@@ -51,7 +51,7 @@ export class HandlerPreciousMetals extends HandlerBase {
 `;
     for (const element of elements) {
       const elemData = bullionStarData.spotPrices[element.key];
-      let elemValue = _.round(parseFloat(elemData.value.split(` `)[1]), 2);
+      let elemValue = _.round(parseFloat(elemData.value.split(`$`)[1].trim()), 2);
       elemValue = formatter.format(elemValue * 100);
       let line = `${element.icon} ${element.name} <b>${elemValue}</b>
 `;
