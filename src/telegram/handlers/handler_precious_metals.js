@@ -62,14 +62,22 @@ export class HandlerPreciousMetals extends HandlerBase {
     const {
       pamp100gPrice: silverBullionPrice,
       pamp100gBuyBack: silverBullionBuyBack,
-      pamp100gStock: silverBullionStock
+      pamp100gStock: silverBullionStock,
+      coinPrice: silverBullionCoinPrice,
+      coinBuyBack: silverBullionCoinBuyBack,
+      coinStock: silverBullionCoinStock
     } = await silverBullionLib.getPrices();
 
     msg += `
-<u>100g PAMP Gold Cast Bar</u> [<a href="https://www.silverbullion.com.sg/Product/Detail/Gold_100_gram_PAMP_Suisse_cast_bar">Silver Bullion</a>]
+<u>100g PAMP Gold Cast Bar</u> [<a href="https://www.silverbullion.com.sg/Product/Detail/Gold_100_gram_PAMP_Suisse_cast_bar">Silver Bullion PAMP Bar</a>]
 Price - ${silverBullionPrice}
 Buying - ${silverBullionBuyBack}
 Stock - ${silverBullionStock}
+
+<u>100g PAMP Gold Cast Bar</u> [<a href="https://www.https://www.silverbullion.com.sg/Shop/Buy/Gold_Coins">Silver Bullion Maple Leaf Coin</a>]
+Price - ${silverBullionCoinPrice}
+Buying - ${silverBullionCoinBuyBack}
+Stock - ${silverBullionCoinStock}
 `;
 
     const pampData = bullionStarData.pamp100g;

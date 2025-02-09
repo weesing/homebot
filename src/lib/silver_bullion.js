@@ -58,24 +58,39 @@ export class SilverBullionLib {
   }
 
   async getPrices() {
-    const pamp100gUrl = "https://www.silverbullion.com.sg";
-    logger.info(`Collecting info from ${pamp100gUrl}`);
+    const silverBullionUrl = "https://www.silverbullion.com.sg";
+    logger.info(`Collecting info from ${silverBullionUrl}`);
     const pamp100Path = "/Product/Detail/Gold_100_gram_PAMP_Suisse_cast_bar";
-    const { data: htmlString } = await axios.get(
-      `${pamp100gUrl}${pamp100Path}`
+    const { data: html100String } = await axios.get(
+      `${silverBullionUrl}${pamp100Path}`
     );
 
-    const dom = new JSDOM(htmlString);
-    const $ = require("jquery")(dom.window);
+    let dom = new JSDOM(html100String);
+    let $ = require("jquery")(dom.window);
 
     let pamp100gPrice = this.getSellingPrice($);
     let pamp100gBuyBack = this.getBuyingBackPrice($);
     let pamp100gStock = this.getStock($);
 
+    const mapleLeaf1ozPath = "/Product/Detail/Gold_Coin_Canadian_Maple_Leaf_2015_1oz";
+    const { data: htmlCoinString } = await axios.get(
+      `${silverBullionUrl}${mapleLeaf1ozPath}`
+    );
+
+    dom = new JSDOM(htmlCoinString);
+    $ = require("jquery")(dom.window);
+
+    let coinPrice = this.getSellingPrice($);
+    let coinBuyBack = this.getBuyingBackPrice($);
+    let coinStock = this.getStock($);
+
     return {
       pamp100gPrice,
       pamp100gBuyBack,
-      pamp100gStock
+      pamp100gStock,
+      coinPrice,
+      coinBuyBack,
+      coinStock
     };
   }
 }
