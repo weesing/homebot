@@ -74,7 +74,7 @@ Price - ${silverBullionPrice}
 Buying - ${silverBullionBuyBack}
 Stock - ${silverBullionStock}
 
-<u>100g PAMP Gold Cast Bar</u> [<a href="https://www.https://www.silverbullion.com.sg/Shop/Buy/Gold_Coins">Silver Bullion Maple Leaf Coin</a>]
+<u>1oz Maple Leaf Gold Coin</u> [<a href="https://www.silverbullion.com.sg/Shop/Buy/Gold_Coins">Silver Bullion Maple Leaf Coin</a>]
 Price - ${silverBullionCoinPrice}
 Buying - ${silverBullionCoinBuyBack}
 Stock - ${silverBullionCoinStock}
