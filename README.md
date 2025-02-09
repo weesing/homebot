@@ -88,6 +88,18 @@ docker-compose down
 - Please observe `sample.secrets.json` as an example and create your `secrets.json` file containing your real secrets. 
 - *Please remember not to commit your secrets in your code repository, add the `secrets.json` file into your .gitignore*
 
+# Deploying to Azure
+- Existing docker image - `posttoweesing/private:rata-latest`
+- Build docker image
+  ```
+  docker build -t posttoweesing/private:rata-latest .
+  ```
+- Push image
+  ```
+  docker push posttoweesing/private:rata-latest
+  ```
+- Create a new revision of the container app in Azure based on active revision. Name the revision with the suffix - `{YYYYMMDD}-rc{X}` where `X` is the release candidate for that day.
+
 # Improvements
 - *(DONE)* Migrate to different Telegram Bot framework from Telegraf. Not very ideal internal error handling and often crashes the bot.
 - Refactoring of menu handling to it's own generic library.
