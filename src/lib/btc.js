@@ -1,11 +1,11 @@
-import { CoinDeskLib } from './coin_desk';
+import { BinanceLib } from './binance';
 import { AssetDefines } from './asset_defines';
 
 export class BTCLib {
   async getPrices() {
-    const coinDeskLib = new CoinDeskLib();
-    const currencies = ['USD', 'SGD'];
-    const rates = await coinDeskLib.getPrices(currencies);
+    const currencies = ['BTCUSDC'];
+    const binanceLib = new BinanceLib();
+    const rates = await binanceLib.getPrices(currencies);
     let msg = `
 █████▀▀▀▀▀█████
 ██▀──▄─▄────▀██
