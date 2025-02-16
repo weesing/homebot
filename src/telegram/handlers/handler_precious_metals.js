@@ -69,24 +69,23 @@ export class HandlerPreciousMetals extends HandlerBase {
     } = await silverBullionLib.getPrices();
 
     msg += `
-<u>100g PAMP Gold Cast Bar</u> [<a href="https://www.silverbullion.com.sg/Product/Detail/Gold_100_gram_PAMP_Suisse_cast_bar">Silver Bullion PAMP Bar</a>]
-Price - ${silverBullionPrice}
-Buying - ${silverBullionBuyBack}
-Stock - ${silverBullionStock}
-
-<u>1oz Maple Leaf Gold Coin</u> [<a href="https://www.silverbullion.com.sg/Shop/Buy/Gold_Coins">Silver Bullion Maple Leaf Coin</a>]
-Price - ${silverBullionCoinPrice}
-Buying - ${silverBullionCoinBuyBack}
-Stock - ${silverBullionCoinStock}
+<u>100g PAMP Gold Cast Bar</u> [<a href="https://www.silverbullion.com.sg/Product/Detail/Gold_100_gram_PAMP_Suisse_cast_bar">SilverBullion</a>]
+Price | Buying| Stock
+${silverBullionPrice} | ${silverBullionBuyBack} | ${silverBullionStock}
 `;
 
     const pampData = bullionStarData.pamp100g;
     msg += `
-<u>100g PAMP Gold Cast Bar</u> [<a href="https://www.bullionstar.com/buy/product/gold-pamp-cast-100g">Bullion Star</a>]
-Price - ${pampData.price}
-Buying - ${pampData.buying}
-Stock - ${pampData.stock}
+<u>100g PAMP Gold Cast Bar</u> [<a href="https://www.bullionstar.com/buy/product/gold-pamp-cast-100g">BullionStar</a>]
+Price | Buying| Stock
+${pampData.price} | ${pampData.buying} | ${pampData.stock}
 `;
+
+    msg += `
+<u>1oz Maple Leaf Gold Coin</u> [<a href="https://www.silverbullion.com.sg/Shop/Buy/Gold_Coins">SilverBullion</a>] | [<a href="https://www.bullionstar.com/buy/product/gold-coin-canadian-maple-1oz-2025">BullionStar</a>]
+Price | Buying| Stock
+${silverBullionCoinPrice} | ${silverBullionCoinBuyBack} | ${silverBullionCoinStock}
+`
     msg += `
 ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
 ⣿⣿⣿⣿⣿⣿⣿⣟⠿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠏⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
